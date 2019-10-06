@@ -1,0 +1,23 @@
+.our-services{
+background:#fff ;
+color:rgb(3, 30, 54);
+.ant-row{
+    .ant-col{
+        .ant-card{
+            width: 90% !important;
+            
+            margin: 15px auto;
+            text-align: center;
+            i{
+                font-size: 180px;
+            }
+            &:hover{
+                background: yellow;
+            }
+        }
+        .ant-card-bordered {
+            border: none !important;
+        }
+    }
+}
+}

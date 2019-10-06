@@ -1,0 +1,46 @@
+.navbar-component {
+    background: #282D43;
+    color: #fff;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        padding: 0px 20px;
+
+    }
+
+    .navbar {
+        padding: 0px 20px;
+
+        .anticon {
+            font-size: 28px;
+        }
+
+        div {
+            .ant-drawer-content {
+                background: #282D43;
+
+                .ant-drawer-header {
+                    background: #282D43;
+                    height: 8vh;
+
+                    .ant-drawer-title {
+                        color: #fff;
+                        ;
+                    }
+                }
+
+                .ant-drawer-body {
+                    .ant-list {
+                        color: #fff;
+                        .ant-list-item{
+                            border-bottom: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
