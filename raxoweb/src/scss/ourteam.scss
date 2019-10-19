@@ -1,3 +1,45 @@
-.our-team{
-    background: magenta;
+.our-team {
+    background: #fff;
+
+    .section-heading {
+        font-family: 'Grenze', serif;
+        color: #031e36;
+        font-size: 40px;
+        border-bottom: 2px solid yellow;
+        width: 25%;
+        margin: 30px 37.5%;
+        text-align: center;
+
+        @media(max-width:768px) {
+            width: 50%;
+            margin: 0px 25%;
+        }
+
+        @media(max-width:370px) {
+            width: 80%;
+            margin: 0px 10%;
+        }
+
+    }
+
+    .ant-row {
+        .ant-col {
+            padding: 10px 20px;
+
+
+            .team-member {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                background: #eee;
+                margin: 0 auto;
+            }
+
+            h3 {
+                text-align: center;
+                font-size: 22px;
+                margin: 8px 0px;
+            }
+        }
+    }
 }

@@ -1,3 +1,59 @@
-.contact-us{
-    background: yellow;
+.contact-us {
+    background: #fff;
+    position: relative;
+
+    .section-heading {
+        font-family: 'Grenze', serif;
+        color: #031e36;
+        font-size: 40px;
+        border-bottom: 2px solid yellow;
+        width: 25%;
+        margin: 30px 37.5%;
+        text-align: center;
+
+        @media(max-width:768px) {
+            width: 50%;
+            margin: 0px 25%;
+        }
+
+        @media(max-width:370px) {
+            width: 80%;
+            margin: 0px 10%;
+        }
+
+    }
+
+    .contact-us-content {
+        .ant-row {
+            .ant-col {
+                padding: 20px;
+
+                h3 {
+                    text-align: center;
+                }
+                .contact-content{
+                    padding: 22px 0px;
+                    text-align: center;
+                    div{
+                        line-height: 38px;
+                    }
+                }
+
+                .ant-form {
+                    .ant-form-item {
+                        margin-bottom: 6px;
+
+                        .ant-col {
+                            padding: 2px;
+                        }
+
+
+                    }
+
+                }
+            }
+        }
+
+
+    }
 }
