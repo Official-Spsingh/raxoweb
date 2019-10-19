@@ -8,7 +8,7 @@ import OurTeam from './components/OurTeam';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import FooterComponent from './components/FooterComponent';
-import BlogsComponent from '.components/BlogsComponent';
+import BlogsComponent from './components/BlogsComponent';
 
 export default class App extends Component {
   render() {
