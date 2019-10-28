@@ -4,7 +4,7 @@ export default class ContactUs extends Component {
     render() {
         return (
             <div className="contact-us">
-                <h1 class="section-heading">Contact Us</h1>
+                <h1 className="section-heading">Contact Us</h1>
                 <div className="contact-us-content">
                     <Row>
                         <Col xs={24} sm={24} md={12} lg={12} xl={12}>
