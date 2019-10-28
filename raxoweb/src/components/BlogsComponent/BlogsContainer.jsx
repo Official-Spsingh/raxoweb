@@ -7,7 +7,7 @@ export default class BlogsContainer extends Component {
             blogData: []
         }
     }
-    componentWillMount() {
+    componentDidMount() {
         axios.get(`https://jsonplaceholder.typicode.com/posts`)
             .then(res => {
                 console.log(res.data)
