@@ -1,0 +1,25 @@
+.header-main-container {
+  .header-content-container {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin: auto;
+    .header-content {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 5px;
+      text-transform: uppercase;
+      span {
+        cursor: pointer;
+        font-weight: 700;
+      }
+    }
+    .header-logo-container {
+        padding: 5px;
+      img {
+        height: 90px;
+        width: 90px;
+      }
+    }
+  }
+}
