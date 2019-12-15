@@ -1,10 +1,10 @@
 import React from 'react';
-import LandingPageContainer from './components/LandingPageContainer';
+import MainContainer from './components/MainContainer';
 
 function App() {
   return (
     <div className="App">
-      <LandingPageContainer/>
+      <MainContainer />
     </div>
   );
 }

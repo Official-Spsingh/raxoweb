@@ -1,0 +1,22 @@
+.home-page-content-container {
+  text-align: center;
+  padding: 15px 5px;
+  .titles-container {
+    h1 {
+      margin-bottom: 10px; 
+      color: rgba(75, 75, 75, 0.88);   
+    }
+    .green-strip {
+      border: 2px solid #61c5b6;
+      width: 110px;
+      margin: auto;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+    h2 {
+      font-size: 26px;
+      font-weight: 500;
+      color: rgba(75, 75, 75, 0.88);  
+    }
+  }
+}
