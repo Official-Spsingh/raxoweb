@@ -20,6 +20,12 @@ const LandingPageContainer = (props) => {
             <HomePageContentContainer title="BootCamp" subTitle="Spending Hours In Coaching Still Feel Confident less !">
                 <BootCamp/>
             </HomePageContentContainer>
+            <HomePageContentContainer title="others">
+              <h1>Others</h1>
+              <h1>Others</h1>
+              <h1>Others</h1>
+              <h1>Others</h1>
+            </HomePageContentContainer>
 
         </div>
     )
