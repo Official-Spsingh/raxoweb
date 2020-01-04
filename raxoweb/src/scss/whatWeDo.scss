@@ -1,0 +1,58 @@
+.what-we-do {
+    margin: 42px 0px;
+  .ant-row {
+    .ant-col {
+      .card-container {
+        width: 70%;
+        margin: auto;
+        height: 320px;
+        box-shadow: 2px 0px 4px 1px #8d8686;
+        position: relative;
+
+        .top-section {
+            height: 65%;
+        }
+        .buttom-section {
+            height: 35%;
+            background: url('../media/whatwedowave.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+          .title-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 2px;
+          }
+        }
+        
+      }
+      .container1 {
+        background: url("../media/whatwedo1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .container2 {
+        background: url("../media/whatwedo2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .container3 {
+        background: url("../media/whatwedo3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .container4 {
+        background: url("../media/whatwedo4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+}
