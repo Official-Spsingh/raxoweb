@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from "react-router";
 
-const logo = require('../../../media/logo.jpeg')
+const logo = require('../../../media/logo.png')
 const HeaderComponent = (props) => {
     const gotoPage = (link) => {
         props.history.push(link)

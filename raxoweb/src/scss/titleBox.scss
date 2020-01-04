@@ -24,10 +24,15 @@
       text-align: center;
       
       .main-heading {
-        margin-bottom: 0px;
+        margin-bottom: 5px;
+        color: #000a49;
       }
       .sub-sub-heading {
         margin-bottom: 5px;
+        color: #000a49;
+      }
+      .sub-heading {
+        color: #000a49;
       }
       .learn-more-button {
           padding: 15px 5px;
@@ -39,6 +44,7 @@
           width: fit-content;
           border: 2px solid;
           border-radius: 20px;
+          color: #000a49;
         }
       }
     }
