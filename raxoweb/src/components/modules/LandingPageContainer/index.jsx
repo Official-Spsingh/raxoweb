@@ -3,6 +3,7 @@ import HeaderComponent from '../HeaderComponent';
 import TitleBoxComponent from '../TitleBoxComponent';
 import HomePageContentContainer from '../HomePageContentContainer';
 import GrowYourBuisness from '../GrowYourBuisness';
+import WhatWeDo from '../WhatWeDo';
 const LandingPageContainer = (props) => {
     return (
         <div className="landing-page-container">
@@ -14,10 +15,14 @@ const LandingPageContainer = (props) => {
             <HomePageContentContainer title="Manage Handle Grow Your Business With Us">
                 <GrowYourBuisness />
             </HomePageContentContainer>
-            <HomePageContentContainer title="Manage Handle Grow Your Business With Us">
-                <h1>Hello content</h1>
-                <h1>Hello content</h1>
-                <h1>Hello content</h1>
+            <HomePageContentContainer title="What We Do">
+               <WhatWeDo/>
+            </HomePageContentContainer>
+            <HomePageContentContainer title="Öther things">
+               <h1>ghjkl;</h1>
+               <h1>ghjkl;</h1>
+               <h1>ghjkl;</h1>
+               <h1>ghjkl;</h1>
             </HomePageContentContainer>
 
         </div>
