@@ -1,0 +1,25 @@
+.bootcamp-main-container {
+  display: flex;
+  .content-container {
+    text-align: left;
+    flex: 2;
+    p{
+        padding: 10px 5%;
+    }
+    .btn-container {
+        text-align: center;
+        padding: 10px 5px;
+      .ant-btn {
+        background-color: #00094a;
+        border: none;
+      }
+    }
+  }
+  .image-container {
+    flex: 1;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
