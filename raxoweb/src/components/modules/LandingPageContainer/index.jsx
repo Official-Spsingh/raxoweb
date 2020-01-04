@@ -17,7 +17,7 @@ const LandingPageContainer = (props) => {
             <HomePageContentContainer title="What We Do">
                 <WhatWeDo />
             </HomePageContentContainer>
-            <HomePageContentContainer title="BOOTCAMP." subTitle="Spending Hours In Coaching Still Feel Confident less !">
+            <HomePageContentContainer title="BootCamp" subTitle="Spending Hours In Coaching Still Feel Confident less !">
                 <BootCamp/>
             </HomePageContentContainer>
 
