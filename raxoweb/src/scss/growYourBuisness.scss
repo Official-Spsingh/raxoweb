@@ -1,0 +1,60 @@
+.grow-your-buisness {
+  display: flex;
+  .left-section {
+    width: 50%;
+    .outer-section {
+      width: 70%;
+      margin: 40px auto;
+      border-top: 15px solid #b3b3b3;
+      border-left: 15px solid #b3b3b3;
+      border-right: 15px solid #b3b3b3;
+      border-top: 15px solid #b3b3b3;
+      border-left: 15px solid #b3b3b3;
+      border-right: 15px solid #b3b3b3;
+      .middle-section {
+        border-top: 15px solid #fff;
+        border-left: 15px solid #fff;
+        border-right: 15px solid #fff;
+        .image-container {
+          width: 100%;
+          height: 100%;
+          img {
+            height: 450px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .right-section {
+    width: 50%;
+    .right-section-container {
+      margin: 55px auto;
+      width: 70%;
+      .growth-list-section {
+        .header-section {
+          display: flex;
+          justify-content: flex-start;
+          .header-left-section {
+            width: 42px;
+            margin: 8px;
+            img {
+              width: 100%;
+            }
+          }
+          .header-right-secion {
+            font-weight: 500;
+            margin: 8px;
+            font-size: 22px;
+          }
+        }
+        .content-section {
+          font-weight: 500;
+          text-align: left;
+          padding: 0px 10px 0px 55px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

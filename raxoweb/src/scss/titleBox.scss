@@ -1,9 +1,12 @@
 .title-box-component-main-container {
   display: flex;
+  height: 85vh;
   .title-box-left-content-container {
-    flex: 1;
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .image-holder {
-      height: 100%;
       width: 100%;
       img {
         height: inherit;
