@@ -20,13 +20,13 @@ const HeaderComponent = (props) => {
                 </div>
                 <div className="header-content-right">
                     <div className="header-content">
-                        <span>Work</span>
+                        <span>Bootcamp</span>
                     </div>
                     <div className="header-content">
-                        <span>Contact</span>
+                        <span>Blogs</span>
                     </div>
                     <div className="header-content">
-                        <span>View</span>
+                        <span>Login</span>
                     </div>
                 </div>
             </div>
