@@ -5,7 +5,7 @@ const WhatWeDo = (props) => {
         <div className="what-we-do">
             <Row>
 
-                <Col xl={8} lg={8} md={8} sm={24} xs={24}>
+                <Col xl={6} lg={6} md={12} sm={24} xs={24}>
                     <div className="card-container container1">
                         <div className="top-section">
 
@@ -18,7 +18,7 @@ const WhatWeDo = (props) => {
                     </div>
 
                 </Col>
-                <Col xl={8} lg={8} md={8} sm={24} xs={24}>
+                <Col xl={6} lg={6} md={12} sm={24} xs={24}>
                     <div className="card-container container2">
                         <div className="top-section">
 
@@ -31,8 +31,21 @@ const WhatWeDo = (props) => {
                     </div>
 
                 </Col>
-                <Col xl={8} lg={8} md={8} sm={24} xs={24}>
+                <Col xl={6} lg={6} md={12} sm={24} xs={24}>
                     <div className="card-container container3">
+                        <div className="top-section">
+
+                        </div>
+                        <div className="buttom-section">
+                            <div className="title-section">
+                                Web Development
+                            </div>
+                        </div>
+                    </div>
+
+                </Col>
+                <Col xl={6} lg={6} md={12} sm={24} xs={24}>
+                    <div className="card-container container4">
                         <div className="top-section">
 
                         </div>
