@@ -1,6 +1,10 @@
 .title-box-component-main-container {
   display: flex;
   height: 85vh;
+  @media (max-width:768px)
+  {
+    flex-direction: column;
+  }
   .title-box-left-content-container {
     flex: 1 1;
     display: flex;

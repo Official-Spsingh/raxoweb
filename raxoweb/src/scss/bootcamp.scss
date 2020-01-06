@@ -1,5 +1,9 @@
 .bootcamp-main-container {
   display: flex;
+  @media (max-width:768px)
+  {
+    flex-direction: column;
+  }
   .content-container {
     text-align: left;
     flex: 2;

@@ -1,9 +1,22 @@
 .grow-your-buisness {
   display: flex;
+  @media (max-width:768px)
+  {
+    flex-direction: column;
+  }
   .left-section {
     width: 50%;
+    @media (max-width:768px)
+    {
+      width: 100%;
+    }
     .outer-section {
       width: 70%;
+      @media (max-width:768px)
+      {
+        width: 98%;
+        margin: 10px auto;
+      }
       margin: 40px auto;
       border-top: 15px solid #b3b3b3;
       border-left: 15px solid #b3b3b3;
@@ -20,7 +33,12 @@
           height: 100%;
           img {
             height: 500px;
-            width: 100%;;
+            width: 100%;
+            @media (max-width:768px)
+            {
+              height: 370px;
+            }
+            
           }
         }
       }
@@ -28,9 +46,18 @@
   }
   .right-section {
     width: 50%;
+    @media (max-width:768px)
+    {
+      width: 100%;
+    }
     .right-section-container {
       margin: 115px 8%;
       width: 70%;
+      @media (max-width:768px)
+      {
+        width: 98%;
+        margin: 20px 1%;
+      }
       .growth-list-section {
         .header-section {
           display: flex;
