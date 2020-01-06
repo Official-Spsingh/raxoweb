@@ -4,10 +4,12 @@ import HeaderComponent from '../modules/HeaderComponent';
 import { Route, Switch } from "react-router";
 import FooterComponent from '../modules/FooterComponent';
 import BlogsContainer from '../modules/BlogsContainer';
+import HeaderComponentMobile from '../modules/HeaderComponentMobile';
 const MainContainer = (props) => {
     return (
         <div className="main-container">
             <HeaderComponent />
+            <HeaderComponentMobile/>
             <Switch>
                 <Route exact path="/">
                     <LandingPageContainer />
