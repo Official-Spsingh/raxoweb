@@ -1,6 +1,7 @@
 .footer-component {
   background: #000a49;
-  height: 15vh;
+  background: #306060;
+  height: 16vh;
   color: #fafafa;
   .footer {
     display: flex;
@@ -9,6 +10,7 @@
     height: 100%;
     @media (max-width: 768px) {
       flex-direction: column;
+      justify-content: center;
     }
     .left-section {
       text-align: left;

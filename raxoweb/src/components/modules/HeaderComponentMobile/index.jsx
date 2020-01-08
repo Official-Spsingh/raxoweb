@@ -19,8 +19,38 @@ class HeaderComponentMobile extends Component {
         });
     };
     render() {
-
-
+        const links = [
+            {
+                name: 'Home',
+                icon: 'home',
+                route: 'home'
+            },
+            {
+                name: 'About',
+                icon: 'info-circle',
+                route: 'home'
+            },
+            {
+                name: 'Services',
+                icon: 'setting',
+                route: 'home'
+            },
+            {
+                name: 'Bootcamp',
+                icon: 'schedule',
+                route: 'home'
+            },
+            {
+                name: 'Blogs',
+                icon: 'block',
+                route: 'home'
+            },
+            {
+                name: 'Login',
+                icon: 'login',
+                route: 'home'
+            }
+        ]
         return (
             <div className="header-mobile">
                 <div className="header-mobile-wrapper">
@@ -35,15 +65,31 @@ class HeaderComponentMobile extends Component {
 
                         </div>
                         <Drawer
-                            title="Raxoweb"
                             placement="right"
-                            closable={true}
+                            closable={false}
                             onClose={this.onClose}
                             visible={this.state.visible}
+                            className='mobile-header-drawer-container'
                         >
-                            <p>Some contents...</p>
-                            <p>Some contents...</p>
-                            <p>Some contents...</p>
+                            <div className="drawer-content-main-container">
+                                <div className="title-container">
+                                    <h2>RAXOWEB</h2>
+                                    <h4>Enhance Your Success With Us</h4>
+                                </div>
+                                <div className="bottom-design" />
+
+                                <div className="links-container">
+                                    {
+                                        links.map((linkItem, index) =>
+                                            <div key={index} className="link-item">
+                                                <Icon type={linkItem.icon} />
+                                                <h3>{linkItem.name}</h3>
+                                            </div>
+                                        )
+                                    }
+                                </div>
+
+                            </div>
                         </Drawer>
                     </div>
                 </div>
