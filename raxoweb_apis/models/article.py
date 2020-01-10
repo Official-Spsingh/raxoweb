@@ -1,32 +1,32 @@
-from db import db
+from flask_sqlalchemy import SQLAlchemy
+db = SQLAlchemy()
 
-
-class ArticleModel(db.Model):
-    __tablename__ = 'articles'
-
+class Movies(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80))
-    price = db.Column(db.Float(precision=2))
+    title = db.Column(db.String(30), unique=True, nullable=False)
+    director = db.Column(db.String(30), unique=False, nullable=False)
+    genre = db.Column(db.String(30), unique=False, nullable=False)
+    collection = db.Column(db.Integer, unique=False, nullable=False)
 
-    store_id = db.Column(db.Integer, db.ForeignKey('categories.id'))
-    store = db.relationship('CategoryModel')
-
-    def __init__(self, name, price, store_id):
-        self.name = name
-        self.price = price
-        self.store_id = store_id
+    def __init__(self, title, director, genre, collection):
+        self.title = title
+        self.director = director
+        self.genre = genre
+        self.collection = collection
 
     def json(self):
-        return {'name': self.name, 'price': self.price}
+        return {'Title': self.title, 'Director': self.director, 'Genre': self.genre, 'Collection': self.collection}
 
     @classmethod
-    def find_by_name(cls, name):
-        return cls.query.filter_by(name=name).first()
+    def find_by_title(cls, title):
+        return cls.query.filter_by(title=title).first()
 
-    def save_to_db(self):
+    def save_to(self):
         db.session.add(self)
         db.session.commit()
 
-    def delete_from_db(self):
+    def delete_(self):
         db.session.delete(self)
         db.session.commit()
+
+    
