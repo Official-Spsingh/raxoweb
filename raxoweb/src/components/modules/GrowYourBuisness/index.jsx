@@ -1,9 +1,9 @@
 import React from 'react';
 
-const image = require('../../../media/growBuisness.jpg')
-const icon1 = require('../../../media/growthicon.png')
-const icon2 = require('../../../media/manageicon.png')
-const icon3 = require('../../../media/experience.png')
+const image = require('https://raxowebapi.herokuapp.com/landing-page-images/growBuisness.jpg')
+const icon1 = require('https://raxowebapi.herokuapp.com/landing-page-images/growthicon.png')
+const icon2 = require('https://raxowebapi.herokuapp.com/landing-page-images/manageicon.png')
+const icon3 = require('https://raxowebapi.herokuapp.com/landing-page-images/experience.png')
 
 const GrowYourBuisness = (props) => {
     return (

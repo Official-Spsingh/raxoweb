@@ -1,6 +1,6 @@
 import React from 'react';
 
-const image = require('../../../media/image.jpg')
+const image = require('https://raxowebapi.herokuapp.com/landing-page-images/image.jpg')
 const TitleBoxComponent = (props) => {
     return (
         <div className="title-box-component-main-container">
