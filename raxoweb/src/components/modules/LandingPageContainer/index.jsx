@@ -4,6 +4,7 @@ import HomePageContentContainer from '../HomePageContentContainer';
 import GrowYourBuisness from '../GrowYourBuisness';
 import WhatWeDo from '../WhatWeDo';
 import BootCamp from '../BootCamp';
+import ContactUs from '../ContactUsComponent';
 const LandingPageContainer = (props) => {
     return (
         <div className="landing-page-container">
@@ -26,12 +27,7 @@ const LandingPageContainer = (props) => {
             <HomePageContentContainer title="BootCamp" subTitle="Spending Hours In Coaching Still Feel less Confident!">
                 <BootCamp/>
             </HomePageContentContainer>
-            <HomePageContentContainer title="Others">
-              <h1>Others</h1>
-              <h1>Others</h1>
-              <h1>Others</h1>
-              <h1>Others</h1>
-            </HomePageContentContainer>
+            <ContactUs/>
 
         </div>
     )
