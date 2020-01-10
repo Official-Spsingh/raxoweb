@@ -1,62 +1,35 @@
 from flask import Flask
-from flask_restful import Resource, reqparse, Api
+from flask_restful import Api
+from flask_jwt import JWT
+
+from security import authenticate, identity
+from resources.user import UserRegister
+from resources.article import Article, ArticleList
+from resources.category import Category, CategoryList
+from resources.load_images import Images
 
 app = Flask(__name__)
-api = Api(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///base.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
+app.secret_key = 'jose'
+api = Api(app)
 
-from base import Movies, db
-db.init_app(app)
-app.app_context().push()
-db.create_all()
 
-class Movies_List(Resource):
-    parser = reqparse.RequestParser()
-    parser.add_argument('director', type=str, required=False, help='Director of the movie')
-    parser.add_argument('genre', type=str, required=False, help='Genre of the movie')
-    parser.add_argument('collection', type=int, required=True, help='Gross collection of the movie')
-    
-    def get(self, movie):
-        item = Movies.find_by_title(movie)
-        if item:
-            return item.json()
-        return {'Message': 'Movie is not found'}
-    
-    def post(self, movie):
-        if Movies.find_by_title(movie):
-            return {' Message': 'Movie with the  title {} already exists'.format(movie)}
-        args = Movies_List.parser.parse_args()
-        item = Movies(movie, args['director'], args['genre'], args['collection'])
-        item.save_to()
-        return item.json()
-        
-    def put(self, movie):
-        args = Movies_List.parser.parse_args()
-        item = Movies.find_by_title(movie)
-        if item:
-            item.collection = args['collection']
-            item.save_to()
-            return {'Movie': item.json()}
-        item = Movies(movie, args['director'], args['genre'], args['collection'])
-        item.save_to()
-        return item.json()
-            
-    def delete(self, movie):
-        item  = Movies.find_by_title(movie)
-        if item:
-            item.delete_()
-            return {'Message': '{} has been deleted from records'.format(movie)}
-        return {'Message': '{} is already not on the list'.format()}
-    
-class All_Movies(Resource):
-    def get(self):
-        return {'Movies': list(map(lambda x: x.json(), Movies.query.all()))}
-    
-api.add_resource(All_Movies, '/')
-api.add_resource(Movies_List, '/<string:movie>')
+@app.before_first_request
+def create_tables():
+    db.create_all()
 
-if __name__=='__main__':
-    
-    app.run(debug=True)
+
+jwt = JWT(app, authenticate, identity)  # /auth
+
+api.add_resource(Category, '/category')
+api.add_resource(CategoryList, '/categories')
+api.add_resource(Article, '/article')
+api.add_resource(ArticleList, '/articles')
+api.add_resource(UserRegister, '/register')
+api.add_resource(Images,'/landing-page-images/<string:image>')
+if __name__ == '__main__':
+    from db import db
+    db.init_app(app)
+    app.run(port=5000, debug=True)
