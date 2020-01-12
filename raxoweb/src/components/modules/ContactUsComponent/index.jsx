@@ -28,7 +28,7 @@ export default class ContactUs extends Component {
                     destroyOnClose={true}
                     footer={null}
                     wrapClassName='contact-us-modal-main-container'
-                    bodyStyle={{height:480,width:600}}
+                    
                 >
                     <div className="contact-us-container">
                         <div className="contact-box">
