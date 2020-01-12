@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from "react-router";
 import { Icon, Drawer } from 'antd'
 
-const logo = require('../../../media/logo.png')
+const logo = require('https://raxowebapi.herokuapp.com/landing-page-images/logo.png')
 class HeaderComponentMobile extends Component {
 
     state = { visible: false };

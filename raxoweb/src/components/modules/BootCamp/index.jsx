@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'antd';
-const bootcampImage = require('../../../media/bootcamp.png');
+const bootcampImage = require('https://raxowebapi.herokuapp.com/landing-page-images/bootcamp.png');
 const BootCamp = (props) => {
     return (
         <div className="bootcamp-main-container">
