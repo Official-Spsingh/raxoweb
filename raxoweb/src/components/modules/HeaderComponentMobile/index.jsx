@@ -55,7 +55,7 @@ class HeaderComponentMobile extends Component {
                 <div className="header-mobile-wrapper">
                     <div className="left-section">
                         <div className="logo-container">
-                            <img src={'https://raxowebapi.herokuapp.com/landing-page-images/logo.png'} />
+                        <img style={{ height: "40px", width: "130px" }} src={require('../../../assets/raxologo8888.png')} alt="Raxoweb" />
                         </div>
                     </div>
                     <div className="right-section">
@@ -69,13 +69,14 @@ class HeaderComponentMobile extends Component {
                             onClose={this.onClose}
                             visible={this.state.visible}
                             className='mobile-header-drawer-container'
+                            style={{zIndex:999999999}}
                         >
                             <div className="drawer-content-main-container">
                                 <div className="title-container">
                                     <h2>RAXOWEB</h2>
                                     <h4>Enhance Your Success With Us</h4>
                                 </div>
-                                <div className="bottom-design" />
+                              
 
                                 <div className="links-container">
                                     {
