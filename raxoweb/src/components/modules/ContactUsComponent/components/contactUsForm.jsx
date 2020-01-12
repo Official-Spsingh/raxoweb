@@ -42,7 +42,7 @@ const ContactUsForm = (props) => {
                         rules: [{ required: true, message: 'Please enter your email' }],
                     })(
                         <Input
-                            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                            prefix={<Icon type="wechat" style={{ color: 'rgba(0,0,0,.25)' }} />}
                             placeholder="Email"
                         />,
                     )}
@@ -52,7 +52,7 @@ const ContactUsForm = (props) => {
                         rules: [{ required: true, message: 'Please enter your mobile number' }],
                     })(
                         <Input
-                            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                            prefix={<Icon type="mobile" style={{ color: 'rgba(0,0,0,.25)' }} />}
                             placeholder="Mobile No."
                         />,
                     )}
