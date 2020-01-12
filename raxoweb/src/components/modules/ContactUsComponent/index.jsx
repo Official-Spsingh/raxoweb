@@ -19,7 +19,8 @@ export default class ContactUs extends Component {
     render() {
         return (
             <div className='contact-us-main-container'>
-                <Button type="primary" size="large" onClick={this.openModal}>Contact Us</Button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, doloremque quaerat ab, quae facere laborum minus, reprehenderit molestias harum delectus inventore eos illo iure facilis doloribus expedita rem quibusdam neque.</p>
+                <Button type="primary" shape={'round'} onClick={this.openModal} style={{background:'#0A3D62',border:'none'}}>Contact Us</Button>
                 <Modal
                     visible={this.state.visible}
                     onCancel={this.closeModal}
@@ -32,7 +33,7 @@ export default class ContactUs extends Component {
                 >
                     <div className="contact-us-container">
                         <div className="contact-box">
-                            <ContactUsForm/>
+                            <ContactUsForm closeModal={this.closeModal}/>
                         </div>
                     </div>
                 </Modal>

@@ -20,6 +20,27 @@
                 margin: 0;
               }
             }
+            .contact-buttons {
+              display: flex;
+              justify-content: flex-end;
+              .contact-btn {
+                margin: 5px 10px;
+                width: 115px;
+                height: 35px;
+              }
+              .submit {
+                background: #0a3d62;
+                color: #fafafa;
+                border: none;
+              }
+              .cancel {
+                background: #fafafa;
+                &:hover{
+                  color:#0a3d62;
+                  border-color:#0a3d62; 
+                }
+              }
+            }
           }
         }
       }

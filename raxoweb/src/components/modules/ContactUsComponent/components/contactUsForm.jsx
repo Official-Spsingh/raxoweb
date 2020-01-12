@@ -67,11 +67,14 @@ const ContactUsForm = (props) => {
                         />,
                     )}
                 </Form.Item>
-                <center>
-                    <Button type="primary" htmlType="submit" style={{width:150}}>
+                <div className="contact-buttons">
+                    <Button className="contact-btn cancel" onClick={props.closeModal}>
+                        Cancel
+                    </Button>
+                    <Button type="primary" htmlType="submit" className="contact-btn submit">
                         Submit
                     </Button>
-                </center>
+                </div>
             </Form>
         </div>
     )

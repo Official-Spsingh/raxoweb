@@ -30,7 +30,7 @@ const HeaderComponent = (props) => {
 
                 <div className="header-content-right">
 
-                    <div className="header-content">
+                    <div className="header-content cancel">
                         <span>SignUp</span>
                     </div>
                     <div className="header-content login">

@@ -25,16 +25,6 @@ class HeaderComponentMobile extends Component {
                 route: 'home'
             },
             {
-                name: 'About',
-                icon: 'info-circle',
-                route: 'home'
-            },
-            {
-                name: 'Services',
-                icon: 'setting',
-                route: 'home'
-            },
-            {
                 name: 'Bootcamp',
                 icon: 'schedule',
                 route: 'home'

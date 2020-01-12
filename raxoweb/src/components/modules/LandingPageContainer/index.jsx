@@ -11,11 +11,11 @@ const LandingPageContainer = (props) => {
             <TitleBoxComponent />
             <HomePageContentContainer title="Delivering Digital Experience">
                 <p>
-                A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea. 
-                A paragraph consists of one or more sentences.
-                A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea.
-                A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea.
-                A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea.
+                    A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea.
+                    A paragraph consists of one or more sentences.
+                    A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea.
+                    A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea.
+                    A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea.
                 </p>
             </HomePageContentContainer>
             <HomePageContentContainer title="Manage Handle Grow Your Business With Us">
@@ -24,11 +24,12 @@ const LandingPageContainer = (props) => {
             <HomePageContentContainer title="What We Do">
                 <WhatWeDo />
             </HomePageContentContainer>
-            <HomePageContentContainer title="BootCamp" subTitle="Spending Hours In Coaching Still Feel less Confident!">
-                <BootCamp/>
+            <HomePageContentContainer title="BootCamp" subTitle="Spending Hours In Coaching Still Feel less Confident !">
+                <BootCamp />
             </HomePageContentContainer>
-            <ContactUs/>
-
+            <HomePageContentContainer title="Contact Us" subTitle="Schedule a meeting with us !">
+                <ContactUs />
+            </HomePageContentContainer>
         </div>
     )
 }

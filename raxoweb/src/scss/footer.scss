@@ -1,5 +1,5 @@
 .footer-component {
-  background: #000a49;
+  background: #0a3d62;
   // background: #306060;
   height: 16vh;
   color: #fafafa;
@@ -15,7 +15,7 @@
     .left-section {
       text-align: left;
       cursor: pointer;
-      span{
+      span {
         font-size: 16px;
       }
     }
@@ -31,7 +31,12 @@
         justify-content: space-around;
         align-items: center;
         margin: 0;
-        div {
+        a {
+          color: inherit;
+          &:hover{
+            color: inherit;
+          }
+          div {
             width: 50px;
             height: 50px;
 
@@ -42,15 +47,16 @@
             margin: 0px 10px;
             cursor: pointer;
             @media (max-width: 768px) {
-                width: 40px;
-                height: 40px;
-              }
-          .anticon {
-            font-size: 30px;
-            
-            @media (max-width: 768px) {
+              width: 40px;
+              height: 40px;
+            }
+            .anticon {
+              font-size: 30px;
+
+              @media (max-width: 768px) {
                 font-size: 24px;
               }
+            }
           }
         }
       }

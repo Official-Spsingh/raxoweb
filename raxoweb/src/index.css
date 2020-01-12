@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #FAFAFA;
+  font-family: 'Libre Franklin', sans-serif;
 }
 
 code {
