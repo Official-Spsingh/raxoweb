@@ -10,27 +10,30 @@ const HeaderComponent = (props) => {
         <div className="header-main-container">
             <div className="header-content-container">
                 <div className="header-content-left">
-                    <div className="header-content" onClick={() => gotoPage('')}>
-                        <span>Home</span>
+                    <div className="header-logo-container" onClick={() => gotoPage('')}>
+                        <img style={{ height: "40px", width: "130px" }} src={require('../../../assets/raxologo8888.png')} alt="Raxoweb" />
+
+                       
                     </div>
+                    <div className="menu-content">
+
+                    
                     <div className="header-content">
-                        <span>About</span>
-                    </div>
-                    <div className="header-content">
-                        <span>Services</span>
-                    </div>
+                            <span>Bootcamp</span>
+                        </div>
+                        <div className="header-content" onClick={() => gotoPage('blogs')}>
+                            <span>Blogs</span>
+                        </div>
+                        </div>
+
                 </div>
-                <div className="header-logo-container">
-                    <img src={'https://raxowebapi.herokuapp.com/landing-page-images/logo.png'} alt="logo" />
-                </div>
+
                 <div className="header-content-right">
+
                     <div className="header-content">
-                        <span>Bootcamp</span>
+                        <span>SignUp</span>
                     </div>
-                    <div className="header-content" onClick={() => gotoPage('blogs')}>
-                        <span>Blogs</span>
-                    </div>
-                    <div className="header-content">
+                    <div className="header-content login">
                         <span>Login</span>
                     </div>
                 </div>

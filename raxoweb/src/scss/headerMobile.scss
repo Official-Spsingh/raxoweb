@@ -3,7 +3,14 @@
     display: flex;
   }
   display: none;
-  height: 15vh;
+    position: fixed;
+    z-index: 999999;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #fafafa;
+    height: 60px;
   .header-mobile-wrapper {
     display: flex;
     justify-content: space-between;
@@ -12,8 +19,6 @@
     .left-section {
       width: 50%;
       .logo-container {
-        width: 70px;
-        height: 70px;
         margin: 0px 24px;
         cursor: pointer;
         img {
@@ -42,7 +47,8 @@
       .title-container {
         text-align: center;
         background: #306060;
-        padding: 40px 3px 25px;
+        padding: 40px 3px 45px;
+        border-bottom-left-radius: 20px;
         h2 {
           color: white;
           padding: 5px;
