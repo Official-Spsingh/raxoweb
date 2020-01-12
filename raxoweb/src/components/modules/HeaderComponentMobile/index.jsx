@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { withRouter } from "react-router";
 import { Icon, Drawer } from 'antd'
 
-const logo = require('https://raxowebapi.herokuapp.com/landing-page-images/logo.png')
 class HeaderComponentMobile extends Component {
 
     state = { visible: false };
@@ -56,7 +55,7 @@ class HeaderComponentMobile extends Component {
                 <div className="header-mobile-wrapper">
                     <div className="left-section">
                         <div className="logo-container">
-                            <img src={logo} />
+                            <img src={'https://raxowebapi.herokuapp.com/landing-page-images/logo.png'} />
                         </div>
                     </div>
                     <div className="right-section">

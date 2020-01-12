@@ -1,12 +1,11 @@
 import React from 'react';
 
-const image = require('https://raxowebapi.herokuapp.com/landing-page-images/image.jpg')
 const TitleBoxComponent = (props) => {
     return (
         <div className="title-box-component-main-container">
             <div className="title-box-left-content-container">
                 <div className="image-holder">
-                    <img src={image} alt="Loading ..." />
+                    <img src={'https://raxowebapi.herokuapp.com/landing-page-images/image.jpg'} alt="Loading ..." />
                 </div>
             </div>
             <div className="title-box-right-content-container">

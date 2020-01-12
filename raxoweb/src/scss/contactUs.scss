@@ -1,31 +1,41 @@
-.contact-us-main-container {
-  padding: 20px;
-  text-align: center;
-}
-.contact-us-modal-main-container {
-  .ant-modal-body {
-    padding: 0;
-    .contact-us-container {
-      height: 100%;
-      background: linear-gradient(to bottom right, white 50%, #000a48 50%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .contact-box {
-        background: whitesmoke;
-        border-radius: 10px;
-        border: 1px solid;
-        .form-container {
-            padding: 0 15px 15px;
-          .title-container {
-            text-align: center;
-            padding: 15px 10px;
-            h1{
-                margin: 0;
-            }
-          }
-        }
-      }
+// .contact-us-main-container {
+//   padding: 20px;
+//   text-align: center;
+// }
+// .contact-us-modal-main-container {
+//   .ant-modal-body {
+//     padding: 0;
+//     .contact-us-container {
+//       height: 100%;
+//       background: linear-gradient(to bottom right, white 50%, #000a48 50%);
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       .contact-box {
+//         background: whitesmoke;
+//         border-radius: 10px;
+//         border: 1px solid;
+//         .form-container {
+//             padding: 0 15px 15px;
+//           .title-container {
+//             text-align: center;
+//             padding: 15px 10px;
+//             h1{
+//                 margin: 0;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+.form-container {
+  padding: 0 15px 15px;
+  .title-container {
+    text-align: center;
+    padding: 15px 10px;
+    h1 {
+      margin: 0;
     }
   }
 }

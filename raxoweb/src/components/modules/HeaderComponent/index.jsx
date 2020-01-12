@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from "react-router";
 
-const logo = require('https://raxowebapi.herokuapp.com/landing-page-images/logo.png');
 
 const HeaderComponent = (props) => {
     const gotoPage = (link) => {
@@ -22,7 +21,7 @@ const HeaderComponent = (props) => {
                     </div>
                 </div>
                 <div className="header-logo-container">
-                    <img src={logo} alt="logo" />
+                    <img src={'https://raxowebapi.herokuapp.com/landing-page-images/logo.png'} alt="logo" />
                 </div>
                 <div className="header-content-right">
                     <div className="header-content">
