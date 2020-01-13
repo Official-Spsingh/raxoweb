@@ -5,6 +5,7 @@ import GrowYourBuisness from '../GrowYourBuisness';
 import WhatWeDo from '../WhatWeDo';
 import BootCamp from '../BootCamp';
 import ContactUs from '../ContactUsComponent';
+import FooterComponent from '../../modules/FooterComponent';
 const LandingPageContainer = (props) => {
     return (
         <div className="landing-page-container">
@@ -30,6 +31,7 @@ const LandingPageContainer = (props) => {
             <HomePageContentContainer title="Contact Us" subTitle="Schedule a meeting with us !">
                 <ContactUs />
             </HomePageContentContainer>
+            <FooterComponent />
         </div>
     )
 }

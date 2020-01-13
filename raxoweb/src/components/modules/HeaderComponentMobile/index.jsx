@@ -17,27 +17,36 @@ class HeaderComponentMobile extends Component {
             visible: false,
         });
     };
+    gotoPage = (link) => {
+        if (link != 'login/signUp') {
+            this.props.history.push(link)
+        }
+        else {
+            this.props.setModalVisible(true)
+        }
+        this.onClose()
+    }
     render() {
         const links = [
             {
                 name: 'Home',
                 icon: 'home',
-                route: 'home'
+                route: ''
             },
             {
                 name: 'Bootcamp',
                 icon: 'schedule',
-                route: 'home'
+                route: 'bootcamp'
             },
             {
                 name: 'Blogs',
                 icon: 'block',
-                route: 'home'
+                route: 'blogs'
             },
             {
-                name: 'Login',
+                name: 'Login/SignUp',
                 icon: 'login',
-                route: 'home'
+                route: 'login/signUp'
             }
         ]
         return (
@@ -45,7 +54,7 @@ class HeaderComponentMobile extends Component {
                 <div className="header-mobile-wrapper">
                     <div className="left-section">
                         <div className="logo-container">
-                        <img style={{ height: "40px", width: "130px" }} src={require('../../../assets/raxologo8888.png')} alt="Raxoweb" />
+                            <img style={{ height: "40px", width: "130px" }} src={require('../../../assets/raxologo8888.png')} alt="Raxoweb" />
                         </div>
                     </div>
                     <div className="right-section">
@@ -59,19 +68,19 @@ class HeaderComponentMobile extends Component {
                             onClose={this.onClose}
                             visible={this.state.visible}
                             className='mobile-header-drawer-container'
-                            style={{zIndex:999999999}}
+                            style={{ zIndex: 999999999 }}
                         >
                             <div className="drawer-content-main-container">
                                 <div className="title-container">
                                     <h2>RAXOWEB</h2>
                                     <h4>Enhance Your Success With Us</h4>
                                 </div>
-                              
+
 
                                 <div className="links-container">
                                     {
                                         links.map((linkItem, index) =>
-                                            <div key={index} className="link-item">
+                                            <div key={index} className="link-item" onClick={() => this.gotoPage(linkItem.route)}>
                                                 <Icon type={linkItem.icon} />
                                                 <h3>{linkItem.name}</h3>
                                             </div>
