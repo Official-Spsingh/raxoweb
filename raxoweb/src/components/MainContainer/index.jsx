@@ -1,29 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LandingPageContainer from '../modules/LandingPageContainer';
 import HeaderComponent from '../modules/HeaderComponent';
 import { Route, Switch } from "react-router";
-import FooterComponent from '../modules/FooterComponent';
 import BlogsContainer from '../modules/BlogsContainer';
 import HeaderComponentMobile from '../modules/HeaderComponentMobile';
+import LoginSignupContainer from '../modules/LoginSignUpContainer';
+import BootCampContainer from '../modules/BootCampContainer';
+import FooterComponent from '../modules/FooterComponent';
+
 const MainContainer = (props) => {
+    const [visible, setModalVisible] = useState(false)
     return (
         <div className="main-container">
-            <HeaderComponent />
-            <HeaderComponentMobile/>
+            <HeaderComponent setModalVisible={setModalVisible} />
+            <HeaderComponentMobile setModalVisible={setModalVisible} />
             <Switch>
                 <Route exact path="/">
                     <LandingPageContainer />
                 </Route>
                 <Route exact path="/blogs">
-                    <BlogsContainer/>
+                    <BlogsContainer />
+                </Route>
+                <Route exact path="/bootcamp">
+                  <BootCampContainer/>
                 </Route>
                 <Route path="/*">
                     <LandingPageContainer />
                 </Route>
+                
             </Switch>
-            <FooterComponent/>
-            
-
+            <LoginSignupContainer visible={visible} setModalVisible={setModalVisible} />
+            <FooterComponent />
         </div>
     )
 }

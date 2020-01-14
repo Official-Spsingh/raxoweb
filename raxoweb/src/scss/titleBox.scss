@@ -1,6 +1,7 @@
 .title-box-component-main-container {
   display: flex;
   height: 100vh;
+  margin: 18px 0px;
   @media (max-width:600px)
   {
     flex-direction: column;

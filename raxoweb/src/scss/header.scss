@@ -39,6 +39,7 @@
         img {
           height: 90px;
           width: 90px;
+          cursor: pointer;
         }
       }
     }
@@ -51,11 +52,13 @@
         span {
           cursor: pointer;
           font-weight: 700;
+          cursor: pointer;
         }
       }
       .login {
         background: #0a3d62;
         color: #FAFAFA;
+        border-radius: 5px;
       }
       .cancel{
         color: #0A3D62;
