@@ -15,7 +15,7 @@ const BootCamp = (props) => {
                 </div>
             </div>
             <div className="image-container">
-                <img class="clip-animation" src={'https://raxowebapi.herokuapp.com/landing-page-images/bootcamp.png'}></img>
+                <img className="clip-animation" src={'https://raxowebapi.herokuapp.com/landing-page-images/bootcamp.png'}></img>
             </div>
         </div>
     )

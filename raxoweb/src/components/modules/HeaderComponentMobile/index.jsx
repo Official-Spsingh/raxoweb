@@ -54,7 +54,7 @@ class HeaderComponentMobile extends Component {
                 <div className="header-mobile-wrapper">
                     <div className="left-section">
                         <div className="logo-container" onClick={() => this.gotoPage('/')}>
-                            <img style={{ height: "40px", width: "130px" }} src={require('../../../assets/raxologo8888.png')} alt="Raxoweb" />
+                            <img style={{ height: "40px", width: "130px" }} src={require('../../../assets/logo-full.png')} alt="Raxoweb" />
                         </div>
                     </div>
                     <div className="right-section">

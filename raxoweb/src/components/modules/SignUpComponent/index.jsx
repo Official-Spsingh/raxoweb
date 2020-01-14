@@ -3,9 +3,7 @@ import {Form,Input,Icon,Button} from'antd'
 import makeRequest from '../../../utils/makeRequest'
 
 const SignUpComponent = (props) => {
-    const [passwordUpdated,setPasswordUpdate]=useState(false)
     const { getFieldDecorator } = props.form;
-    
     const handleSubmit=(e)=>{
         e.preventDefault()
         props.form.validateFields((value,err)=>{
@@ -31,9 +29,6 @@ const SignUpComponent = (props) => {
       callback();
     }
   };
-    const onPasswordChange=()=>{
-        setPasswordUpdate(true)
-    }
     return (
         <div className="signup-component-main-container">
             <div className="heading-container">
@@ -75,7 +70,6 @@ const SignUpComponent = (props) => {
               prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
               type="password"
               placeholder="Enter your Password"
-                onChange={onPasswordChange}
             />,
           )}
         </Form.Item>
