@@ -1,0 +1,20 @@
+#RaxowebMain{
+.ant-modal-body{
+    padding: 0px;
+    .loginSignupContainer{
+       
+        .loginSignup-tabs{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 1px solid #0a3d62;
+            height: 50px;
+        }
+        .tab-content{
+            min-height: 400px;
+        }
+    }
+}
+  
+}
+

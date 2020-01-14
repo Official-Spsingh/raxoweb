@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router";
 import BlogsContainer from '../modules/BlogsContainer';
 import HeaderComponentMobile from '../modules/HeaderComponentMobile';
 import LoginSignupContainer from '../modules/LoginSignUpContainer';
+import FooterComponent from '../modules/FooterComponent';
 const MainContainer = (props) => {
     const [visible, setModalVisible] = useState(false)
     return (
@@ -23,6 +24,7 @@ const MainContainer = (props) => {
                 </Route>
             </Switch>
             <LoginSignupContainer visible={visible} setModalVisible={setModalVisible} />
+            <FooterComponent />
         </div>
     )
 }
