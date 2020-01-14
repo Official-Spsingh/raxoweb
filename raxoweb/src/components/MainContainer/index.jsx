@@ -24,7 +24,7 @@ const MainContainer = (props) => {
                 <Route exact path="/bootcamp">
                   <BootCampContainer/>
                 </Route>
-                <Route path="/*">
+                <Route path="*">
                     <LandingPageContainer />
                 </Route>
                 
