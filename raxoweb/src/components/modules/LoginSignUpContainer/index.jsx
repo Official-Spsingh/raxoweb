@@ -1,6 +1,7 @@
-import React from "react";
-import { Modal } from "antd";
-import { useState } from "react";
+import React,{useState} from "react"
+import { Modal } from "antd"
+import LoginComponent from '../LoginComponent'
+import SignUpContainer from '../SignUpContainer'
 
 export default function LoginSignUpContainer({ visible, setModalVisible }) {
   const [activeTab, setActiveTab] = useState("login");
@@ -22,11 +23,12 @@ export default function LoginSignUpContainer({ visible, setModalVisible }) {
           </div>
         </div>
         <div className="tab-content">
-          {activeTab == "login" ? (
-            <div className="loginContent">login</div>
-          ) : (
-            <div className="signupContent">signup</div>
-          )}
+          {
+            activeTab == "login" ?
+              <LoginComponent />
+              :
+              <SignUpContainer />
+          }
         </div>
       </div>
     </Modal>
