@@ -14,7 +14,7 @@ export default function LoginSignUpContainer({ visible, setModalVisible }) {
     >
       <div className="loginSignupContainer">
         <div className="loginSignup-tabs">
-          <div className="login" onClick={() => setActiveTab("login")}>
+          <div className="login" onClick={() => setActiveTab("login")} >
             Login
           </div>
           <div className="signup" onClick={() => setActiveTab("signup")}>
