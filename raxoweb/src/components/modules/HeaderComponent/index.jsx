@@ -11,7 +11,7 @@ const HeaderComponent = (props) => {
             <div className="header-content-container">
                 <div className="header-content-left">
                     <div className="header-logo-container" onClick={() => gotoPage('')}>
-                        <img style={{ height: "40px", width: "130px" }} src={require('../../../assets/raxologo8888.png')} alt="Raxoweb" />
+                        <img style={{ height: "40px", width: "130px" }} src={require('../../../assets/logo-full.png')} alt="Raxoweb" />
 
 
                     </div>
