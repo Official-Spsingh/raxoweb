@@ -3,4 +3,54 @@
 
   min-height: 84vh;
   padding: 65px 0px;
+  .blog-item{
+    padding: 30px 45px 0px 45px;
+    .blog-heading{
+      font-size: 28px;
+      font-weight: 600;
+    }
+    .blog-author{
+      display: flex;
+    justify-content: flex-start;
+    margin: 24px 0px 0px 0px;
+      .author-pic{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        color: #fff;
+        background: #0a3d62;
+        border-radius: 50%;
+        .anticon{
+padding: 2px;
+        }
+      }
+      .author-name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 20px;
+      }
+    }
+    .blog-content{
+      padding: 20px 0px;
+    font-size: 16px;
+    word-spacing: 1.5px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+      .blog-date{
+        font-style: italic;
+        font-family: monospace;
+        padding: 0px 5px 0px 0px;
+      }
+      .loadMore{
+        padding: 0px 0px 0px 8px;
+        color: #0a3d62;
+        font-style: italic;
+        cursor: pointer;
+      }
+    }
+  }
 }
