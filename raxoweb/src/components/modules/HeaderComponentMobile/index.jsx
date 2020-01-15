@@ -23,6 +23,7 @@ class HeaderComponentMobile extends Component {
         }
         else {
             this.props.setModalVisible(true)
+            this.props.setActiveTab('login')
         }
         this.onClose()
     }

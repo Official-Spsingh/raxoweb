@@ -6,6 +6,10 @@ const HeaderComponent = (props) => {
     const gotoPage = (link) => {
         props.history.push(link)
     }
+    const setActiveModal=(type)=>{
+       props.setModalVisible(true) 
+       props.setActiveTab(type)
+    }
     return (
         <div className="header-main-container">
             <div className="header-content-container">
@@ -28,10 +32,10 @@ const HeaderComponent = (props) => {
 
                 <div className="header-content-right">
 
-                    <div className="header-content cancel" onClick={()=>props.setModalVisible(true)}>
+                    <div className="header-content cancel" onClick={()=>setActiveModal('signup')}>
                         <span>SignUp</span>
                     </div>
-                    <div className="header-content login" onClick={()=>props.setModalVisible(true)}>
+                    <div className="header-content login" onClick={()=>setActiveModal('login')}>
                         <span>Login</span>
                     </div>
                 </div>
