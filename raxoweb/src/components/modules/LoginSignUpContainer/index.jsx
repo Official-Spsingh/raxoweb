@@ -3,8 +3,7 @@ import { Modal } from "antd"
 import LoginComponent from '../LoginComponent'
 import SignUpContainer from '../SignUpContainer'
 
-export default function LoginSignUpContainer({ visible, setModalVisible }) {
-  const [activeTab, setActiveTab] = useState("login");
+export default function LoginSignUpContainer({ visible, setModalVisible,activeTab,setActiveTab }) {
   return (
     <Modal
       visible={visible}

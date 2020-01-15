@@ -55,8 +55,8 @@ const SignUpComponent = (props) => {
                 <
                 div className = "heading-container" >
                 <
-                h2 > Sign Up < /h2> <
-                /div> <
+                h2 > Sign Up < /h2> < /
+                div > <
                 div className = "signup-form-container" >
                 <
                 Form onSubmit = {
@@ -72,7 +72,8 @@ const SignUpComponent = (props) => {
                         }],
                     })( <
                         Input prefix = {
-                            < Icon type = "user"
+                            <
+                            Icon type = "user"
                             style = {
                                 {
                                     color: 'rgba(0,0,0,.25)'
@@ -80,7 +81,8 @@ const SignUpComponent = (props) => {
                             }
                             />}
                             placeholder = "Enter your UserName" /
-                            > ,
+                            >
+                            ,
                         )
                     } <
                     /Form.Item> <
@@ -98,7 +100,8 @@ const SignUpComponent = (props) => {
                             ],
                         })( <
                             Input prefix = {
-                                < Icon type = "user"
+                                <
+                                Icon type = "user"
                                 style = {
                                     {
                                         color: 'rgba(0,0,0,.25)'
@@ -106,7 +109,8 @@ const SignUpComponent = (props) => {
                                 }
                                 />}
                                 placeholder = "Enter your Email" /
-                                > ,
+                                >
+                                ,
                             )
                         } <
                         /Form.Item> <
@@ -123,7 +127,8 @@ const SignUpComponent = (props) => {
                                 ],
                             })( <
                                 Input prefix = {
-                                    < Icon type = "lock"
+                                    <
+                                    Icon type = "lock"
                                     style = {
                                         {
                                             color: 'rgba(0,0,0,.25)'
@@ -132,7 +137,8 @@ const SignUpComponent = (props) => {
                                     />}
                                     type = "password"
                                     placeholder = "Enter your Password" /
-                                    > ,
+                                    >
+                                    ,
                                 )
                             } <
                             /Form.Item> <
@@ -149,7 +155,8 @@ const SignUpComponent = (props) => {
             ],
                                 })( <
                                     Input prefix = {
-                                        < Icon type = "lock"
+                                        <
+                                        Icon type = "lock"
                                         style = {
                                             {
                                                 color: 'rgba(0,0,0,.25)'
@@ -158,7 +165,8 @@ const SignUpComponent = (props) => {
                                         />}
                                         type = "password"
                                         placeholder = "Confirm your Password" /
-                                        > ,
+                                        >
+                                        ,
                                     )
                                 } <
                                 /Form.Item> <
@@ -168,10 +176,10 @@ const SignUpComponent = (props) => {
                                 htmlType = "submit"
                                 block className = "login-form-button" >
                                 Sign Up <
-                                /Button> <
-                                /Form.Item> <
-                                /Form> <
-                                /div> <
+                                /Button> < /
+                                Form.Item > <
+                                /Form> < /
+                                div > <
                                 /div>
                             )
                         }

@@ -10,10 +10,11 @@ import FooterComponent from '../modules/FooterComponent';
 
 const MainContainer = (props) => {
     const [visible, setModalVisible] = useState(false)
+     const [activeTab, setActiveTab] = useState("login");
     return (
         <div className="main-container">
-            <HeaderComponent setModalVisible={setModalVisible} />
-            <HeaderComponentMobile setModalVisible={setModalVisible} />
+            <HeaderComponent setModalVisible={setModalVisible} setActiveTab={setActiveTab} />
+            <HeaderComponentMobile setModalVisible={setModalVisible} setActiveTab={setActiveTab} />
             <Switch>
                 <Route exact path="/">
                     <LandingPageContainer />
@@ -29,7 +30,7 @@ const MainContainer = (props) => {
                 </Route>
                 
             </Switch>
-            <LoginSignupContainer visible={visible} setModalVisible={setModalVisible} />
+            <LoginSignupContainer visible={visible} setModalVisible={setModalVisible} activeTab={activeTab} setActiveTab={setActiveTab} />
             <FooterComponent />
         </div>
     )
