@@ -1,11 +1,12 @@
 .grow-your-buisness {
   display: flex;
+  justify-content: space-between;
   @media (max-width:768px)
   {
     flex-direction: column;
   }
   .left-section {
-    width: 50%;
+    width: 40%;
     @media (max-width:768px)
     {
       width: 100%;
@@ -26,7 +27,7 @@
           height: 100%;
           img {
             height: 500px;
-            width: 100%;
+            // width: 100%;
             @media (max-width:768px)
             {
               height: 370px;
@@ -38,14 +39,14 @@
     }
   }
   .right-section {
-    width: 50%;
+    width: 53%;
     @media (max-width:768px)
     {
       width: 100%;
     }
     .right-section-container {
-      margin: 115px 8%;
-      width: 70%;
+      margin: 115px 2%;
+      width: 80%;
       @media (max-width:768px)
       {
         width: 98%;
@@ -65,14 +66,14 @@
           .header-right-secion {
             font-weight: 500;
             margin: 8px;
-            font-size: 22px;
+            font-size: 26px;
           }
         }
         .content-section {
           font-weight: 500;
           text-align: left;
           padding: 0px 10px 0px 55px;
-          font-size: 15px;
+          font-size: 17px;
         }
       }
     }
