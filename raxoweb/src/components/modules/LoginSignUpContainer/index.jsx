@@ -26,7 +26,7 @@ export default function LoginSignUpContainer({ visible, setModalVisible,activeTa
             activeTab == "login" ?
               <LoginComponent />
               :
-              <SignUpContainer />
+              <SignUpContainer setModalVisible={setModalVisible}/>
           }
         </div>
       </div>

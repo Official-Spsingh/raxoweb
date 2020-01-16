@@ -1,9 +1,47 @@
-.signup-component-main-container{
+.signup-container-main-container {
+  .ant-tabs-bar {
+    display: none;
+  }
+
+  .signup-component-main-container {
     padding: 10px 20px;
-    .heading-container{
-        text-align: center;
+    .heading-container {
+      text-align: center;
     }
-    .signup-form-container{
-        padding: 5px 10px;
+    .signup-form-container {
+      padding: 5px 10px;
     }
+  }
+  .otp-component-main-container {
+    padding: 20px;
+    .heading-container {
+      text-align: center;
+      padding: 10px;
+    }
+    .otp-form-container {
+      padding: 10px;
+      .otp-input-container {
+          text-align: center;
+        padding: 10px 5px 20px;
+        .container-style {
+          justify-content: center;
+          .input-style {
+            text-align: center;
+            width: 45px !important;
+            height: 45px !important;
+            margin: 5px !important;
+            border: 1px solid #989898 !important;
+          }
+        }
+      }
+      .otp-verify-button-container {
+        padding: 15px 5px;
+      }
+      .otp-footer-buttons-container {
+        padding: 20px 5px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
 }
