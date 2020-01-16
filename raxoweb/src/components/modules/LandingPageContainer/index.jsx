@@ -11,9 +11,15 @@ const LandingPageContainer = props => {
       <TitleBoxComponent />
       <HomePageContentContainer title="Delivering Digital Experience">
         <p>
-          We help you to present yourself ravishing digitally. Manage your
+          Digitally adapt design thinking process to deep examine your customers need.
+          Make your oragnization alligned to future operation model.
+          Manage your people, work efficiently in a manner never done. Data handling and
+          analysis made easy, fast and in a creative manner. Adapt agility in your data 
+          to make it more clear and usefull.
+
+          {/* We help you to present yourself ravishing digitally. Manage your
           people, work efficiently in a manner never done. Data handling and
-          analysys made easy, fast and in a creative manner.
+          analysys made easy, fast and in a creative manner. */}
         </p>
       </HomePageContentContainer>
       <HomePageContentContainer title="Manage Handle Grow Your Business With Us">

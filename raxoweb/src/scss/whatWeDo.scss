@@ -14,11 +14,12 @@
         }
 
         .top-section {
-          height: 65%;
+          height: 75%;
         }
         .buttom-section {
-          height: 35%;
-          background: url("https://raxowebapi.herokuapp.com/landing-page-images/whatwedowave.png");
+          height: 25%;
+          // background: url("https://raxowebapi.herokuapp.com/landing-page-images/whatwedowave.png");
+          background: #000000b3;
           background-size: cover;
           background-repeat: no-repeat;
           border-bottom-left-radius: 20px;
@@ -26,16 +27,18 @@
           .title-section {
             display: flex;
             justify-content: center;
+            align-items: center;
             padding: 48px 0px;
             height: 100%;
             font-size: 18px;
             font-weight: 500;
             letter-spacing: 2px;
+            color: whitesmoke;
           }
         }
       }
       .container1 {
-        background: url("https://raxowebapi.herokuapp.com/landing-page-images/whatwedo1.jpg");
+        background: url("https://raxowebapi.herokuapp.com/landing-page-images/whatwedo1.jpg");       
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;

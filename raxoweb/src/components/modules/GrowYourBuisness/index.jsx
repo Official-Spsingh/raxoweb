@@ -27,8 +27,9 @@ const GrowYourBuisness = (props) => {
 
                         </div>
                         <div className="content-section">
-                            A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.
-        </div>
+                            Grow your organization by making proper and effective use of data you already have.
+                            Future predictions and decision making made easy. 
+                             </div>
                     </div>
 
                     <div className="growth-list-section">
@@ -42,8 +43,10 @@ const GrowYourBuisness = (props) => {
 
                         </div>
                         <div className="content-section">
-                            A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.
-        </div>
+                            Managing your customers,employees no more a headache. Raxoweb provides you tool for handling all
+                            the request through a single platform. Bring in more visibility and transparency with our tools.
+                        
+                         </div>
                     </div>
 
                     <div className="growth-list-section">
@@ -57,8 +60,11 @@ const GrowYourBuisness = (props) => {
 
                         </div>
                         <div className="content-section">
-                            A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.
-        </div>
+                            We focus on providing our customers a premium and an unforgettable experience with all our products.
+                            
+                             
+
+                             </div>
                     </div>
 
                 </div> </div>
