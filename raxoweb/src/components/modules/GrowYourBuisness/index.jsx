@@ -1,5 +1,8 @@
 import React from 'react';
-
+growBuisness = require('../../media/images/growBuisness.jpg')
+growthicon = require('../../media/images/growthicon.png')
+manageicon = require('../../media/images/manageicon.png')
+experience = require('../../media/images/experience.png')
 const GrowYourBuisness = (props) => {
     return (
         <div className="grow-your-buisness">
@@ -7,7 +10,7 @@ const GrowYourBuisness = (props) => {
                 <div className="outer-section">
                     <div className="middle-section">
                         <div className="image-container">
-                            <img src={'https://raxowebapi.herokuapp.com/landing-page-images/growBuisness.jpg'} />
+                            <img src={growBuisness.jpg} />
                         </div>
                     </div>
                 </div>
@@ -19,7 +22,7 @@ const GrowYourBuisness = (props) => {
                     <div className="growth-list-section">
                         <div className="header-section">
                             <div className="header-left-section">
-                                <img src={'https://raxowebapi.herokuapp.com/landing-page-images/growthicon.png'}></img>
+                                <img src={growthicon}></img>
                             </div>
                             <div className="header-right-secion">
                                 Growth
@@ -35,7 +38,7 @@ const GrowYourBuisness = (props) => {
                     <div className="growth-list-section">
                         <div className="header-section">
                             <div className="header-left-section">
-                                <img src={'https://raxowebapi.herokuapp.com/landing-page-images/manageicon.png'}></img>
+                                <img src={manageicon.png}></img>
                             </div>
                             <div className="header-right-secion">
                                 Management
@@ -52,7 +55,7 @@ const GrowYourBuisness = (props) => {
                     <div className="growth-list-section">
                         <div className="header-section">
                             <div className="header-left-section">
-                                <img src={'https://raxowebapi.herokuapp.com/landing-page-images/experience.png'}></img>
+                                <img src={experience}></img>
                             </div>
                             <div className="header-right-secion">
                                 Experience

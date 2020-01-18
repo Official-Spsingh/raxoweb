@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import { withRouter } from "react-router";
+bootcamp = require('../../media/images/bootcamp.png')
 const BootCamp = (props) => {
     const gotoPage = (link) => {
         props.history.push(link)
@@ -15,7 +16,7 @@ const BootCamp = (props) => {
                 </div>
             </div>
             <div className="image-container">
-                <img className="clip-animation" src={'https://raxowebapi.herokuapp.com/landing-page-images/bootcamp.png'}></img>
+                <img className="clip-animation" src={bootcamp}></img>
             </div>
         </div>
     )
