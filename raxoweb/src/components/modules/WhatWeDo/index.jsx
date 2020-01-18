@@ -8,7 +8,6 @@ const WhatWeDo = (props) => {
                 <Col xl={6} lg={6} md={12} sm={24} xs={24}>
                     <div className="card-container container1">
                         <div className="top-section">
-
                         </div>
                         <div className="buttom-section">
                             <div className="title-section">
