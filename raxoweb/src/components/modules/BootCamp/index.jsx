@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import { withRouter } from "react-router";
-bootcamp = require('../../media/images/bootcamp.png')
+const bootcamp = require('../../../media/images/bootcamp.png')
 const BootCamp = (props) => {
     const gotoPage = (link) => {
         props.history.push(link)
