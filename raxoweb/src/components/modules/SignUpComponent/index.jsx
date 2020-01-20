@@ -30,7 +30,7 @@ const SignUpComponent = (props) => {
                 makeRequest.post('register', dataToSend)
                     .then(response => {
                         setSignUpLoading(false)
-                        if (response.data.status.code == 201) {
+                        if (response.data.status.code == 201 || response.data.status.code == 202) {
                             props.setActiveKey('otp')
                         } else if (response.data.status.code == 409) {
                             enableEmailValidation(true)

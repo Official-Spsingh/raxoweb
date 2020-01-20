@@ -9,6 +9,7 @@ const OtpComponent = (props) => {
         props.form.validateFields((err, value) => {
             if (!err) {
                 setLoading(true)
+                console.log(value)
             }
         })
 
@@ -26,10 +27,10 @@ const OtpComponent = (props) => {
                                 rules: [{ required: true, message: 'Please enter OTP sent to your email Id' }],
                             })(
                                 <OtpInput
-                                    onChange={otp => console.log(otp)}
                                     numInputs={4}
                                     containerStyle='container-style'
                                     inputStyle='input-style'
+                                    isInputNum={true}
                                 />
                             )}
                         </Form.Item>
