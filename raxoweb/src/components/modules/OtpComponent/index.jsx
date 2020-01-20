@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import OtpInput from 'react-otp-input'
 import { Button, Form } from 'antd'
+import makeRequest from '../../../utils/makeRequest'
 const OtpComponent = (props) => {
     const { getFieldDecorator } = props.form
     const [loading, setLoading] = useState(false)
@@ -9,7 +10,7 @@ const OtpComponent = (props) => {
         props.form.validateFields((err, value) => {
             if (!err) {
                 setLoading(true)
-                console.log(value)
+                // makeRequest.post('')
             }
         })
 
