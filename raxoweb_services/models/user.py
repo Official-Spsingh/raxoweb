@@ -9,18 +9,24 @@ class UserModel(db.Model):
     password = db.Column(db.String(80))
     email = db.Column(db.String(80))
     isactive = db.Column(db.String(5))
-    def __init__(self, username, password,email):
+
+    def __init__(self, username, password, email, isactive):
         self.username = username
         self.password = password
         self.email = email
-        self.isactive = 'False'
+        self.isactive = isactive
+
     def save_to_db(self):
         db.session.add(self)
         db.session.commit()
 
+    def delete_from_db(self):
+        db.session.delete(self)
+        db.session.commit()
+
     @classmethod
     def find_by_email(cls, email):
-        return cls.query.filter_by(email=email)
+        return cls.query.filter_by(email=email).first()
 
     # @classmethod
     # def find_by_id(cls, _id):

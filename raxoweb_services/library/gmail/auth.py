@@ -1,27 +1,29 @@
-
 from __future__ import print_function
 import httplib2
 import os
 
-from apiclient import discovery
+from apiclient import discovery, errors
 from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
+import argparse
 
 try:
-    import argparse
+
     flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
 except ImportError:
     flags = None
 
+
 class auth:
-    def __init__(self,SCOPES,CLIENT_SECRET_FILE, APPLICATION_NAME):
+    def __init__(self, SCOPES, CLIENT_SECRET_FILE, APPLICATION_NAME):
         self.SCOPES = SCOPES
         self.CLIENT_SECRET_FILE = CLIENT_SECRET_FILE
         self.APPLICATION_NAME = APPLICATION_NAME
+
     def get_credentials(self):
         cwd_dir = os.getcwd()
-        credential_dir = os.path.join(cwd_dir, '.credentials')
+        credential_dir = os.path.join(cwd_dir, 'library/gmail/.credentials')
         if not os.path.exists(credential_dir):
             os.makedirs(credential_dir)
         credential_path = os.path.join(credential_dir,
@@ -34,7 +36,7 @@ class auth:
             flow.user_agent = self.APPLICATION_NAME
             if flags:
                 credentials = tools.run_flow(flow, store, flags)
-            else: # Needed only for compatibility with Python 2.6
+            else:  # Needed only for compatibility with Python 2.6
                 credentials = tools.run(flow, store)
             print('Storing credentials to ' + credential_path)
         return credentials
