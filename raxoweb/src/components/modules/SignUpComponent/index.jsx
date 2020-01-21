@@ -179,8 +179,8 @@ const SignUpComponent = (props) => {
                                     }
                                 />}
                                 type="password"
-                                placeholder="Confirm your Password" /
-                            >
+                                placeholder="Confirm your Password"
+                            />
                                         ,
                             )
                         }
