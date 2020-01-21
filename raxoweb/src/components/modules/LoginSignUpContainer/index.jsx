@@ -1,9 +1,10 @@
-import React,{useState} from "react"
-import { Modal } from "antd"
-import LoginComponent from '../LoginComponent'
+import React, { useState } from "react"
+import { Modal,Tabs } from "antd"
+import LoginContainer from '../LoginContainer'
 import SignUpContainer from '../SignUpContainer'
+const { TabPane } = Tabs;
 
-export default function LoginSignUpContainer({ visible, setModalVisible,activeTab,setActiveTab }) {
+export default function LoginSignUpContainer({ visible, setModalVisible, activeTab, setActiveTab }) {
   return (
     <Modal
       visible={visible}
@@ -11,24 +12,17 @@ export default function LoginSignUpContainer({ visible, setModalVisible,activeTa
       footer={null}
       closable={false}
       getContainer={() => document.getElementById("RaxowebMain")}
+      destroyOnClose={true}
     >
       <div className="loginSignupContainer">
-        <div className="loginSignup-tabs">
-          <div className="login" onClick={() => setActiveTab("login")} >
-            Login
-          </div>
-          <div className="signup" onClick={() => setActiveTab("signup")}>
-            SignUp
-          </div>
-        </div>
-        <div className="tab-content">
-          {
-            activeTab == "login" ?
-              <LoginComponent />
-              :
-              <SignUpContainer setModalVisible={setModalVisible}/>
-          }
-        </div>
+        <Tabs activeKey={activeTab}>
+          <TabPane key='login' tab='Login'>
+            <LoginContainer setModalVisible={setModalVisible} setActiveTab={setActiveTab} />
+          </TabPane>
+          <TabPane key="signup" tab='Sign Up'>
+            <SignUpContainer setModalVisible={setModalVisible} setActiveTab={setActiveTab} />
+          </TabPane>
+        </Tabs>
       </div>
     </Modal>
   );

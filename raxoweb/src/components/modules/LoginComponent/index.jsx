@@ -1,9 +1,54 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Avatar, Form, Icon, Input, Button } from 'antd'
+import makeRequest from '../../../utils/makeRequest'
 
 const LoginComponent = (props) => {
+  const [loading, setLoading] = useState(false)
+  const [message, setMessage] = useState('')
   const handleSubmit = (e) => {
     e.preventDefault()
+    props.form.validateFields((err, value) => {
+      if (!err) {
+        setLoading(true)
+        makeRequest.post('login', value)
+          .then(response => {
+            if (response.data.status.code == 400) {
+              setMessage("User not Found")
+              props.form.validateFields(['email'], { force: true })
+              setLoading(false)
+            }
+            else if (response.data.status.code == 405) {
+              makeRequest.post('resend-otp', { email: value.email })
+                .then(response => {
+                  if (response.data.status.code == 201) {
+                    props.setEmail(value.email)
+                    props.setActiveKey('otp')
+                  }
+                  else {
+
+                  }
+                })
+                .catch(err => {
+                  console.log(err)
+                })
+            }
+            else if (response.data.status.code == 200) {
+              props.loginSuccessFull()
+            }
+          })
+          .catch(err => {
+            console.log(err)
+          })
+      }
+    })
+  }
+  const emailValidator = (rule, value, callback) => {
+    if (message.length) {
+      callback(message)
+    }
+    else {
+      callback()
+    }
   }
   const { getFieldDecorator } = props.form;
   return (
@@ -17,12 +62,13 @@ const LoginComponent = (props) => {
       <div className="login-form-container">
         <Form onSubmit={handleSubmit} className="login-form">
           <Form.Item>
-            {getFieldDecorator('username', {
-              rules: [{ required: true, message: 'Please enter your Username' }],
+            {getFieldDecorator('email', {
+              rules: [{ required: true, message: 'Please enter your email' }, { type: 'email', message: 'Invalid email Id' }, { validator: emailValidator }],
             })(
               <Input
                 prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                placeholder="Username"
+                placeholder="Email"
+                onKeyDown={() => setMessage('')}
               />,
             )}
           </Form.Item>
@@ -38,13 +84,12 @@ const LoginComponent = (props) => {
             )}
           </Form.Item>
           <Form.Item>
-            <Button type="primary" htmlType="submit" block className="login-form-button">
+            <Button type="primary" htmlType="submit" block className="login-form-button" loading={loading}>
               Log in
           </Button>
             <div className="forgot-password-container">
-              <a className="login-form-forgot" href="">
-                Forgot password ?
-              </a>
+              <Button type="link" onClick={() => props.setActiveTab('signup')}>Sign Up</Button>
+              <Button type="link">Forgot Password ?</Button>
             </div>
           </Form.Item>
         </Form>

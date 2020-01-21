@@ -26,6 +26,7 @@ const SignUpComponent = (props) => {
                 let dataToSend = {
                     ...value
                 }
+                props.setEmail(value.email)
                 delete dataToSend['confirmPassword']
                 makeRequest.post('register', dataToSend)
                     .then(response => {
@@ -109,7 +110,7 @@ const SignUpComponent = (props) => {
                                     },
                                     {
                                         type: 'email',
-                                        meaasge: 'Invalid email Id'
+                                        message: 'Invalid email Id'
                                     },
                                     {
                                         validator: emailValidator
@@ -189,6 +190,7 @@ const SignUpComponent = (props) => {
                             Sign Up
                         </Button>
                     </Form.Item >
+                    <Button type="link" onClick={() => props.setActiveTab('login')}>Already a user ?</Button>
                 </Form>
             </div >
         </div>
