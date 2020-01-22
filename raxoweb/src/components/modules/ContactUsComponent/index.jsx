@@ -5,9 +5,9 @@ const { TabPane } = Tabs;
 export default class ContactUs extends Component {
   state = {
     visible: false,
-    activeTab: "1",
+    activeTab: "2",
     loading: false,
-    status: "",
+    status: "success",
     message: "",
     subMessage: ""
   };
@@ -48,7 +48,11 @@ export default class ContactUs extends Component {
       }
     }
   };
-
+  goToContactUs=()=>{
+    this.setState({
+      activeTab:"1"
+    })
+  }
   render() {
     return (
       <div className="contact-us-main-container">
@@ -93,9 +97,12 @@ export default class ContactUs extends Component {
                   title={this.state.message}
                   subTitle={this.state.subMessage}
                   extra={[
+                   <div style={{display:"flex"}}>
                     <Button key="cancelContact" onClick={this.closeModal}>
                       Cancel
                     </Button>
+                    <Button key="goToContactUs" onClick={this.goToContactUs}>Submit Another Response</Button>
+                    </div>
                   ]}
                 />
               </div>
