@@ -97,7 +97,13 @@ export default class ContactUs extends Component {
                   title={this.state.message}
                   subTitle={this.state.subMessage}
                   extra={[
-                    <div style={{ display: "flex" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-around",
+                        alignItems: "center"
+                      }}
+                    >
                       <Button key="cancelContact" onClick={this.closeModal}>
                         Cancel
                       </Button>
