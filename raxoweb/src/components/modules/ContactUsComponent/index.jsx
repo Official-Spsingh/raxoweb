@@ -22,7 +22,7 @@ export default class ContactUs extends Component {
     });
   };
   dataSent = (data, status) => {
-    console.log(data,status)
+    console.log(data, status);
     if (data) {
       this.setState({
         loading: true
@@ -36,8 +36,8 @@ export default class ContactUs extends Component {
           message: "Your message has been successfully sent !",
           subMessage: "Our team will contact you soon..."
         });
-      } 
-      if(status=="error"){
+      }
+      if (status == "error") {
         this.setState({
           loading: false,
           activeTab: "2",
@@ -48,11 +48,11 @@ export default class ContactUs extends Component {
       }
     }
   };
-  goToContactUs=()=>{
+  goToContactUs = () => {
     this.setState({
-      activeTab:"1"
-    })
-  }
+      activeTab: "1"
+    });
+  };
   render() {
     return (
       <div className="contact-us-main-container">
@@ -97,11 +97,17 @@ export default class ContactUs extends Component {
                   title={this.state.message}
                   subTitle={this.state.subMessage}
                   extra={[
-                   <div style={{display:"flex"}}>
-                    <Button key="cancelContact" onClick={this.closeModal}>
-                      Cancel
-                    </Button>
-                    <Button key="goToContactUs" onClick={this.goToContactUs}>Submit Another Response</Button>
+                    <div style={{ display: "flex" }}>
+                      <Button key="cancelContact" onClick={this.closeModal}>
+                        Cancel
+                      </Button>
+                      <Button
+                        key="goToContactUs"
+                        type="primary"
+                        onClick={this.goToContactUs}
+                      >
+                        Submit Again
+                      </Button>
                     </div>
                   ]}
                 />
