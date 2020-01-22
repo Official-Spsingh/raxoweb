@@ -23,7 +23,7 @@ const BlogsContainer = props => {
             <div className="blog-content">
               <div className="blog-date">9 hours ago </div>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ad reiciendis nemo quia numquam eos asperiores quasi dolorum eveniet, libero sunt consequuntur quibusdam voluptas enim placeat recusandae ratione excepturi quisquam.
-          <span className="loadMore">Load more...</span>
+              <div className="loadMore">Load more...</div>
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@ const BlogsContainer = props => {
       </div>
       <div className="blog-item">
         <div className="blog-heading">
-         How to master coding in just a month !
+          How to master coding in just a month !
       </div>
         <div className="blog-content-wrapper">
           <div className="blog-title-image">
@@ -47,9 +47,9 @@ const BlogsContainer = props => {
           </div>
             </div>
             <div className="blog-content">
-            <div className="blog-date">January 14, 2020</div>
+              <div className="blog-date">January 14, 2020</div>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ad reiciendis nemo quia numquam eos asperiores quasi dolorum eveniet, libero sunt consequuntur quibusdam voluptas enim placeat recusandae ratione excepturi quisquam.
-          <span className="loadMore">Load more...</span>
+          <div className="loadMore">Load more...</div>
             </div>
           </div>
         </div>
