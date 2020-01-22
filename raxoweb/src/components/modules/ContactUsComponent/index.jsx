@@ -5,7 +5,7 @@ const { TabPane } = Tabs;
 export default class ContactUs extends Component {
   state = {
     visible: false,
-    activeTab: "2",
+    activeTab: "1",
     loading: false,
     status: "success",
     message: "",
