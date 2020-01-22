@@ -5,39 +5,45 @@
 .contact-us-modal-main-container {
   .ant-modal-content {
     border-radius: 6px;
+    min-height: 446px;
     .ant-modal-body {
       padding: 0;
-      .contact-us-container {
-        .contact-box {
-          background: whitesmoke;
-          border-radius: 6px;
-          .form-container {
-            padding: 0 15px 15px;
-            .title-container {
-              text-align: center;
-              padding: 15px 10px;
-              h1 {
-                margin: 0;
+      .ant-tabs {
+        .ant-tabs-bar {
+          display: none;
+        }
+        .contact-us-container {
+          .contact-box {
+            background: whitesmoke;
+            border-radius: 6px;
+            .form-container {
+              padding: 0 15px 15px;
+              .title-container {
+                text-align: center;
+                padding: 15px 10px;
+                h1 {
+                  margin: 0;
+                }
               }
-            }
-            .contact-buttons {
-              display: flex;
-              justify-content: flex-end;
-              .contact-btn {
-                margin: 5px 10px;
-                width: 115px;
-                height: 35px;
-              }
-              .submit {
-                background: #0a3d62;
-                color: #fafafa;
-                border: none;
-              }
-              .cancel {
-                background: #fafafa;
-                &:hover{
-                  color:#0a3d62;
-                  border-color:#0a3d62; 
+              .contact-buttons {
+                display: flex;
+                justify-content: flex-end;
+                .contact-btn {
+                  margin: 5px 10px;
+                  width: 115px;
+                  height: 35px;
+                }
+                .submit {
+                  background: #0a3d62;
+                  color: #fafafa;
+                  border: none;
+                }
+                .cancel {
+                  background: #fafafa;
+                  &:hover {
+                    color: #0a3d62;
+                    border-color: #0a3d62;
+                  }
                 }
               }
             }
