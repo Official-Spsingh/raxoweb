@@ -11,10 +11,11 @@ export default function LoginSignUpContainer({ visible, setModalVisible, activeT
       onCancel={() => setModalVisible(false)}
       footer={null}
       centered={true}
-      closable={false}
+      closable={true}
       getContainer={() => document.getElementById("RaxowebMain")}
       destroyOnClose={true}
       wrapClassName="login-signup-modal"
+      maskClosable={false}
     >
       <div className="loginSignupContainer">
         <Tabs activeKey={activeTab}>

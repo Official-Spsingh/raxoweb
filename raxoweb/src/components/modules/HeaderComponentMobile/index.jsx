@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router";
-import { Icon, Drawer } from 'antd'
+import { Icon, Drawer, Button } from 'antd'
 
 class HeaderComponentMobile extends Component {
 
@@ -43,11 +43,6 @@ class HeaderComponentMobile extends Component {
                 name: 'Blogs',
                 icon: 'block',
                 route: 'blogs'
-            },
-            {
-                name: 'Login/SignUp',
-                icon: 'login',
-                route: 'login/signUp'
             }
         ]
         return (
@@ -55,10 +50,13 @@ class HeaderComponentMobile extends Component {
                 <div className="header-mobile-wrapper">
                     <div className="left-section">
                         <div className="logo-container" onClick={() => this.gotoPage('/')}>
-                            <img style={{ height: "40px", width: "130px" }} src={require('../../../assets/logo-full.png')} alt="Raxoweb" />
+                            <img style={{ height: "45px", width: "45px" }} src={require('../../../assets/logo.png')} alt="Raxoweb" />
                         </div>
                     </div>
                     <div className="right-section">
+                        <div className="login-btn">
+                            <Button onClick={() => this.gotoPage('login/signUp')}>Login</Button>
+                        </div>
                         <div className="icon-container" onClick={this.showDrawer}>
                             <Icon type="menu" />
 

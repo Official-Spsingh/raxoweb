@@ -64,12 +64,19 @@ const SignUpComponent = props => {
   };
   return (
     <div className="signup-component-main-container">
+      <div className="img-container">
+        <img src={require("../../../assets/logo.png")} />
+      </div>
       <div className="heading-container">
-        <h2> Sign Up </h2>
+        <h2> Sign up To Raxoweb </h2>
       </div>
       <div className="signup-form-container">
-        <Form onSubmit={handleSubmit} className="login-form">
-          <Form.Item>
+        <Form
+          onSubmit={handleSubmit}
+          className="login-form"
+          autoComplete={false}
+        >
+          <Form.Item label="Username">
             {getFieldDecorator("username", {
               rules: [
                 {
@@ -77,21 +84,9 @@ const SignUpComponent = props => {
                   message: "Please enter your Username"
                 }
               ]
-            })(
-              <Input
-                prefix={
-                  <Icon
-                    type="user"
-                    style={{
-                      color: "rgba(0,0,0,.25)"
-                    }}
-                  />
-                }
-                placeholder="Enter your UserName"
-              />
-            )}
+            })(<Input/>)}
           </Form.Item>
-          <Form.Item>
+          <Form.Item label="Email">
             {getFieldDecorator("email", {
               rules: [
                 {
@@ -106,22 +101,9 @@ const SignUpComponent = props => {
                   validator: emailValidator
                 }
               ]
-            })(
-              <Input
-                prefix={
-                  <Icon
-                    type="user"
-                    style={{
-                      color: "rgba(0,0,0,.25)"
-                    }}
-                  />
-                }
-                placeholder="Enter your Email"
-                onFocus={() => enableEmailValidation(false)}
-              />
-            )}
+            })(<Input onFocus={() => enableEmailValidation(false)}/>)}
           </Form.Item>
-          <Form.Item>
+          <Form.Item label="Password">
             {getFieldDecorator("password", {
               rules: [
                 {
@@ -132,22 +114,9 @@ const SignUpComponent = props => {
                   validator: validateToNextPassword
                 }
               ]
-            })(
-              <Input
-                prefix={
-                  <Icon
-                    type="lock"
-                    style={{
-                      color: "rgba(0,0,0,.25)"
-                    }}
-                  />
-                }
-                type="password"
-                placeholder="Enter your Password"
-              />
-            )}{" "}
+            })(<Input type="password" />)}{" "}
           </Form.Item>
-          <Form.Item>
+          <Form.Item label="Confirm Password">
             {getFieldDecorator("confirmPassword", {
               rules: [
                 {
@@ -158,20 +127,7 @@ const SignUpComponent = props => {
                   validator: compareToFirstPassword
                 }
               ]
-            })(
-              <Input
-                prefix={
-                  <Icon
-                    type="lock"
-                    style={{
-                      color: "rgba(0,0,0,.25)"
-                    }}
-                  />
-                }
-                type="password"
-                placeholder="Confirm your Password"
-              />
-            )}
+            })(<Input type="password" />)}
           </Form.Item>
           <Form.Item>
             <Button
@@ -184,9 +140,13 @@ const SignUpComponent = props => {
               Sign Up
             </Button>
           </Form.Item>
+          <div className="login-btn">
+            <span className="alreadyauser">Already a member?</span>
           <Button type="link" onClick={() => props.setActiveTab("login")}>
-            Already a user ?
+           Login
           </Button>
+          </div>
+         
         </Form>
       </div>
     </div>

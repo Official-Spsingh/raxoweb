@@ -29,10 +29,24 @@
       }
     }
     .right-section {
-      width: 50%;
-      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .login-btn{
+        .ant-btn{
+          border: 0px;
+          box-shadow: none;
+          background: transparent;
+          font-size: 18px;
+          color: #000a49;
+          outline: none;
+          cursor: pointer;
+        }
+    
+
+      }
       .icon-container {
-        margin: 0px 24px;
+        margin: 0px 24px 0px 12px;
         cursor: pointer;
         i {
           font-size: 24px;

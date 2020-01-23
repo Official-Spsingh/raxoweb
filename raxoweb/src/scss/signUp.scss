@@ -1,15 +1,84 @@
 .signup-container-main-container {
+  padding: 10px 30px;
+  @media (max-width:768px){
+    padding: 5px;
+  }
   .ant-tabs-bar {
     display: none;
   }
 
   .signup-component-main-container {
-    padding: 10px 20px;
+    .img-container {
+      width: 50px;
+      height: 50px;
+      margin: 0px calc(50% - 25px);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
     .heading-container {
       text-align: center;
+      h2 {
+        font: bold 24px/29px "Haas Grot Text R Web", "Helvetica Neue", Helvetica,
+          Arial, sans-serif;
+        margin-bottom: 20px;
+        padding: 5px 10px;
+      }
     }
     .signup-form-container {
       padding: 5px 10px;
+      .ant-form {
+        .ant-row {
+          margin-bottom: 0px !important;
+          .ant-col {
+            label {
+              &::before {
+                content: "" !important;
+              }
+            }
+            input {
+              border: 0px;
+              border-radius: 0px;
+              border-bottom: 1px solid #000a4994;
+              &:focus {
+                outline: none;
+                box-shadow: none;
+                background: transparent;
+              }
+             
+            }
+            .ant-btn{
+              width: 50%;
+              margin: 0px 25%;
+              margin-top: 20px;
+              height: 38px;
+              background: #000a49e0;
+              color: #fafafa;
+              border: 0px;
+            }
+          }
+          .ant-form-item-label{
+            padding: 10px 0px 0px 0px;
+            line-height: 20px;
+          }
+        }
+        .login-btn{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .alreadyauser{
+            color: #1f275fd1;
+            padding: 10px 0px;
+          }
+          .ant-btn{
+            color: #1f275fd1;
+            padding: 0px 7px;
+            font-weight: 600;
+          }
+        }
+        
+      }
     }
   }
   .otp-component-main-container {
@@ -42,11 +111,26 @@
       }
       .otp-verify-button-container {
         padding: 15px 5px;
+        .ant-btn{
+          width: 100%;
+          height: 38px;
+          background: #000a49e0;
+          color: #fafafa;
+          border: 0px;
+        }
       }
       .otp-footer-buttons-container {
         padding: 20px 5px;
         display: flex;
         justify-content: space-between;
+        .ant-btn{
+          width: 30%;
+          height: 38px;
+          background: #000a49e0;
+          color: #fafafa;
+          border: 0px;
+          margin: 0px 10%;
+        }
       }
     }
   }
