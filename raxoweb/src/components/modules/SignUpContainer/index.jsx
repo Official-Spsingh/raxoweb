@@ -10,7 +10,10 @@ const SignUpContainer = (props) => {
   const [email, setEmail] = useState('')
   useEffect(() => {
     if (activeKey == 'success') {
-      setTimeout(() => props.setActiveTab('login'), 2000)
+      setTimeout(() =>{
+        props.setActiveTab('login')
+        setActiveKey('signUp')
+      } , 2000)
     }
   }, [activeKey])
   return (
