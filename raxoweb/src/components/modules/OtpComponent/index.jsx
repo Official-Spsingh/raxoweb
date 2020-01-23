@@ -46,6 +46,7 @@ const OtpComponent = props => {
   const otpValidator = (rule, value, callback) => {
     if (message.length) {
       callback(message);
+      setMessage("")
     } else {
       callback();
     }
@@ -93,7 +94,6 @@ const OtpComponent = props => {
                   containerStyle="container-style"
                   inputStyle="input-style"
                   isInputNum={true}
-                  onChange={() => setMessage("")}
                 />
               )}
             </Form.Item>

@@ -14,8 +14,14 @@ const LoginComponent = props => {
           .post("login", value)
           .then(response => {
             if (response.data.status.code == 400) {
-              setMessage("User not Found");
-              props.form.validateFields(["email"], { force: true });
+              if (response.data.status.value == 'user not found yaa') {
+                setMessage("User not Found");
+                props.form.validateFields(["email"], { force: true });
+              }
+              else if (response.data.status.value == "Wrong password") {
+                setMessage(response.data.status.value)
+                props.form.validateFields(['password'], { force: true })
+              }
               setLoading(false);
             } else if (response.data.status.code == 405) {
               makeRequest
@@ -40,7 +46,7 @@ const LoginComponent = props => {
       }
     });
   };
-  const emailValidator = (rule, value, callback) => {
+  const inputValidator = (rule, value, callback) => {
     if (message.length) {
       callback(message);
     } else {
@@ -63,7 +69,7 @@ const LoginComponent = props => {
               rules: [
                 { required: true, message: "Please enter your email" },
                 { type: "email", message: "Invalid email Id" },
-                { validator: emailValidator }
+                { validator: inputValidator }
               ]
             })(
               <Input
@@ -76,13 +82,14 @@ const LoginComponent = props => {
           </Form.Item>
           <Form.Item label="Password">
             {getFieldDecorator("password", {
-              rules: [{ required: true, message: "Please enter your Password" }]
+              rules: [{ required: true, message: "Please enter your Password" },{validator:inputValidator}]
             })(
               <Input
                 prefix={
                   <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
                 }
                 type="password"
+                onKeyDown={() => setMessage("")}
               />
             )}
           </Form.Item>
@@ -105,9 +112,9 @@ const LoginComponent = props => {
               </Button>
             </div>
             <div className="forgotpass">
-            <Button type="link">Forgot Password ?</Button>
+              <Button type="link">Forgot Password ?</Button>
             </div>
-            
+
           </div>
         </Form>
       </div>
