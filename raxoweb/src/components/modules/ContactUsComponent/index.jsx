@@ -5,7 +5,7 @@ const { TabPane } = Tabs;
 export default class ContactUs extends Component {
   state = {
     visible: false,
-    activeTab: "1",
+    activeTab: "2",
     loading: false,
     status: "success",
     message: "",
@@ -18,7 +18,8 @@ export default class ContactUs extends Component {
   };
   closeModal = () => {
     this.setState({
-      visible: false
+      visible: false,
+      activeTab:"1"
     });
   };
   dataSent = (data, status) => {
@@ -109,7 +110,7 @@ export default class ContactUs extends Component {
                       </Button>
                       <Button
                         key="goToContactUs"
-                        type="primary"
+                        style={{background:"#0a3d62",color:"#fafafa"}}
                         onClick={this.goToContactUs}
                       >
                         Submit Again

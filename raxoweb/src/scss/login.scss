@@ -1,6 +1,6 @@
 .login-component-main-container {
   padding: 20px;
-  @media (max-width:768px){
+  @media (max-width: 768px) {
     padding: 5px;
   }
   .img-container {
@@ -47,7 +47,7 @@
             width: 100%;
             margin-top: 20px;
             height: 38px;
-            background: #000a49e0;
+            background: #0a3d62;
             color: #fafafa;
             border: 0px;
           }
@@ -61,15 +61,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @media(max-width:768px){
-            display: block;
+        @media (max-width: 768px) {
+          display: block;
         }
         .signup {
-            @media(max-width:768px){
-                text-align: center;
-            }
+          @media (max-width: 768px) {
+            text-align: center;
+          }
           .alreadyauser {
-            color: #1f275fd1;
+            color: #0a3d62;
             padding: 10px 0px;
           }
           .ant-btn {
@@ -78,15 +78,14 @@
             font-weight: 600;
           }
         }
-        .forgotpass{
-            text-align: center;
-            .ant-btn {
-                color: #1f275fd1;
-                padding: 0px 2px;
-                font-weight: 600;
-              }
+        .forgotpass {
+          text-align: center;
+          .ant-btn {
+            color: #0a3d62;
+            padding: 0px 2px;
+            font-weight: 600;
+          }
         }
-        
       }
     }
   }

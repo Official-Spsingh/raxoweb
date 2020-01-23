@@ -14,7 +14,7 @@
         }
         .contact-us-container {
           .contact-box {
-            background: whitesmoke;
+            background: #fff;
             border-radius: 6px;
             .form-container {
               padding: 0 15px 15px;
@@ -52,4 +52,7 @@
       }
     }
   }
+}
+.ant-modal-mask{
+  background-color: rgba(0, 0, 0, 0.82);
 }

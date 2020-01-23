@@ -53,7 +53,7 @@
               margin: 0px 25%;
               margin-top: 20px;
               height: 38px;
-              background: #000a49e0;
+              background: #0a3d62;
               color: #fafafa;
               border: 0px;
             }
@@ -68,7 +68,7 @@
           justify-content: center;
           align-items: center;
           .alreadyauser{
-            color: #1f275fd1;
+            color: #0a3d62;
             padding: 10px 0px;
           }
           .ant-btn{
@@ -82,16 +82,23 @@
     }
   }
   .otp-component-main-container {
-    padding: 20px;
+    padding: 0px;
+    .img-container {
+      width: 50px;
+      height: 50px;
+      margin: 0px calc(50% - 25px);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
     .heading-container {
       text-align: center;
-      padding: 10px;
     }
     .otp-form-container {
-      padding: 10px;
+      padding: 10px 0px;
       .otp-input-container {
         text-align: center;
-        padding: 10px 5px 20px;
         .container-style {
           justify-content: center;
           .input-style {
@@ -110,11 +117,12 @@
         }
       }
       .otp-verify-button-container {
-        padding: 15px 5px;
+        padding: 0px;
         .ant-btn{
-          width: 100%;
+          width: 50%;
+          margin: 0px 25%;
           height: 38px;
-          background: #000a49e0;
+          background: #0a3d62;
           color: #fafafa;
           border: 0px;
         }
@@ -122,14 +130,14 @@
       .otp-footer-buttons-container {
         padding: 20px 5px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         .ant-btn{
-          width: 30%;
+          width: 24%;
           height: 38px;
-          background: #000a49e0;
+          background: #0a3d62;
           color: #fafafa;
           border: 0px;
-          margin: 0px 10%;
+          margin: 0px 2%;
         }
       }
     }
