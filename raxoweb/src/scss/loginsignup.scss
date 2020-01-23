@@ -1,12 +1,39 @@
 #RaxowebMain {
-  .ant-modal-mask{
+  .ant-modal-mask {
     background-color: rgba(0, 0, 0, 0.82);
   }
-  .ant-modal-body {
-    padding: 0px;
-    .loginSignupContainer {
-      .ant-tabs-bar {
-        display: none;
+  .login-signup-modal {
+    .ant-modal {
+      width: 800px !important;
+      @media (max-width: 768px) {
+        width: 520px !important;
+      }
+
+      .ant-modal-content {
+        .ant-modal-body {
+          padding: 0px;
+          .login-signup-container-wrapper {
+            display: flex;
+            @media (max-width: 768px) {
+              display: block;
+            }
+            .img-containers {
+              width: 47%;
+              @media (max-width: 768px) {
+                display: none;
+              }
+            }
+            .loginSignupContainer {
+              width: 53%;
+              @media (max-width: 768px) {
+                width: 100%;
+              }
+              .ant-tabs-bar {
+                display: none;
+              }
+            }
+          }
+        }
       }
     }
   }

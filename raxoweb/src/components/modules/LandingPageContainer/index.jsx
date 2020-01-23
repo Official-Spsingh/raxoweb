@@ -5,6 +5,7 @@ import GrowYourBuisness from "../GrowYourBuisness";
 import WhatWeDo from "../WhatWeDo";
 import BootCamp from "../BootCamp";
 import ContactUs from "../ContactUsComponent";
+import BlogsComponent from "../BlogsComponent";
 const LandingPageContainer = props => {
   return (
     <div className="landing-page-container">
@@ -33,6 +34,12 @@ const LandingPageContainer = props => {
         subTitle="Spending Hours In Coaching Still Feel less Confident !"
       >
         <BootCamp />
+      </HomePageContentContainer>
+      <HomePageContentContainer
+        title="Blogs"
+        subTitle="Read and Write Amazing blogs"
+      >
+        <BlogsComponent/>
       </HomePageContentContainer>
       <HomePageContentContainer
         title="Contact Us"

@@ -17,6 +17,11 @@ export default function LoginSignUpContainer({ visible, setModalVisible, activeT
       wrapClassName="login-signup-modal"
       maskClosable={false}
     >
+      <div className="login-signup-container-wrapper">
+        <div className="img-containers">
+          <img src={require('../../../media/images/prototype3.jpg')} width="100%" height="100%"/>
+        </div>
+     
       <div className="loginSignupContainer">
         <Tabs activeKey={activeTab}>
           <TabPane key='login' tab='Login'>
@@ -26,6 +31,7 @@ export default function LoginSignUpContainer({ visible, setModalVisible, activeT
             <SignUpContainer setModalVisible={setModalVisible} setActiveTab={setActiveTab} />
           </TabPane>
         </Tabs>
+      </div>
       </div>
     </Modal>
   );
