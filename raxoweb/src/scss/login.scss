@@ -1,7 +1,7 @@
 .login-component-main-container {
-  padding: 20px;
+  padding: 58px 20px;
   @media (max-width: 768px) {
-    padding: 5px;
+    padding: 64px 5px;
   }
   .img-container {
     width: 50px;
@@ -88,5 +88,11 @@
         }
       }
     }
+  }
+}
+.forgotpassword{
+  padding: 120px 20px;
+  @media (max-width: 768px) {
+    padding: 135px 5px;
   }
 }

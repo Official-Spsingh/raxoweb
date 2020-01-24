@@ -25,6 +25,7 @@
             }
             .loginSignupContainer {
               width: 53%;
+              min-height: 520px !important;
               @media (max-width: 768px) {
                 width: 100%;
               }

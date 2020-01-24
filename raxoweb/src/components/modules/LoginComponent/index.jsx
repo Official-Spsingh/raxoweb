@@ -112,7 +112,7 @@ const LoginComponent = props => {
               </Button>
             </div>
             <div className="forgotpass">
-              <Button type="link">Forgot Password ?</Button>
+              <Button type="link" onClick={()=>props.setActiveKey('forgotPassword')}>Forgot Password ?</Button>
             </div>
 
           </div>
