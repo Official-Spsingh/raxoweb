@@ -2,7 +2,17 @@ import React from 'react';
 const BootCampContainer = (props) => {
     return (
         <div className="bootcamp-container">
-         Bootcamp Container
+         <div className="bootcamp-sec1">
+             <img src={require('../.././../media/images/character6.png')}></img>
+             <div className="bootcamp-sec1-content">
+                        <div className="header-sec">
+                            Master Your Skills
+                            <br></br>
+                            Prepare your path to success
+                        </div>
+             </div>
+         </div>
+         
         </div>
     )
 }
