@@ -14,10 +14,10 @@ const TitleBoxComponent = (props) => {
                         Enhance your success with us
                     </h3>
                     <h1 className="main-heading">
-                    Insights for the connected world
+                        Insights for the connected world
                     </h1>
                     <h2 className="sub-heading">
-                    Passionate people | Creative solutions
+                        Passionate people | Creative solutions
                     </h2>
                     <div className="learn-more-button">
                         <h2>Learn More</h2>
