@@ -19,7 +19,7 @@ export default function LoginSignUpContainer({ visible, setModalVisible, activeT
     >
       <div className="login-signup-container-wrapper">
         <div className="img-containers">
-          <img src={require('../../../media/images/prototype3.jpg')} width="100%" height="100%"/>
+          <img src={require('../../../media/images/prototype3.png')} width="100%" height="100%" style={{padding: "8% 0% 2% 10%"}}/>
         </div>
      
       <div className="loginSignupContainer">

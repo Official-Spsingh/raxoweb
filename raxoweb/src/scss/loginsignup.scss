@@ -4,7 +4,7 @@
   }
   .login-signup-modal {
     .ant-modal {
-      width: 800px !important;
+      width: 900px !important;
       @media (max-width: 768px) {
         width: 520px !important;
       }
@@ -18,13 +18,13 @@
               display: block;
             }
             .img-containers {
-              width: 47%;
+              width: 52%;
               @media (max-width: 768px) {
                 display: none;
               }
             }
             .loginSignupContainer {
-              width: 53%;
+              width: 48%;
               min-height: 520px !important;
               @media (max-width: 768px) {
                 width: 100%;
