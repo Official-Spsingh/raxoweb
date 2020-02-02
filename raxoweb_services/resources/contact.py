@@ -11,7 +11,7 @@ class ContactUs(Resource):
                         help="This field cannot be blank")
     parser.add_argument('lastname',
                         type=str,
-                        required=True,
+                        required=False,
                         help="This field cannot be blank")
     parser.add_argument('email',
                         type=str,
@@ -29,9 +29,9 @@ class ContactUs(Resource):
     @staticmethod
     def post():
         data = ContactUs.parser.parse_args()
-        userinfo = ContactModel(data['firstname'], data['lastname'],
+        userinfo = ContactModel(data['firstname'],
                                 data['email'], data['mobile'],
-                                data['message'])
+                                data['message'], data['lastname'])
         userinfo.save_to_db()
         mail_info(data['email'], data['firstname'])
         mail_me(data['firstname'], data['email'], data['mobile'], data['message'])

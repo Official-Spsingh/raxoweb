@@ -5,7 +5,7 @@ from models.validate import ValidateUser
 current_time = datetime.datetime
 
 
-class Otp:
+class OtpGenerate:
     @staticmethod
     def generate(email):
         code = random.randint(1000, 9999)

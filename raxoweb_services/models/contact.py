@@ -7,10 +7,10 @@ class ContactModel(db.Model):
     firstname = db.Column(db.String(80))
     lastname = db.Column(db.String(80))
     email = db.Column(db.String(80))
-    mobile = db.Column(db.Integer)
+    mobile = db.Column(db.BigInteger)
     message = db.Column(db.String(200))
 
-    def __init__(self, firstname, lastname, email, mobile, message):
+    def __init__(self, firstname, email, mobile, message, lastname=None):
         self.firstname = firstname
         self.lastname = lastname
         self.email = email

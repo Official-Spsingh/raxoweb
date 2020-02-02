@@ -1,11 +1,14 @@
 from flask_restful import Resource, reqparse
 from models.user import UserModel
-from models.validate import ValidateUser
+from models.validate import ValidateUser, ResetHash
 import datetime
 from library.gmail.mail import mail_otp
-from library.otp.otpgenerator import Otp
+from library.otp.otpgenerator import OtpGenerate
+from flask import render_template, make_response, redirect
+import hashlib
 
 current_time = datetime.datetime
+generat_otp = OtpGenerate()
 
 
 class AuthUser(Resource):
@@ -45,7 +48,7 @@ class AuthUser(Resource):
             }
         if int(data['code']) == code:
             print("value saved to db")
-            user_value.isactive = 'True'
+            user_value.isactive = True
             user_value.save_to_db()
             print("done up to here")
             validate_value.delete_from_db()
@@ -80,31 +83,6 @@ class AuthUser(Resource):
         #     }
 
 
-class ResetPassword(Resource):
-    parser = reqparse.RequestParser()
-    parser.add_argument('email',
-                        type=str,
-                        required=True,
-                        help="This field cannot be blank."
-                        )
-
-    @staticmethod
-    def post():
-        data = ResetPassword.parser.parse_args()
-        code = Otp.generate(data['email'])
-        username = UserModel.find_by_email(data['email']).username
-        mail_otp(data['email'], str(code), username)
-        return {
-            "status": {
-                "code": 201,
-                "value": "201 created"
-            },
-            "data": {
-                "message": "OTP is sent to register email"
-            }
-        }
-
-
 class ResendOtp(Resource):
     parser = reqparse.RequestParser()
     parser.add_argument('email',
@@ -115,9 +93,8 @@ class ResendOtp(Resource):
 
     @staticmethod
     def post():
-
         data = ResetPassword.parser.parse_args()
-        code = Otp.generate(data['email'])
+        code = generat_otp.generate(data['email'])
         username = UserModel.find_by_email(data['email']).username
         mail_otp(data['email'], str(code), username)
         validate_value = ValidateUser.find_by_email(data['email'])
@@ -133,3 +110,80 @@ class ResendOtp(Resource):
                 "message": "OTP is sent to register email"
             }
         }
+
+
+class ResetPassword(Resource):
+    parser = reqparse.RequestParser()
+    parser.add_argument('email',
+                        type=str,
+                        required=True,
+                        help="This field cannot be blank."
+                        )
+
+    @staticmethod
+    def post():
+        data = ResetPassword.parser.parse_args()
+        user = UserModel.find_by_email(data['email'])
+        print(data['email'])
+        if user:
+            code = hashlib.md5(str.encode(data['email'])).hexdigest()
+            salt1 = "c2h56a7n3d25a1n9"
+            salt2 = "c94h6a78i42n91a73n58i"
+            final_code = salt1 + code + salt2
+            hash_table = ResetHash(data['email'], final_code)
+            hash_table.save_to_db()
+            url = "http://127.0.0.1:5000/forgot-password/" + final_code
+            # mail_otp(data['email'], str(code), username)
+            return {
+                "status": {
+                    "code": 200,
+                    "value": "200 success"
+                },
+                "data": {
+                    # "message": "mail send to registered email id"
+                    "message": url
+                }
+            }
+        else:
+            return {
+                "status": {
+                    "code": 400,
+                    "value": "404 Not found"
+                },
+                "data": {
+                    "message": "user not found"
+                }
+            }
+
+
+class GenerateReset(Resource):
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def get(otp):
+        headers = {'Content-Type': 'text/html'}
+        return make_response(render_template('index.html', email=otp), 200, headers)
+
+
+class ValidateReset(Resource):
+    parser = reqparse.RequestParser()
+    parser.add_argument('hash',
+                        type=str,
+                        help="this field can't be empty"
+                        )
+    parser.add_argument('password',
+                        type=str,
+                        help="this field can't be empty")
+
+    @staticmethod
+    def post():
+        data = ValidateReset.parser.parse_args()
+        hash_info = ResetHash.find_by_hash(data['hash'])
+        if hash_info:
+            email = hash_info.email
+            user = UserModel.find_by_email(email)
+            user.password = data['password']
+            user.save_to_db()
+            hash_info.delete_from_db()
+        return redirect("https://www.raxoweb.com", code=302)

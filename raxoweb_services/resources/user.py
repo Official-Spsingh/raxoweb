@@ -3,10 +3,38 @@ from models.user import UserModel
 from models.validate import ValidateUser
 import datetime
 from library.gmail.mail import mail_otp
-from library.otp.otpgenerator import Otp
+from library.otp.otpgenerator import OtpGenerate
+import uuid
+from werkzeug.security import generate_password_hash, check_password_hash
+import jwt
+# from functools import wraps
 
-current_time = datetime.datetime.now()
+generat_otp = OtpGenerate()
 
+
+# def token_required(f):
+#     @wraps(f)
+#     def decorated(*args, **kwargs):
+#         token = None
+#
+#         if 'x-access-token' in request.headers:
+#             token = request.headers['x-access-token']
+#
+#         if not token:
+#             return {'message': 'Token is missing!'}
+#
+#         try:
+#             data = jwt.decode(token, )
+#             current_user = User.query.filter_by(public_id=data['public_id']).first()
+#         except:
+#             return {'message': 'Token is invalid!'}
+#
+#         return f(current_user, *args, **kwargs)
+#
+#     return decorated
+
+
+# username, userpic, title , photo, content , category , time , hona chahiye
 
 class UserRegister(Resource):
     parser = reqparse.RequestParser()
@@ -57,8 +85,8 @@ class UserRegister(Resource):
                 past_user.username = data['username']
                 past_user.password = data['password']
                 past_user.save_to_db()
-                code = Otp.generate(data['email'])
-                valid_passcode =ValidateUser.find_by_email(data['email'])
+                code = generat_otp.generate(data['email'])
+                valid_passcode = ValidateUser.find_by_email(data['email'])
                 valid_passcode.code = code
                 valid_passcode.save_to_db()
                 mail_otp(data['email'], str(code), data['username'])
@@ -73,9 +101,10 @@ class UserRegister(Resource):
                 }
 
         try:
-            user = UserModel(data['username'], data['password'], data['email'], 'False')
+            hash_password = generate_password_hash(data['password'], method='sha256')
+            user = UserModel(data['username'], hash_password, data['email'], str(uuid.uuid4()), False, False)
             user.save_to_db()
-            code = Otp.generate(data['email'])
+            code = generat_otp.generate(data['email'])
             """send mail to user for otp"""
             mail_otp(data['email'], str(code), data['username'])
             return {
@@ -100,6 +129,9 @@ class UserRegister(Resource):
 
 
 class UserLogin(Resource):
+    def __init__(self, secret):
+        self.key = secret
+
     parser = reqparse.RequestParser()
     parser.add_argument('email',
                         type=str,
@@ -112,8 +144,7 @@ class UserLogin(Resource):
                         help="This field cannot be blank."
                         )
 
-    @staticmethod
-    def post():
+    def post(self):
         data = UserLogin.parser.parse_args()
         email = data['email']
         password = data['password']
@@ -124,18 +155,23 @@ class UserLogin(Resource):
             },
                        "status": {
                            "code": 400,
-                           "value": "user not found yaa"
+                           "value": "user not found."
                        }
                    }, 200
-        if valid_user.isactive == 'True':
-            if valid_user.password == password:
+        if valid_user.isactive:
+            if check_password_hash(valid_user.password, password):
+                token = jwt.encode({'id': valid_user.id,
+                                    'email': valid_user.email,
+                                    'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=30)},
+                                   self.key)
                 return {
                            "data": {
                                "username": valid_user.username
                            },
                            "status": {
                                "code": 200,
-                               "value": "login successfully"
+                               "value": "login successfully",
+                               "token": token.decode('UTF-8')
                            }
                        }, 200
             else:
