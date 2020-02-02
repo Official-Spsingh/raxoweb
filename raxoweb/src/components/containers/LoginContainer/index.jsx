@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import LoginComponent from "../LoginComponent";
-import ForgotPasswordComponent from "../ForgotPasswordComponent";
+import LoginComponent from "@modules/LoginComponent";
+import ForgotPasswordComponent from "@modules/ForgotPasswordComponent";
 import { Tabs, Result, Button, Icon, Spin, notification } from "antd";
-import OtpComponent from "../OtpComponent";
+import OtpComponent from "@modules/OtpComponent";
 const { TabPane } = Tabs;
 const antIcon = <Icon type="loading" style={{ fontSize: 24 }} spin />;
 

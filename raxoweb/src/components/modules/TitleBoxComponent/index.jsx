@@ -1,5 +1,5 @@
 import React from 'react';
-const image = require('../../../media/images/image.jpg')
+const image = require('@media/images/image.jpg')
 const TitleBoxComponent = (props) => {
     return (
         <div className="title-box-component-main-container">

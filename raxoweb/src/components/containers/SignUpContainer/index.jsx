@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import SignUpComponent from '../SignUpComponent'
+import SignUpComponent from '@modules/SignUpComponent'
 import { Tabs, Result, Button, Icon, Spin } from 'antd'
-import OtpComponent from '../OtpComponent';
+import OtpComponent from '@modules/OtpComponent';
 const { TabPane } = Tabs;
 const antIcon = <Icon type="loading" style={{ fontSize: 24 }} spin />
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Input, Icon, Button, notification } from "antd";
-import makeRequest from "../../../utils/makeRequest";
+import makeRequest from "@utils/makeRequest";
 
 const SignUpComponent = props => {
   const [emailValidationEnabled, enableEmailValidation] = useState(false);

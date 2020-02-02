@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import OtpInput from "react-otp-input";
 import { Button, Form, message as Message } from "antd";
-import makeRequest from "../../../utils/makeRequest";
+import makeRequest from "@utils/makeRequest";
 const OtpComponent = props => {
   const { getFieldDecorator } = props.form;
   const [loading, setLoading] = useState(false);

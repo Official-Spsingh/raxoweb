@@ -1,11 +1,11 @@
 import React from "react";
-import TitleBoxComponent from "../TitleBoxComponent";
-import HomePageContentContainer from "../HomePageContentContainer";
-import GrowYourBuisness from "../GrowYourBuisness";
-import WhatWeDo from "../WhatWeDo";
-import BootCamp from "../BootCamp";
-import ContactUs from "../ContactUsComponent";
-import BlogsComponent from "../BlogsComponent";
+import TitleBoxComponent from "@modules/TitleBoxComponent";
+import HomePageContentContainer from "@containers/HomePageContentContainer";
+import GrowYourBuisness from "@modules/GrowYourBuisness";
+import WhatWeDo from "@modules/WhatWeDo";
+import BootCamp from "@modules/BootCamp";
+import ContactUs from "@modules/ContactUsComponent";
+import BlogsComponent from "@modules/BlogsComponent";
 const LandingPageContainer = props => {
   return (
     <div className="landing-page-container">

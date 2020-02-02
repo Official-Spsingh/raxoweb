@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Avatar, Form, Icon, Input, Button } from "antd";
-import makeRequest from "../../../utils/makeRequest";
+import makeRequest from "@utils/makeRequest";
 
 const LoginComponent = props => {
   const [loading, setLoading] = useState(false);

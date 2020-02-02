@@ -1,8 +1,8 @@
 import React from 'react';
-const growBuisness = require('../../../media/images/growBuisness.jpg')
-const growthicon = require('../../../media/images/growthicon.png')
-const manageicon = require('../../../media/images/manageicon.png')
-const experience = require('../../../media/images/experience.png')
+const growBuisness = require('@media/images/growBuisness.jpg')
+const growthicon = require('@media/images/growthicon.png')
+const manageicon = require('@media/images/manageicon.png')
+const experience = require('@media/images/experience.png')
 const GrowYourBuisness = (props) => {
     return (
         <div className="grow-your-buisness">
