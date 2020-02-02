@@ -1,0 +1,21 @@
+.bootcamp-third-component-container {
+  background: #b9b3b3;
+  padding: 50px 40px;
+  .grid-container {
+    background: white;
+    .grid-item {
+      height: 200px;
+      & > img {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+      }
+      .content-container {
+        padding: 20px;
+        h2 {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

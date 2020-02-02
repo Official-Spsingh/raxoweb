@@ -1,0 +1,63 @@
+.bootcamp-second-component-container {
+  .content-box-container {
+    background: #252525;
+    text-align: center;
+    padding: 60px 10px 100px;
+    & > h1 {
+      color: #e5e1e1;
+      margin: 0;
+      padding: 5px;
+      text-transform: capitalize;
+    }
+    & > h2 {
+      color: #bdbdbd;
+    }
+  }
+  .programming-language-container {
+    position: relative;
+    top: -95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .language-box-container {
+      height: 160px;
+      width: 170px;
+      margin: 15px;
+      .outer-circle {
+        height: 100%;
+        width: 100%;
+        background: #3b82d2;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .inner-circle {
+          height: 65%;
+          width: 65%;
+          background: white;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          & > h2 {
+            margin: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+    @media (max-width:550px){
+        flex-direction: column;
+    }
+  }
+  @media (max-width: 817px) {
+    .content-box-container {
+      padding: 50px 10px 10px;
+    }
+    .programming-language-container {
+      position: static;
+    }
+    background: #252525;
+  }
+}
