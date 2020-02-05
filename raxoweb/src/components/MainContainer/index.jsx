@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import LandingPageContainer from '@containers/LandingPageContainer';
 import HeaderComponent from '@modules/HeaderComponent';
 import { Route, Switch, withRouter } from "react-router";
-import BlogsContainer from '@modules/BlogsContainer';
+import BlogsContainer from '@containers/BlogsContainer';
 import HeaderComponentMobile from '@modules/HeaderComponentMobile';
 import LoginSignupContainer from '@containers/LoginSignUpContainer';
 import BootCampContainer from '@containers/BootCampContainer';
