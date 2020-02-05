@@ -1,0 +1,65 @@
+.bootcamp-forth-component-container {
+  min-height: 450px;
+  @media(max-width:600px){
+    margin-bottom: 40px;
+  }
+  .bootcamp-sec-fourth-header {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header-title {
+      margin-bottom: 10px;
+      color: rgba(75, 75, 75, 0.88);
+      font-size: 30px;
+      text-align: center;
+    }
+    .green-strip {
+      border: 2px solid #0a3d62;
+      width: 110px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+  }
+  .sections-holder {
+    min-height: 350px;
+    padding: 10px 60px;
+    .section {
+      height: 140px;
+      margin-bottom: 20px;
+      .sec-row {
+        height: 100%;
+        .sec-col {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .image-container {
+            height: 100%;
+            text-align: center;
+            img {
+              height: 100%;
+              padding: 25px;
+            }
+          }
+          .title {
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 26px;
+            @media(max-width:600px){
+                text-align: center;
+              }
+          }
+          .subtitle {
+            font-weight: 500;
+            font-size: 17px;
+            @media(max-width:600px){
+                text-align: center;
+              }
+
+          }
+        }
+      }
+    }
+  }
+}
