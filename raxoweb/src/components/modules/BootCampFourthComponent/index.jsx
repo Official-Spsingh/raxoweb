@@ -1,9 +1,9 @@
 import React from 'react'
 import { Row,Col} from 'antd'
 import career from '../../../media/images/career.png'
-import outcome from '../../../media/images/outcome.png'
+import outcome from '../../../media/images/outcome1.png'
 import network from '../../../media/images/network.png'
-import implementation from '../../../media/images/implementation.png'
+import implementation from '../../../media/images/implement-png.png'
 
 const Items =
     [
@@ -38,9 +38,9 @@ function BootCampFourthComponent(props) {
         </div>
         <div className="sections-holder">
            
-            <Row>
+            <Row className="main-row">
                     {
-                        Items.map((item, index) => <Col xxl={12} xl={12} lg={12} md={12} sm={24} xs={24}>
+                        Items.map((item, index) => <Col className="main-col" xxl={12} xl={12} lg={12} md={12} sm={24} xs={24}>
                             <div className="section">
                                 <Row className="sec-row">
                                     <Col xxl={6} xl={8} lg={8} md={24} sm={24} xs={24} className="sec-col">

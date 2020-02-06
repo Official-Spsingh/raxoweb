@@ -4,25 +4,19 @@ import { Row, Col } from 'antd'
 const gridItems =
     [
         {
-            image: "@media/images/bootcamp.png"
-        },
-        {
+            image: "@media/images/bootcamp.png",
             title: "Learn with Fun",
             subTitle: "Student",
             description: "This has been best three months ever"
         },
         {
-            image: "@media/images/bootcamp.png"
-        },
-        {
+            image: "@media/images/bootcamp.png",
             title: "Learn with Fun",
             subTitle: "Student",
             description: "This has been best three months ever"
         },
         {
-            image: "@media/images/bootcamp.png"
-        },
-        {
+            image: "@media/images/bootcamp.png",       
             title: "Learn with Fun",
             subTitle: "Student",
             description: "This has been best three months ever"
