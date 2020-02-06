@@ -2,7 +2,7 @@
   min-height: 84vh;
   padding: 65px 0 20px;
   display: flex;
-  background: yellow;
+  background:whitesmoke;
   @media (max-width: 520px) {
     display: block;
   }
@@ -10,13 +10,13 @@
     padding: 0px;
     margin: 18px 1.66%;
     width: 30%;
-    background: #894646;
+    background: #fff;
     transition: 0.3s;
     border-radius: 12px;
     cursor: pointer;
     position: relative;
     &:hover {
-      box-shadow: 0 16px 32px rgba(32, 32, 49, 0.4), 0 4px 8px rgba(32, 32, 49, 0.2);
+      box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);;
       transform: translateY(-15px);
 
       transform: scale(1.02);
@@ -75,7 +75,7 @@
           word-spacing: 1.5px;
           letter-spacing: 1px;
           font-family: sans-serif;
-          height: 240px;
+          height: 175px;
         }
       }
     }

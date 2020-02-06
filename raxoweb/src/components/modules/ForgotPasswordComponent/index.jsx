@@ -11,7 +11,7 @@ const ForgotPasswordComponent = props => {
       if (!err) {
         setLoading(true);
         makeRequest
-          .post("forgotpassword", value)
+          .post("forgot-password", value)
           .then(response => {
             console.log(response);
           })
