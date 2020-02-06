@@ -7,7 +7,7 @@ const BlogsContainer = props => {
 
         <div className="blog-content-wrapper">
           <div className="blog-title-image">
-            <img src="https://www.anita.com/blog/us/wp-content/uploads/sites/3/2016/02/blog-success.jpg" />
+            <img src={require('../../../media/images/whatwedo1.jpg')} />
           </div>
 
           <div className="blog-content-container">
@@ -46,19 +46,19 @@ const BlogsContainer = props => {
 
         <div className="blog-content-wrapper">
           <div className="blog-title-image">
-            <img src="https://www.anita.com/blog/us/wp-content/uploads/sites/3/2016/02/blog-success.jpg" />
+            <img src={require('../../../media/images/whatwedo3.jpg')} />
           </div>
 
           <div className="blog-content-container">
             <div className="blog-category">
-              GUI DEVELOPMENT
+              MACHINE LEARNING
   </div>
             <div className="blog-heading">
-              Quantitative Data Tools For UX Designers Tools For UX Designers
+              Quality Analysis With Machine Learning
   </div>
             <div className="blog-content">
 
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.  enim placeLorem ipsum dolor sit amet consectetur adipisicing elit.  enim placeat recusandae ratione excepturi quisquam.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.  enim placeLorem ipsum dolor sit am
         
     </div>
 
@@ -75,9 +75,9 @@ const BlogsContainer = props => {
 
 
               <div className="author-name">
-                S P Singh
+                Bipul Singh
     </div>
-              <div className="blog-date">9 hours ago </div>
+              <div className="blog-date">14 hours ago </div>
             </div>
           </div>
         </div>
