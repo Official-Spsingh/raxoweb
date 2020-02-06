@@ -6,7 +6,10 @@ function GridComponent(props) {
             {   
                
                 <div className="content-container">
-                     {/* <img src={require('@media/images/bootcamp.png')} alt="gridImage"/> */}
+                    <div className="image-container">
+                    {/* <img src={require('@media/images/growBuisness.jpg')} alt="gridImage"/> */}
+                        </div>
+                     
                     <h2>Learn with Fun</h2>
                     <h3>Student</h3>
                     <p>This has been the best three months ever</p>
