@@ -4,29 +4,36 @@ import { Row, Col } from 'antd'
 const gridItems =
     [
         {
-            image: "@media/images/bootcamp.png",
-            title: "Learn with Fun",
+            image: "young-student-man.jpg",
+            title: "Career changer",
             subTitle: "Student",
-            description: "This has been best three months ever"
+            description: "“I wouldn’t have been able to grow as a developer, if I had gone to another bootcamp.”"
         },
         {
-            image: "@media/images/bootcamp.png",
-            title: "Learn with Fun",
+            image: "iStock-Asian.jpg",
+            title: "Learn with fun",
             subTitle: "Student",
-            description: "This has been best three months ever"
+            description: "“This has been best three months ever. Everyday at bootcamp was as exciting as first day.”"
         },
         {
-            image: "@media/images/bootcamp.png",       
-            title: "Learn with Fun",
+            image: "AdobeStock_257074046.jpeg",       
+            title: "Witness change",
             subTitle: "Student",
-            description: "This has been best three months ever"
+            description: "“By the first month, you start to realize I can already build stuff.I didn’t get that in college.”"
         }
     ]
 function BootCampThirdComponent(props) {
     return (
         <div className="bootcamp-third-component-container">
             <div className="grid-container">
-                <Row>
+                <div className="header-sec-container">
+                <div className="bootcamp-sec-header"> 
+                    Words From The Best
+                </div>
+                <div className="green-strip"></div>
+                </div>
+               
+                <Row className="grid-container-row">
                     {
                         gridItems.map((item, index) => <Col  xxl={8} xl={8} lg={8} md={8} sm={12} xs={24}><GridComponent key={index} gridItem={item} /></Col>)
                     }

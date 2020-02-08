@@ -1,0 +1,23 @@
+.bootcamp-fifth-section{
+
+    min-height: 350px;
+    padding: 15px 0px;
+    .header-sec-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+       .bootcamp-sec-header{
+         margin-bottom: 6px;
+         color: rgba(75, 75, 75, 0.88);
+         font-size: 30px;
+        }
+       .green-strip {
+         border: 2px solid #0a3d62;
+         width: 110px;
+         border-radius: 5px;
+         margin-bottom: 5px;
+       }
+      }
+}
