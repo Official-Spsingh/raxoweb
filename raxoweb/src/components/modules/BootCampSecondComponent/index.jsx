@@ -8,7 +8,7 @@ function BootCampSecondComponent(props) {
         <div className="bootcamp-second-component-container">
             <div className="content-box-container">
                 <h1>Courses that make you market ready</h1>
-                <h2>After having a survey on what technologies are needed currently, we offer following courses</h2>
+                <h3 style={{color:"#fff"}}>After having a survey on what technologies are needed currently, we offer following courses</h3>
             </div>
             <div className="programming-language-container">
                 {

@@ -1,6 +1,39 @@
 .contact-us-main-container {
   padding: 20px;
   text-align: center;
+  margin: 42px 0px 0px 0px;
+  background: #fff;
+  .contact-us-wrapper{
+    display: flex;
+    min-height: 300px;
+    height: fit-content;
+    @media(max-width:700px){
+     display: block;
+     min-height: fit-content;
+    }
+    .contact-us-image{
+width: 50%;
+@media(max-width:700px){
+  width: 100%;
+ }
+ img{
+ height: 300px;
+ }
+    }
+    .contact-us-content-container{
+      width: 50%;
+      @media(max-width:700px){
+        width: 100%;
+       }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      .contact-us-content{
+padding: 0px 15px;
+      }
+    }
+  }
 }
 .contact-us-modal-main-container {
   .ant-modal-content {

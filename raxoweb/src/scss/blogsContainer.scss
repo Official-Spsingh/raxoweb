@@ -1,47 +1,125 @@
 .blogs-container {
-  min-height: 84vh;
-  padding: 65px 0 20px;
-  display: flex;
-  @media(max-width:480px){
-    display: block;
+  min-height: calc(100vh - 75px);
+  padding: 64px 0 0px;
+  background: whitesmoke;
+  @media (max-width: 520px) {
+    height: fit-content;
+    min-height: fit-content;
   }
-  .blog-item {
-    padding: 30px 15px 0 15px;
-    width: 33.33%;
-    @media(max-width:768px){
-      width: 50%;
+  .blogs-header {
+    background: #282832;
+    color: #fafafa;
+    min-height: 250px;
+    text-align: center;
+    .header1 {
+      padding: 20px 0px;
+      font-size: 40px;
     }
-    @media(max-width:480px){
-      width: 100%;
+    .header2 {
+      font-size: 25px;
     }
-    .blog-heading {
-      font-size: 16px;
-      font-weight: 600;
+    button {
+      border: none;
       cursor: pointer;
+      display: inline-block;
+      margin: 15px 0px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      outline: none;
+      padding: 18px 40px;
+      overflow: hidden;
+      background: #fcad26;
+      color: #fff;
+    }
+  }
+  .blog-items-container {
+    display: flex;
+    @media (max-width: 520px) {
+      display: block;
     }
 
-    .blog-content-wrapper {
-      display: flex;
-      justify-content: space-around;
-      flex-direction: column;
-      @media (max-width: 768px) {
-        display: block;
+    .blog-item {
+      padding: 0px;
+      margin: 18px 1.66%;
+      width: 30%;
+      background: #fff;
+      transition: 0.3s;
+      border-radius: 12px;
+      cursor: pointer;
+      position: relative;
+      &:hover {
+        box-shadow: 8px 28px 50px rgba(39, 44, 49, 0.07), 1px 6px 12px rgba(39, 44, 49, 0.04);
+        transform: translateY(-15px);
+
+        transform: scale(1.02);
       }
-      .blog-title-image {
-        width: 100%;
-        cursor: pointer;
-        min-height: 195px;
-        max-height: 195px;
-        img {
+      @media (max-width: 865px) {
+        width: 48%;
+        margin: 16px 2%;
+      }
+      @media (max-width: 520px) {
+        width: 90%;
+        margin: 12px 5%;
+      }
+
+      .blog-content-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        @media (max-width: 768px) {
+          display: block;
+        }
+        .blog-title-image {
           width: 100%;
+          min-height: 200px;
+          max-height: 200px;
+          height: 200px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-top-right-radius: 12px;
+            border-top-left-radius: 12px;
+          }
+        }
+
+        .blog-content-container {
+          width: 100%;
+          padding: 15px 5%;
+          position: relative;
+          height: 100%;
+          .blog-category {
+            display: block;
+            color: #999;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+          }
+          .blog-heading {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0a0a0a;
+          }
+
+          .blog-content {
+            padding: 20px 0px;
+            font-size: 16px;
+            word-spacing: 1.5px;
+            letter-spacing: 1px;
+            font-family: sans-serif;
+            height: 175px;
+          }
         }
       }
-      .blog-content-container {
-        width: 100%;
+      .blog-footer {
+        position: absolute;
+        bottom: 12px;
+        left: 18px;
+        right: 0;
         .blog-author {
           display: flex;
           justify-content: flex-start;
-          margin: 24px 0px 0px 0px;
           .author-pic {
             width: 40px;
             height: 40px;
@@ -56,28 +134,15 @@
               padding: 2px;
             }
           }
-          .author-name {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0px 20px;
-          }
-        }
-        .blog-content {
-          padding: 20px 0px;
-          font-size: 16px;
-          word-spacing: 1.5px;
-          letter-spacing: 1px;
-          font-family: sans-serif;
-          .blog-date {
-            font-style: italic;
-            font-family: monospace;
-            padding: 0px 5px 0px 0px;
-          }
-          .loadMore {
-            color: #0a3d62;
-            font-style: italic;
-            cursor: pointer;
+          .blog-details {
+            margin: 0px 15px;
+            .author-name {
+              display: flex;
+              align-items: center;
+            }
+            .blog-date {
+              font-family: monospace;
+            }
           }
         }
       }

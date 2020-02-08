@@ -19,7 +19,7 @@ export default class ContactUs extends Component {
   closeModal = () => {
     this.setState({
       visible: false,
-      activeTab:"1"
+      activeTab: "1"
     });
   };
   dataSent = (data, status) => {
@@ -57,22 +57,34 @@ export default class ContactUs extends Component {
   render() {
     return (
       <div className="contact-us-main-container">
-        <p>
-          Send us an email, give us a call, or submit the form on clicking the
-          Contact us button below to get a hold of us! If you’d like to inquire
-          about our services, please fill free to reach us at raxoweb@gmail.com
+        <div className="contact-us-wrapper">
+
+
+          <div className="contact-us-image">
+<img src="https://cdn.dribbble.com/users/2385564/screenshots/5290122/contact_us-illustration_2x.png"/>
+          </div>
+          <div className="contact-us-content-container">
+            <div className="contact-us-content">
+
+
+              <p>
+                Send us an email, give us a call, or submit the form on clicking the
+                Contact us button below to get a hold of us! If you’d like to inquire
+                about our services, please fill free to reach us at raxoweb@gmail.com
         </p>
-        <Button
-          type="primary"
-          shape={"round"}
-          onClick={this.openModal}
-          style={{ background: "#0A3D62", border: "none" }}
-        >
-          Contact Us
+              <Button
+                type="primary"
+                shape={"round"}
+                onClick={this.openModal}
+                style={{ background: "#0A3D62", border: "none" }}
+              >
+                Contact Us
         </Button>
+            </div>
+          </div>
+        </div>
         <Modal
           visible={this.state.visible}
-          onCancel={this.closeModal}
           centered={true}
           closable={false}
           destroyOnClose={true}
@@ -110,7 +122,7 @@ export default class ContactUs extends Component {
                       </Button>
                       <Button
                         key="goToContactUs"
-                        style={{background:"#0a3d62",color:"#fafafa"}}
+                        style={{ background: "#0a3d62", color: "#fafafa" }}
                         onClick={this.goToContactUs}
                       >
                         Submit Again

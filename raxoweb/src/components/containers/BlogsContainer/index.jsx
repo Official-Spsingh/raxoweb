@@ -3,59 +3,98 @@ import { Icon } from 'antd';
 const BlogsContainer = props => {
   return (
     <div className="blogs-container">
-      <div className="blog-item">
-        <div className="blog-heading">
-          Quantitative Data Tools For UX Designers
+      <div className="blogs-header">
+        <div className="header1">
+          Raxoweb Blogs
+        </div>
+        <div className="header2">
+          Read and Write Technical Blogs and Share With Your Friends
+        </div>
+        <button>Write Blogs</button>
       </div>
+      <div className="blog-items-container">
+
+      
+      <div className="blog-item">
+
         <div className="blog-content-wrapper">
           <div className="blog-title-image">
-            <img src="https://www.anita.com/blog/us/wp-content/uploads/sites/3/2016/02/blog-success.jpg" />
+            <img src={require('../../../media/images/whatwedo1.jpg')} />
           </div>
+
           <div className="blog-content-container">
-            <div className="blog-author">
-              <div className="author-pic">
-                <Icon type="user" />
-              </div>
+            <div className="blog-category">
+              GUI DEVELOPMENT
+          </div>
+            <div className="blog-heading">
+              Quantitative Data Tools For UX Designers
+          </div>
+            <div className="blog-content">
+
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.  enim placeat recusandae ratione excepturi quisquam.
+
+            </div>
+
+          </div>
+        </div>
+        <div className="blog-footer">
+          <div className="blog-author">
+            <div className="author-pic">
+              <Icon type="user" />
+            </div>
+            <div className="blog-details">
+
+
               <div className="author-name">
                 S P Singh
-          </div>
-            </div>
-            <div className="blog-content">
+                </div>
               <div className="blog-date">9 hours ago </div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ad reiciendis nemo quia numquam eos asperiores quasi dolorum eveniet, libero sunt consequuntur quibusdam voluptas enim placeat recusandae ratione excepturi quisquam.
-              <div className="loadMore">Load more...</div>
             </div>
           </div>
         </div>
 
       </div>
       <div className="blog-item">
-        <div className="blog-heading">
-          How to master coding in just a month !
-      </div>
+
         <div className="blog-content-wrapper">
           <div className="blog-title-image">
-            <img src="http://lifesafar.com/wp-content/uploads/2018/01/blog.jpg" />
+            <img src={require('../../../media/images/whatwedo3.jpg')} />
           </div>
+
           <div className="blog-content-container">
-            <div className="blog-author">
-              <div className="author-pic">
-                <Icon type="user" />
-              </div>
-              <div className="author-name">
-                S P Singh
-          </div>
-            </div>
+            <div className="blog-category">
+              MACHINE LEARNING
+  </div>
+            <div className="blog-heading">
+              Quality Analysis With Machine Learning
+  </div>
             <div className="blog-content">
-              <div className="blog-date">January 14, 2020</div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ad reiciendis nemo quia numquam eos asperiores quasi dolorum eveniet, libero sunt consequuntur quibusdam voluptas enim placeat recusandae ratione excepturi quisquam.
-          <div className="loadMore">Load more...</div>
+
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.  enim placeLorem ipsum dolor sit am
+        
+    </div>
+
+          </div>
+        </div>
+        <div className="blog-footer">
+
+
+          <div className="blog-author">
+            <div className="author-pic">
+              <Icon type="user" />
+            </div>
+            <div className="blog-details">
+
+
+              <div className="author-name">
+                Bipul Singh
+    </div>
+              <div className="blog-date">14 hours ago </div>
             </div>
           </div>
         </div>
-
       </div>
-
+</div>
     </div>
   );
 };
