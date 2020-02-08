@@ -11,7 +11,7 @@ const BootCampContainer = (props) => {
              <BootCampFourthComponent/>
              <BootCampSecondComponent/>            
              <BootCampThirdComponent/>
-             <BootCampFifthContainer/>
+             {/* <BootCampFifthContainer/> */}
         </div>
     )
 }
