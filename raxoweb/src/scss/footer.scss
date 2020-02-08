@@ -1,14 +1,17 @@
 .footer-component {
   background: #0a3d62;
   // background: #306060;
-  height: 16vh;
+  height: 75px;
+  @media(max-width: 700px){
+    height: 115px;
+  }
   color: #fafafa;
   .footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       flex-direction: column;
       justify-content: center;
     }

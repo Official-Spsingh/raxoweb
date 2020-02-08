@@ -26,14 +26,15 @@ const LandingPageContainer = props => {
       <HomePageContentContainer title="Manage Handle Grow Your Business With Us">
         <GrowYourBuisness />
       </HomePageContentContainer>
-      <HomePageContentContainer title="What We Do">
-        <WhatWeDo />
-      </HomePageContentContainer>
+     
       <HomePageContentContainer
         title="BootCamp"
         subTitle="Spending Hours In Coaching Still Feel less Confident !"
       >
         <BootCamp />
+      </HomePageContentContainer>
+      <HomePageContentContainer title="What We Do">
+        <WhatWeDo />
       </HomePageContentContainer>
       <HomePageContentContainer
         title="Blogs"
@@ -41,12 +42,12 @@ const LandingPageContainer = props => {
       >
         <BlogsComponent/>
       </HomePageContentContainer>
-      <HomePageContentContainer
+      {/* <HomePageContentContainer
         title="Contact Us"
         subTitle="Schedule a meeting with us !"
-      >
+      > */}
         <ContactUs />
-      </HomePageContentContainer>
+      {/* </HomePageContentContainer> */}
       
     </div>
   );

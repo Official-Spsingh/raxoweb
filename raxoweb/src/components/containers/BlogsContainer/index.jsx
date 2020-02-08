@@ -3,6 +3,18 @@ import { Icon } from 'antd';
 const BlogsContainer = props => {
   return (
     <div className="blogs-container">
+      <div className="blogs-header">
+        <div className="header1">
+          Raxoweb Blogs
+        </div>
+        <div className="header2">
+          Read and Write Technical Blogs and Share With Your Friends
+        </div>
+        <button>Write Blogs</button>
+      </div>
+      <div className="blog-items-container">
+
+      
       <div className="blog-item">
 
         <div className="blog-content-wrapper">
@@ -82,7 +94,7 @@ const BlogsContainer = props => {
           </div>
         </div>
       </div>
-
+</div>
     </div>
   );
 };
