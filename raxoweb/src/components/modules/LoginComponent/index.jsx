@@ -37,7 +37,7 @@ const LoginComponent = props => {
                   console.log(err);
                 });
             } else if (response.data.status.code == 200) {
-              props.loginSuccessFull();
+              props.loginSuccessFull(response.data.status.access_token, response.data.status.refresh_token);
             }
           })
           .catch(err => {
@@ -82,7 +82,7 @@ const LoginComponent = props => {
           </Form.Item>
           <Form.Item label="Password">
             {getFieldDecorator("password", {
-              rules: [{ required: true, message: "Please enter your Password" },{validator:inputValidator}]
+              rules: [{ required: true, message: "Please enter your Password" }, { validator: inputValidator }]
             })(
               <Input
                 prefix={
@@ -112,7 +112,7 @@ const LoginComponent = props => {
               </Button>
             </div>
             <div className="forgotpass">
-              <Button type="link" onClick={()=>props.setActiveKey('forgotPassword')}>Forgot Password ?</Button>
+              <Button type="link" onClick={() => props.setActiveKey('forgotPassword')}>Forgot Password ?</Button>
             </div>
 
           </div>

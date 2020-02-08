@@ -1,9 +1,9 @@
 import React from 'react'
 import { Row, Col } from 'antd'
-import career from '../../../media/images/career.png'
-import outcome from '../../../media/images/outcome1.png'
-import network from '../../../media/images/network.png'
-import implementation from '../../../media/images/implement-png.png'
+import career from '@media/images/career.png'
+import outcome from '@media/images/outcome1.png'
+import network from '@media/images/network.png'
+import implementation from '@media/images/implement-png.png'
 
 const Items =
     [
@@ -45,7 +45,7 @@ function BootCampFourthComponent(props) {
                                 <Row className="sec-row">
                                     <Col xxl={6} xl={8} lg={8} md={24} sm={24} xs={24} className="sec-col">
                                         <div className="image-container">
-                                            <img src={item.image}></img>
+                                            <img src={item.image} alt="bootcampImage"></img>
                                         </div>
                                     </Col>
                                     <Col xxl={18} xl={16} lg={16} md={24} sm={24} xs={24} className="sec-col">
