@@ -3,16 +3,17 @@ import React from 'react'
 function GridComponent(props) {
     return (
         <div className="grid-item">
-            {   
-               
+            {
+
                 <div className="content-container">
                     <div className="image-container">
-                    {/* <img src={require('@media/images/growBuisness.jpg')} alt="gridImage"/> */}
-                        </div>
-                     
-                    <h2>Learn with Fun</h2>
-                    <h3>Student</h3>
-                    <p>This has been the best three months ever</p>
+                        <img src={require('../../../../media/images/'+props.gridItem.image)} alt="gridImage"/>
+                    </div>
+                    <div className="comment-container">
+                        <h2>{props.gridItem.title}</h2>
+                        <p>{props.gridItem.subTitle}</p>
+                        <p className="content">{props.gridItem.description}</p>
+                    </div>
                 </div>
             }
         </div>
