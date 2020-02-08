@@ -6,6 +6,7 @@
   .contact-us-wrapper{
     display: flex;
     min-height: 300px;
+    flex-direction: row-reverse;
     height: fit-content;
     @media(max-width:700px){
      display: block;
