@@ -1,14 +1,15 @@
 import React from 'react';
 import { withRouter } from "react-router";
+import { isUserAuthenticated, logoutUser } from '@utils/auth'
 
 
 const HeaderComponent = (props) => {
     const gotoPage = (link) => {
         props.history.push(link)
     }
-    const setActiveModal=(type)=>{
-       props.setModalVisible(true) 
-       props.setActiveTab(type)
+    const setActiveModal = (type) => {
+        props.setModalVisible(true)
+        props.setActiveTab(type)
     }
     return (
         <div className="header-main-container">
@@ -26,18 +27,33 @@ const HeaderComponent = (props) => {
                         <div className="header-content" onClick={() => gotoPage('blogs')}>
                             <span>Blogs</span>
                         </div>
+                        {
+                            isUserAuthenticated() ?
+                                <div className="header-content" onClick={() => gotoPage('writeBlog')}>
+                                    <span>Write Blog</span>
+                                </div>
+                                : null
+                        }
                     </div>
 
                 </div>
 
                 <div className="header-content-right">
-
-                    <div className="header-content cancel" onClick={()=>setActiveModal('signup')}>
-                        <span>SignUp</span>
-                    </div>
-                    <div className="header-content login" onClick={()=>setActiveModal('login')}>
-                        <span>Login</span>
-                    </div>
+                    {
+                        !isUserAuthenticated() ?
+                            <>
+                                <div className="header-content cancel" onClick={() => setActiveModal('signup')}>
+                                    <span>SignUp</span>
+                                </div>
+                                <div className="header-content login" onClick={() => setActiveModal('login')}>
+                                    <span>Login</span>
+                                </div>
+                            </>
+                            :
+                            <div className="header-content login" onClick={() => logoutUser()}>
+                                <span style={{ textTransform: 'capitalize', letterSpacing: '0.75px' }}>Logout</span>
+                            </div>
+                    }
                 </div>
             </div>
         </div>

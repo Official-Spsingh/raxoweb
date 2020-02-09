@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router";
 import { Icon, Drawer, Button } from 'antd'
+import { isUserAuthenticated, logoutUser } from '@utils/auth'
 
 class HeaderComponentMobile extends Component {
 
@@ -28,7 +29,7 @@ class HeaderComponentMobile extends Component {
         this.onClose()
     }
     render() {
-        const links = [
+        let links = [
             {
                 name: 'Home',
                 icon: 'home',
@@ -45,6 +46,9 @@ class HeaderComponentMobile extends Component {
                 route: 'blogs'
             }
         ]
+        if (isUserAuthenticated()) {
+            links = [...links, { name: 'Write Blog', icon: 'edit', route: 'writeBlog' }]
+        }
         return (
             <div className="header-mobile">
                 <div className="header-mobile-wrapper">
@@ -54,9 +58,13 @@ class HeaderComponentMobile extends Component {
                         </div>
                     </div>
                     <div className="right-section">
-                        <div className="login-btn">
-                            <Button onClick={() => this.gotoPage('login/signUp')}>Login</Button>
-                        </div>
+                        {
+                            !isUserAuthenticated() ?
+                                <div className="login-btn">
+                                    <Button onClick={() => this.gotoPage('login/signUp')}>Login</Button>
+                                </div>
+                                : null
+                        }
                         <div className="icon-container" onClick={this.showDrawer}>
                             <Icon type="menu" />
 
@@ -85,8 +93,16 @@ class HeaderComponentMobile extends Component {
                                             </div>
                                         )
                                     }
+                                    {
+                                        isUserAuthenticated()
+                                            ?
+                                            <div key="logout" className="link-item" onClick={() => logoutUser()}>
+                                                <Icon type={'logout'} />
+                                                <h3>{'Logout'}</h3>
+                                            </div>
+                                            : null
+                                    }
                                 </div>
-
                             </div>
                         </Drawer>
                     </div>

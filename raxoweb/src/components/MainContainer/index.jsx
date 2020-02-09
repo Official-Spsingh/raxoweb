@@ -8,12 +8,12 @@ import LoginSignupContainer from '@containers/LoginSignUpContainer';
 import BootCampContainer from '@containers/BootCampContainer';
 import FooterComponent from '@modules/FooterComponent';
 import { useEffect } from 'react';
+import { PrivateRoute } from '@utils/privateRoute';
 
 const MainContainer = (props) => {
     const [visible, setModalVisible] = useState(false)
     const [activeTab, setActiveTab] = useState("login");
     useEffect(() => {
-        console.log(props)
         if (props.location.pathname == "/blogs") {
             document.title = "Raxoweb Blogs"
         }
@@ -40,6 +40,9 @@ const MainContainer = (props) => {
                 <Route exact path="/bootcamp">
                     <BootCampContainer />
                 </Route>
+                <PrivateRoute exact path="/writeBlog">
+                    <h1>Hello</h1>
+                </PrivateRoute>
                 <Route path="*">
                     <LandingPageContainer />
                 </Route>
