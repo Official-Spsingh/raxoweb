@@ -1,7 +1,8 @@
 import React from 'react';
+import { Row, Col } from 'antd';
 const growBuisness = require('@media/images/growBuisness.jpg')
-const growthicon = require('@media/images/growthicon.png')
-const manageicon = require('@media/images/growthicon.png')
+const growthicon = require('@media/images/growthicon1.png')
+const manageicon = require('@media/images/managementicon1.png')
 const experience = require('@media/images/experience.png')
 const GrowYourBuisness = (props) => {
     return (
@@ -19,48 +20,70 @@ const GrowYourBuisness = (props) => {
                 <div className="right-section-container">
                     <div className="growth-list-section">
                         <div className="header-section">
-                            <div className="header-left-section">
-                                <img src={growthicon}></img>
-                            </div>
-                            <div className="header-right-secion">
-                                Growth
-                            </div>
+                            <Row className="grow-row">
+                                <Col xl={4} lg={4} md={4} sm={24} xs={24} className="grow-col1">
+                                    <div className="header-left-section">
+                                        <img src={growthicon}></img>
+                                    </div>
+                                </Col>
+                                <Col xl={20} lg={20} md={20} sm={24} xs={24} className="grow-col">
+                                    <div className="header-right-secion">
+                                        Growth
+                                 </div>
+                                    <div className="content-section">
+                                        Grow your organization by making proper and effective use of data you already have.
+                                        Future predictions and decision making made easy.
+                                    </div>
+                                </Col>
+
+                            </Row>
+
                         </div>
-                        <div className="content-section">
-                            Grow your organization by making proper and effective use of data you already have.
-                            Future predictions and decision making made easy.
-                        </div>
+
                     </div>
                     <div className="growth-list-section">
                         <div className="header-section">
-                            <div className="header-left-section">
-                                <img src={manageicon}></img>
-                            </div>
-                            <div className="header-right-secion">
-                                Management
-                            </div>
+                            <Row className="grow-row">
+                                <Col xl={4} lg={4} md={4} sm={24} xs={24} className="grow-col1">
+                                    <div className="header-left-section">
+                                        <img src={manageicon}></img>
+                                    </div>
+                                </Col>
+                                <Col xl={20} lg={20} md={20} sm={24} xs={24} className="grow-col">
+                                    <div className="header-right-secion">
+                                        Management
+                                    </div>
+                                    <div className="content-section">
+                                        Managing your customers,employees no more a headache. Raxoweb provides you tool for handling all
+                                        the request through a single platform. Bring in more visibility and transparency with our tools.
+                                     </div>
+                                </Col>
+                            </Row>
                         </div>
-                        <div className="content-section">
-                            Managing your customers,employees no more a headache. Raxoweb provides you tool for handling all
-                            the request through a single platform. Bring in more visibility and transparency with our tools.
-                         </div>
-                    </div>
-                    <div className="growth-list-section">
-                        <div className="header-section">
-                            <div className="header-left-section">
-                                <img src={experience}></img>
+                        <div className="growth-list-section">
+                            <div className="header-section">
+                                <Row className="grow-row">
+                                    <Col xl={4} lg={4} md={4} sm={24} xs={24} className="grow-col1">
+                                        <div className="header-left-section">
+                                            <img src={experience}></img>
+                                        </div>
+                                    </Col>
+                                    <Col xl={20} lg={20} md={20} sm={24} xs={24} className="grow-col">
+                                        <div className="header-right-secion">
+                                            Experience
+                                         </div>
+                                        <div className="content-section">
+                                            We focus on providing our customers a premium and an unforgettable experience with all our products.
+                                        </div>
+                                    </Col>
+                                </Row>
                             </div>
-                            <div className="header-right-secion">
-                                Experience
-                            </div>
-                        </div>
-                        <div className="content-section">
-                            We focus on providing our customers a premium and an unforgettable experience with all our products.
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    )
-}
-export default GrowYourBuisness;
+                </div>
+                </div>
+                )
+            }
+            export default GrowYourBuisness;
+   

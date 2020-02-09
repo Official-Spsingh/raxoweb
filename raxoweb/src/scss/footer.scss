@@ -1,7 +1,7 @@
 .footer-component {
-  background: #0a3d62;
+  background: #0A3D62;
   // background: #306060;
-  height: 75px;
+  height: 50px;
   @media(max-width: 700px){
     height: 115px;
   }
@@ -40,8 +40,8 @@
             color: inherit;
           }
           div {
-            width: 50px;
-            height: 50px;
+            width: 35px;
+            height: 35px;
 
             display: flex;
             justify-content: center;
@@ -50,14 +50,14 @@
             margin: 0px 10px;
             cursor: pointer;
             @media (max-width: 600px) {
-              width: 40px;
-              height: 40px;
+              width: 35px;
+              height: 35px;
             }
             .anticon {
-              font-size: 30px;
+              font-size: 20px;
 
               @media (max-width: 600px) {
-                font-size: 24px;
+                font-size: 20px;
               }
             }
           }
