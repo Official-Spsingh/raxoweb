@@ -61,7 +61,7 @@ export default class ContactUs extends Component {
 
 
           <div className="contact-us-image">
-<img src="https://cdn.dribbble.com/users/2385564/screenshots/5290122/contact_us-illustration_2x.png"/>
+           <img src={require('../../../media/images/character-contact.png')}/>
           </div>
           <div className="contact-us-content-container">
             <div className="contact-us-content">

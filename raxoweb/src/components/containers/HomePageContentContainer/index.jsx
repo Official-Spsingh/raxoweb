@@ -1,7 +1,7 @@
 import React from 'react';
 const HomePageContentContainer = (props) => {
     return (
-        <div className="home-page-content-container">
+        <div className="home-page-content-container" style={props.title=="What We Do"?{background:"#f4f4f4"}:{}}>
             <div className="titles-container">
                 <h1>{props.title}</h1>
                 <div className="green-strip"></div>
@@ -14,3 +14,5 @@ const HomePageContentContainer = (props) => {
     )
 }
 export default HomePageContentContainer;    
+
+// #ECEFF1
