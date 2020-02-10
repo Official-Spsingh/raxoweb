@@ -27,13 +27,6 @@ const HeaderComponent = (props) => {
                         <div className="header-content" onClick={() => gotoPage('blogs')}>
                             <span>Blogs</span>
                         </div>
-                        {
-                            isUserAuthenticated() ?
-                                <div className="header-content" onClick={() => gotoPage('writeBlog')}>
-                                    <span>Write Blog</span>
-                                </div>
-                                : null
-                        }
                     </div>
 
                 </div>
