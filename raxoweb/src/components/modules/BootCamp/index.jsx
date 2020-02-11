@@ -11,7 +11,7 @@ const BootCamp = (props) => {
         <div className="bootcamp-main-container">
 
             <Row>
-                <Col xl={12} lg={12} md={12} sm={24} xs={24}>
+                <Col xl={12} lg={12} md={12} sm={24} xs={24} style={{padding:"15px"}}>
                     <img style={{height:"100%",width:"100%"}} src={bootcamppage}></img>
                 </Col>
                 <Col xl={12} lg={12} md={12} sm={24} xs={24}>
