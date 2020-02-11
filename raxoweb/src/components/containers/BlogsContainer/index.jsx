@@ -1,6 +1,21 @@
 import React from "react";
 import { Icon } from 'antd';
+import {isUserAuthenticated} from '@utils/auth'
+import {withRouter} from 'react-router-dom'
 const BlogsContainer = props => {
+
+  const writeBlogClicked=()=>{
+    if(isUserAuthenticated()){
+      props.history.push('writeBlog')
+    }
+    else{
+      setActiveModal('login')
+    }
+  }
+  const setActiveModal = (type) => {
+    props.setModalVisible(true)
+    props.setActiveTab(type)
+}
   return (
     <div className="blogs-container">
       <div className="blogs-header">
@@ -10,7 +25,7 @@ const BlogsContainer = props => {
         <div className="header2">
           Read and Write Technical Blogs and Share With Your Friends
         </div>
-        <button>Write Blogs</button>
+        <button onClick={()=>writeBlogClicked()}>Write Blogs</button>
       </div>
       <div className="blog-items-container">
 
@@ -98,4 +113,4 @@ const BlogsContainer = props => {
     </div>
   );
 };
-export default BlogsContainer;
+export default withRouter(BlogsContainer);

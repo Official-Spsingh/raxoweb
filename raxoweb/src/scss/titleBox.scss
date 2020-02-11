@@ -1,57 +1,53 @@
 .title-box-component-main-container {
-  display: flex;
-  height: 100vh;
-  margin: 18px 0px;
-  @media (max-width:600px)
-  {
-    flex-direction: column;
-  }
-  .title-box-left-content-container {
-    flex: 1 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    .image-holder {
-      width: 100%;
-      img {
-        height: inherit;
-        width: inherit;
-      }
+    height: calc(100vh - 60px);
+    @media (max-width: 600px) {
+        flex-direction: column;
     }
-  }
-  .title-box-right-content-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    .title-container {
-      text-align: center;
-      
-      .main-heading {
-        margin-bottom: 5px;
-        color: #000a49;
-      }
-      .sub-sub-heading {
-        margin-bottom: 5px;
-        color: #000a49;
-      }
-      .sub-heading {
-        color: #000a49;
-      }
-      .learn-more-button {
-          padding: 15px 5px;
-
-        h2 {
-            cursor: pointer;
-          margin: 0 auto;
-          padding: 0px 15px 4px;
-          width: fit-content;
-          border: 2px solid;
-          border-radius: 20px;
-          color: #000a49;
+    .title-box-left-content-container {
+        flex: 1 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .image-holder {
+            width: 100%;
+            img {
+                height: inherit;
+                width: inherit;
+            }
         }
-      }
     }
-  }
+    .title-box-right-content-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        .title-container {
+            text-align: center;
+            .main-heading {
+                margin-bottom: 5px;
+                color: #000a49;
+            }
+            .sub-sub-heading {
+                margin-bottom: 5px;
+                color: #000a49;
+            }
+            .sub-heading {
+                color: #000a49;
+            }
+            .learn-more-button {
+                padding: 15px 5px;
+                h2 {
+                    cursor: pointer;
+                    margin: 0 auto;
+                    padding: 0px 15px 4px;
+                    width: fit-content;
+                    border: 2px solid;
+                    border-radius: 20px;
+                    color: #000a49;
+                }
+            }
+        }
+    }
 }

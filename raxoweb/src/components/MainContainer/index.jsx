@@ -28,28 +28,32 @@ const MainContainer = (props) => {
     })
     return (
         <div className="main-container">
-            <HeaderComponent setModalVisible={setModalVisible} setActiveTab={setActiveTab} />
-            <HeaderComponentMobile setModalVisible={setModalVisible} setActiveTab={setActiveTab} />
-            <Switch>
-                <Route exact path="/">
-                    <LandingPageContainer />
-                </Route>
-                <Route exact path="/blogs">
-                    <BlogsContainer />
-                </Route>
-                <Route exact path="/bootcamp">
-                    <BootCampContainer />
-                </Route>
-                <PrivateRoute exact path="/writeBlog">
-                    <h1>Hello</h1>
-                </PrivateRoute>
-                <Route path="*">
-                    <LandingPageContainer />
-                </Route>
+            <div className="header-container">
+                <HeaderComponent setModalVisible={setModalVisible} setActiveTab={setActiveTab} />
+                <HeaderComponentMobile setModalVisible={setModalVisible} setActiveTab={setActiveTab} />
+            </div>
+            <div className="page-container">
+                <Switch>
+                    <Route exact path="/">
+                        <LandingPageContainer />
+                    </Route>
+                    <Route exact path="/blogs">
+                        <BlogsContainer setModalVisible={setModalVisible} setActiveTab={setActiveTab} />
+                    </Route>
+                    <Route exact path="/bootcamp">
+                        <BootCampContainer />
+                    </Route>
+                    <PrivateRoute exact path="/writeBlog">
+                        <h1>Hello</h1>
+                    </PrivateRoute>
+                    <Route path="*">
+                        <LandingPageContainer />
+                    </Route>
 
-            </Switch>
-            <LoginSignupContainer visible={visible} setModalVisible={setModalVisible} activeTab={activeTab} setActiveTab={setActiveTab} />
-            <FooterComponent />
+                </Switch>
+                <LoginSignupContainer visible={visible} setModalVisible={setModalVisible} activeTab={activeTab} setActiveTab={setActiveTab} />
+                <FooterComponent />
+            </div>
         </div>
     )
 }

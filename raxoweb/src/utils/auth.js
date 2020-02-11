@@ -1,4 +1,5 @@
 import { getCookie, setCookie } from '@utils/cookie'
+import makeRequest from '@utils/makeRequest'
 let userAuthenticated = false
 export const isUserAuthenticated = () => {
     if (getCookie('accessToken').length > 25 && userAuthenticated)
@@ -11,7 +12,17 @@ export const setUserAuthentication = (type) => {
 }
 
 export const logoutUser = () => {
-    setCookie('accessToken', "", 0)
-    setCookie('refreshToken', "", 0)
-    window.location.reload()
+    makeRequest.postLogout()
+        .then(response => {
+            if (response.status == 200) {
+                setCookie('accessToken', "", 0)
+                setCookie('refreshToken', "", 0)
+                window.location.reload()
+            }
+        })
+        .catch(error => {
+            setCookie('accessToken', "", 0)
+            setCookie('refreshToken', "", 0)
+            window.location.reload()
+        })
 }
