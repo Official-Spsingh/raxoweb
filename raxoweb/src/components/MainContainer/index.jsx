@@ -9,6 +9,7 @@ import BootCampContainer from '@containers/BootCampContainer';
 import FooterComponent from '@modules/FooterComponent';
 import { useEffect } from 'react';
 import { PrivateRoute } from '@utils/privateRoute';
+import WriteBlogComponent from '@modules/WriteBlogComponent';
 
 const MainContainer = (props) => {
     const [visible, setModalVisible] = useState(false)
@@ -44,7 +45,7 @@ const MainContainer = (props) => {
                         <BootCampContainer />
                     </Route>
                     <PrivateRoute exact path="/writeBlog">
-                        <h1>Hello</h1>
+                        <WriteBlogComponent/>
                     </PrivateRoute>
                     <Route path="*">
                         <LandingPageContainer />
