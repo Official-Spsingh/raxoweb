@@ -1,12 +1,12 @@
 .bootcamp-first-component-container {
     display: flex;
     height: calc(100vh - 60px);
+    align-items: center;
     .image-container {
         flex: 1;
         padding: 15px;
         img {
-            height: 100%;
-            width: 100%;
+            max-width: 100%;
         }
     }
     .content-container {

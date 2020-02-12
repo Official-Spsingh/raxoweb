@@ -21,6 +21,7 @@ export const logoutUser = () => {
             }
         })
         .catch(error => {
+            console.log("err")
             setCookie('accessToken', "", 0)
             setCookie('refreshToken', "", 0)
             window.location.reload()
