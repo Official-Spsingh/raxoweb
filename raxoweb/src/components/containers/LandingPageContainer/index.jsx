@@ -29,7 +29,7 @@ const LandingPageContainer = props => {
      
       <HomePageContentContainer
         title="BootCamp"
-        subTitle="Spending Hours In Coaching Still Feel less Confident !"
+        subTitle="Master Coding with the guidance of experts"
       >
         <BootCamp />
       </HomePageContentContainer>
@@ -42,12 +42,8 @@ const LandingPageContainer = props => {
       >
         <BlogsComponent/>
       </HomePageContentContainer>
-      {/* <HomePageContentContainer
-        title="Contact Us"
-        subTitle="Schedule a meeting with us !"
-      > */}
+    
         <ContactUs />
-      {/* </HomePageContentContainer> */}
       
     </div>
   );
