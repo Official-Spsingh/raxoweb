@@ -3,18 +3,23 @@
    .ant-row {
     .ant-col {
       .card-container {
-        width: 75%;
+        width: 76%;
         margin: auto;
         height: 320px;
         box-shadow: 4px 4px 10px 2px #e4e4e4;
         position: relative;
-        margin: 10px auto;
+        margin: 10px 3%;
         @media (max-width: 768px) {
-          width: 80%;
+          width: 92%;
+          margin: 10px 4%;
+        }
+        @media(max-width:575px){
+          width: 90%;
+          margin: 18px 5%;
         }
 
         .top-section {
-          height: 75%;
+          height: 70%;
           //  background: url("../media/images/whatwedo1.jpg");
           img{
             height: 100%;
@@ -25,19 +30,18 @@
 
         }
         .buttom-section {
-          height: 25%;
+          height: 30%;
           background: #fff;
           background-size: cover;
           background-repeat: no-repeat;
           border-bottom-left-radius: 10px;
           border-bottom-right-radius: 10px;
+          padding: 10px 0px 10px 0px;
           .title-section {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            padding: 10px 0;
-            // height: 100%;
               .title{
                 font-size: 18px;
                 color: rgba(0, 0, 0, 0.85);

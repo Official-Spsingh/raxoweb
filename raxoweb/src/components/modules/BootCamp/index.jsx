@@ -10,21 +10,20 @@ const BootCamp = (props) => {
     return (
         <div className="bootcamp-main-container">
 
-            <Row>
-                <Col xl={12} lg={12} md={12} sm={24} xs={24} style={{padding:"15px"}}>
-                    <img style={{height:"100%",width:"100%"}} src={bootcamppage}></img>
-                </Col>
-                <Col xl={12} lg={12} md={12} sm={24} xs={24}>
-                    <div className="content-container" style={{ textAlign: "center" }}>
-                        <p>Why need to be experienced to have professionalism ?</p>
-                        <p>Come Join us to make you battle ready. We provide you with perfect atmosphere to grow as a professional coder and someone what makes market demand from you. Come Join us to make you battle ready. We provide you with perfect atmosphere to grow as a professional coder and someone what makes market demand from you. Come Join us to make you battle ready. We provide you with perfect atmosphere to grow as a professional coder and someone what makes market demand from you.</p>
+           <div className="img-container">
+           <img src={bootcamppage}></img>
+           </div>
+                    
+               
+                    <div className="content-container">
+                        <p>Spending hours in coaching still feel less confident ?<br></br>Come Join us and be battle ready. We provide you perfect atmosphere to grow as a professional coder and someone what makes market demands from you.
+                        We believe in practicals rather than just theory stuff, so here you can get maximum practical exposures 
+                        and you will work on multiple of real world projects. </p>
                         <div className="btn-container">
                             <Button type="primary" shape="round" onClick={() => gotoPage('bootcamp')}>Learn More</Button>
                         </div>
                     </div>
-                </Col>
-
-            </Row>
+             
 
         </div>
     )
