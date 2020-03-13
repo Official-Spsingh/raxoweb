@@ -9,12 +9,13 @@ from flask_cors import CORS
 from db import db
 from resources.article import UserPost
 from blacklist import BLACKLIST
-
+from appoptics_apm.middleware import AppOpticsApmMiddleware
 app = Flask(__name__)
+app.wsgi_app = AppOpticsApmMiddleware(app.wsgi_app)
 CORS(app)
 api = Api(app)
 
-environment = 'prod'
+environment = 'dev'
 if environment == 'dev':
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///base.db'
     app.debug = True
