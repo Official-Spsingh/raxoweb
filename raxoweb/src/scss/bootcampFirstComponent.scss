@@ -5,6 +5,9 @@
     .image-container {
         flex: 1;
         padding: 15px;
+        @media (max-width:768px) {
+min-height: 200px;
+        }
         img {
             max-width: 100%;
         }
