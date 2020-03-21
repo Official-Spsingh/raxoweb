@@ -46,9 +46,9 @@ class HeaderComponentMobile extends Component {
                 route: 'blogs'
             }
         ]
-        if (isUserAuthenticated()) {
-            links = [...links, { name: 'Write Blog', icon: 'edit', route: 'writeBlog' }]
-        }
+        // if (isUserAuthenticated()) {
+        //     links = [...links, { name: 'Write Blog', icon: 'edit', route: 'writeBlog' }]
+        // }
         return (
             <div className="header-mobile">
                 <div className="header-mobile-wrapper">
