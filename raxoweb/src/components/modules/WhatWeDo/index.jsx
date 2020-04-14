@@ -24,7 +24,7 @@ const WhatWeDo = (props) => {
                 <Col xl={6} lg={6} md={12} sm={12} xs={24}>
                     <div className="card-container container3">
                         <div className="top-section">
-                            <img src={require('../../../media/images/whatwedo3.jpg')} />
+                            <img src={require('../../../media/images/whatwedo7.jpg')} />
                         </div>
                         <div className="buttom-section">
                             <div className="title-section">
@@ -38,7 +38,7 @@ const WhatWeDo = (props) => {
                 <Col xl={6} lg={6} md={12} sm={12} xs={24}>
                     <div className="card-container container4">
                         <div className="top-section">
-                            <img src={require('../../../media/images/whatwedo4.jpg')} />
+                            <img src={require('../../../media/images/whatwedo8.jpg')} />
                         </div>
                         <div className="buttom-section">
                             <div className="title-section">
