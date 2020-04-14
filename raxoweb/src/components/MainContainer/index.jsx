@@ -5,6 +5,7 @@ import { Route, Switch, withRouter } from "react-router";
 import BlogsContainer from '@containers/BlogsContainer';
 import HeaderComponentMobile from '@modules/HeaderComponentMobile';
 import LoginSignupContainer from '@containers/LoginSignUpContainer';
+import WebinarContainer from '@containers/WebinarContainer';
 import BootCampContainer from '@containers/BootCampContainer';
 import FooterComponent from '@modules/FooterComponent';
 import { useEffect } from 'react';
@@ -35,8 +36,8 @@ const MainContainer = (props) => {
             </div>
             <div className="page-container">
                 <Switch>
-                    <Route exact path="/">
-                        <LandingPageContainer />
+                    <Route exact path="/webinar">
+                        <WebinarContainer />
                     </Route>
                     <Route exact path="/blogs">
                         <BlogsContainer setModalVisible={setModalVisible} setActiveTab={setActiveTab} />
@@ -45,8 +46,11 @@ const MainContainer = (props) => {
                         <BootCampContainer />
                     </Route>
                     <PrivateRoute exact path="/writeBlog">
-                        <WriteBlogComponent/>
+                        <WriteBlogComponent />
                     </PrivateRoute>
+                    <Route exact path="/">
+                        <LandingPageContainer />
+                    </Route>
                     <Route path="*">
                         <LandingPageContainer />
                     </Route>

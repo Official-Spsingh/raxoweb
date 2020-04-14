@@ -40,10 +40,15 @@ class HeaderComponentMobile extends Component {
                 icon: 'schedule',
                 route: 'bootcamp'
             },
+            // {
+            //     name: 'Blogs',
+            //     icon: 'block',
+            //     route: 'blogs'
+            // },
             {
-                name: 'Blogs',
-                icon: 'block',
-                route: 'blogs'
+                name: 'Webinar',
+                icon: 'play-circle',
+                route: 'webinar'
             }
         ]
         // if (isUserAuthenticated()) {
