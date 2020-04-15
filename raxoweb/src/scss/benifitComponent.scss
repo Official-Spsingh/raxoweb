@@ -1,0 +1,23 @@
+.benifit-Component-main-container{
+        width: 400px;
+        height: 62px;
+        margin-left: 420px;
+        border-radius: 30px;
+        border: 2px solid black;
+    
+    .benifit-content-container{
+        width: 100%;
+        height: 61px;
+        border-radius: 30px;
+        display: flex;
+    
+    .benifit-container-left{
+        border-radius: 30px;
+        width: 70px;
+    }
+    .benifit-container-right{
+        width: calc(100% - 70px);
+        border-radius: 31px;
+    }
+}
+}

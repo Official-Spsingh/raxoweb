@@ -3,6 +3,7 @@ import WebinarFistPage from '@modules/WebinarFirstPage'
 import HomePageContentContainer from "@containers/HomePageContentContainer";
 import BootCampFourthComponent from '@modules/BootCampFourthComponent'
 import { Button } from 'antd'
+import BenifitComponent from '@modules/BenifitComponent';
 const WebinarContainer = () => {
   return (
     <div className="webinar-main-container">
@@ -15,7 +16,11 @@ const WebinarContainer = () => {
        </p>
         <Button type="primary">Know More</Button>
       </HomePageContentContainer>
-      <BootCampFourthComponent />
+      <HomePageContentContainer
+        title="Benifits from this Webinar"
+      >
+        <BenifitComponent />
+      </HomePageContentContainer>
     </div>
   )
 }
