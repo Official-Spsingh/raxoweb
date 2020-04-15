@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-const growBuisness = require('@media/svg/growyourbusiness.svg')
+const growBuisness = require('@media/images/growBuisness.jpg')
 const growthicon = require('@media/svg/b2.svg')
 const manageicon = require('@media/svg/b3.svg')
 const experience = require('@media/svg/b1.svg')

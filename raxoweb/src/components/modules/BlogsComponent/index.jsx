@@ -12,11 +12,11 @@ const BlogsComponent = props => {
       writer or even a group of writers share their views on an individual subject.
       So now you can also become a blogger by reading and writing technical blogs at our platform.
       </p>
-      <div className="btn-container">
+      {/* <div className="btn-container">
         <Button type="primary" shape="round" onClick={() => gotoPage("blogs")} style={{background:"#0a3d62" ,color:"#fafafa",border:"0px"}}>
           Read Blogs
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };
