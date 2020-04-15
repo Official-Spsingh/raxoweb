@@ -14,7 +14,7 @@ const WebinarFistPage = () => {
                             <p>
                                 An initiative by team <b>Raxoweb</b> to utilze your valuable time during this lock down period and enhance your technology stack, So that you can compete in this fast growing IT world.
                             </p>
-                            <Button type="primary">Know More</Button>
+                            <a href="#"><Button type="primary">Know More</Button></a>
                         </div>
                     </div>
                     <div className="content-right-container">

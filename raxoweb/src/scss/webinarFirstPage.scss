@@ -60,10 +60,20 @@
         }
     }
 }
-.ant-btn{
-    margin: 20px;
-    background: #0a3d62;
-    border: none;
-    outline: none;
-    border-radius: 14px;
+a{
+    text-decoration: none;
+    .ant-btn{
+        margin: 20px;
+        background: #0a3d62;
+        border: none;
+        outline: none;
+        border-radius: 14px;
+        &:hover{
+            margin: 20px;
+        background: #0a3d62;
+        border: none;
+        outline: none;
+        border-radius: 14px; 
+        }
+    }
 }
