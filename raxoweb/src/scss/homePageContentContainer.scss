@@ -6,6 +6,9 @@
       margin-bottom: 10px;
       color: rgba(75, 75, 75, 0.88);
       font-size: 30px;
+      @media(max-width: 414px){
+        font-size: 26px;
+    }
     }
     .green-strip {
       border: 2px solid #0a3d62;
@@ -18,6 +21,9 @@
       font-size: 22px;
       font-weight: 500;
       color: rgba(75, 75, 75, 0.88);
+      @media(max-width: 414px){
+        font-size: 20px;
+    }
     }
   }
   .content-container {
@@ -25,6 +31,9 @@
       padding: 10px 14%;
       font-size: 18px;
       font-weight: 500;
+      @media(max-width: 414px){
+        padding: 10px 6%;
+    }
     }
   }
 }
