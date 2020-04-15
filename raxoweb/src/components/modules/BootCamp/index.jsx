@@ -1,8 +1,7 @@
 import React from 'react';
 import { Button, Row, Col } from 'antd';
 import { withRouter } from "react-router";
-const bootcamp = require('@media/images/bootcamp.png')
-const bootcamppage =require('@media/images/c3.png')
+const bootcamppage =require('@media/svg/homepagebootcamp.svg')
 const BootCamp = (props) => {
     const gotoPage = (link) => {
         props.history.push(link)

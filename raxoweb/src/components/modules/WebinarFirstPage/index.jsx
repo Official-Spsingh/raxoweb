@@ -18,7 +18,7 @@ const WebinarFistPage = () => {
                         </div>
                     </div>
                     <div className="content-right-container">
-                        <img src={require('../../../media/webinar1.svg')} />
+                        <img src={require('@media/svg/webinar1.svg')} />
                     </div>
                 </div>
             </div>

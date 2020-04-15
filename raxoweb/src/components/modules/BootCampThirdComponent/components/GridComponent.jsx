@@ -7,7 +7,7 @@ function GridComponent(props) {
 
                 <div className="content-container">
                     <div className="image-container">
-                        <img src={require('../../../../media/images/'+props.gridItem.image)} alt="gridImage"/>
+                        <img src={require('@media/images/'+props.gridItem.image)} alt="gridImage"/>
                     </div>
                     <div className="comment-container">
                         <h2>{props.gridItem.title}</h2>
