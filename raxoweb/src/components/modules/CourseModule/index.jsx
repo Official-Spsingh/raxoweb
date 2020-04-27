@@ -81,9 +81,6 @@ package 1
 <div className="packlist">
 package 2
 </div>
-<div className="packlist">
-package 3
-</div>
 </div>
             </HomePageContentContainer>
            
