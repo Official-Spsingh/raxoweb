@@ -55,9 +55,12 @@
               }
               .sub-title{
                 padding: 0 13px;
-    margin: 0;
-                margin: 0;
-
+                margin: 0;    
+              }
+              .action-btn{
+                color: #3b82d2;
+                font-weight: bold;
+                cursor: pointer;
               }
           }
         }
@@ -98,6 +101,9 @@
         background-size: cover;
         background-position: center;
         border-radius: 10px;
+      }
+      .courses{
+        cursor: pointer;
       }
     }
   }

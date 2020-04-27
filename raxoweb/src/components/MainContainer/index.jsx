@@ -11,6 +11,7 @@ import FooterComponent from '@modules/FooterComponent';
 import { useEffect } from 'react';
 import { PrivateRoute } from '@utils/privateRoute';
 import WriteBlogComponent from '@modules/WriteBlogComponent';
+import CourseModule from '@modules/CourseModule';
 
 const MainContainer = (props) => {
     const [visible, setModalVisible] = useState(false)
@@ -44,6 +45,9 @@ const MainContainer = (props) => {
                     </Route>
                     <Route exact path="/bootcamp">
                         <BootCampContainer />
+                    </Route>
+                    <Route exact path="/python-course">
+                        <CourseModule/>
                     </Route>
                     <PrivateRoute exact path="/writeBlog">
                         <WriteBlogComponent />
