@@ -4,6 +4,7 @@ import { withRouter } from "react-router";
 import { Collapse } from 'antd';
 import { PlayCircleTwoTone,StarFilled } from '@ant-design/icons';
 import HomePageContentContainer from "@containers/HomePageContentContainer";
+import BenifitComponent from "@modules/BenifitComponent";
 
 const { Panel } = Collapse;
 
@@ -48,6 +49,20 @@ const CourseModule = props => {
             <div className="content-container">
             <HomePageContentContainer title="What you'll learn">
             <div className="whatWillYouearn">
+                <div className="binder">
+
+                
+<BenifitComponent count={1} title="Askh afkzj fkjbbankjfk"/>
+<BenifitComponent count={2} title="Askh afkzj fkjbbankjfk"/>
+</div>
+<div className="binder">
+<BenifitComponent count={3} title="Askh afkzj fkjbbankjfk"/>
+<BenifitComponent count={4} title="Askh afkzj fkjbbankjfk"/>
+</div>
+<div className="binder">
+<BenifitComponent count={5} title="Askh afkzj fkjbbankjfk"/>
+<BenifitComponent count={6} title="Askh afkzj fkjbbankjfk"/>
+</div>
 
 </div>
             </HomePageContentContainer>
