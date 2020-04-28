@@ -127,11 +127,14 @@ const CourseModule = props => {
                 <div className="registerForCourse">
                     <div className="box">
                         <div className="upper-section">
-
+                            <img src={require('../../../media/images/python2.png')} />
                         </div>
-                        <div className="btnSection">
-                            Register Now !
+                        <a href="https://forms.gle/R7bBRiWD9fjuepwx5" target="_blank">
+                            <div className="btnSection">
+                                Register Now !
          </div>
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -158,22 +161,17 @@ const CourseModule = props => {
 
                 <HomePageContentContainer title="Course content">
                     <div className="courseContent">
-                        <Collapse
-                            bordered={false}
-                            defaultActiveKey={['1']}
-                            expandIcon={({ isActive }) => <PlayCircleTwoTone style={{ fontSize: "20px" }} />}
-                            className="site-collapse-custom-collapse"
-                        >
+                    <Collapse accordion>
                             {
                                 arr.map((element,index)=>{
                                     return(
-                                        <Panel header={element.heading} key={index+1} className="site-collapse-custom-panel">
+                                        <Panel style={{color:"#505763",fontWeight:"700"}} header={element.heading.charAt(0).toUpperCase() + element.heading.slice(1)} key={index+1} className="site-collapse-custom-panel">
                                         <div>
-                                            <ul>
+                                            <ol>
                                                 {element.content.map((item,index)=>{
-                                                    return <li>{item}</li>
+                                                    return <li style={{margin:"3px 0px",fontWeight:"500"}}>{item}</li>
                                                 })}
-                                            </ul>
+                                            </ol>
                                         </div>
                                     </Panel>
                                    )

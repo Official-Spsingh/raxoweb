@@ -50,6 +50,12 @@
                 color: #000;
                 .upper-section {
                     height: 150px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        max-height: 80%;
+                    }
                 }
                 .btnSection {
                     color: #fff;
@@ -84,6 +90,7 @@
             }
         }
         .courseContent {
+            padding: 20px 60px;
             [data-theme="compact"] .site-collapse-custom-collapse .site-collapse-custom-panel,
             .site-collapse-custom-collapse .site-collapse-custom-panel {
                 background: #f7f7f7;
@@ -91,6 +98,13 @@
                 margin-bottom: 24px;
                 border: 0px;
                 overflow: hidden;
+                
+            }
+            .ant-collapse-header{
+                background: #F9F9F9;
+            }
+            .ant-collapse-content-box{
+                padding: 16px 0px;
             }
         }
         .coursePackage {

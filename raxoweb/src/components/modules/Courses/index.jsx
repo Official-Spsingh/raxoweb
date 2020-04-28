@@ -12,7 +12,7 @@ const Courses = (props) => {
                 <Col xl={6} lg={6} md={12} sm={12} xs={24}>
                     <div className="card-container container1 courses" onClick={() => gotoPage("python-course")}>
                         <div className="top-section">
-                            <img src={require('../../../media/images/whatwedo6.png')}>
+                            <img src={require('../../../media/images/py1.png')}>
 
                             </img>
                         </div>
@@ -28,7 +28,7 @@ const Courses = (props) => {
                 <Col xl={6} lg={6} md={12} sm={12} xs={24}>
                     <div className="card-container container3">
                         <div className="top-section">
-                            <img src={require('../../../media/images/whatwedo7.jpg')} />
+                            <img src={require('../../../media/images/web.jpg')} />
                         </div>
                         <div className="buttom-section">
                             <div className="title-section">
@@ -42,7 +42,7 @@ const Courses = (props) => {
                 <Col xl={6} lg={6} md={12} sm={12} xs={24}>
                     <div className="card-container container4">
                         <div className="top-section">
-                            <img src={require('../../../media/images/whatwedo8.jpg')} />
+                            <img src={require('../../../media/images/js.jpg')} />
                         </div>
                         <div className="buttom-section">
                             <div className="title-section">
@@ -56,7 +56,7 @@ const Courses = (props) => {
                 <Col xl={6} lg={6} md={12} sm={12} xs={24}>
                     <div className="card-container container1">
                         <div className="top-section">
-                            <img src={require('../../../media/images/whatwedo1.jpg')}>
+                            <img src={require('../../../media/images/react.jpg')}>
 
                             </img>
                         </div>
