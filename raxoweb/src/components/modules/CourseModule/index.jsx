@@ -161,24 +161,24 @@ const CourseModule = props => {
 
                 <HomePageContentContainer title="Course content">
                     <div className="courseContent">
-                    <Collapse accordion defaultActiveKey={['0']}>
+                        <Collapse accordion defaultActiveKey={['0']}>
                             {
-                                arr.map((element,index)=>{
-                                    return(
-                                        <Panel style={{color:"#505763",fontWeight:"700"}}  header={element.heading.charAt(0).toUpperCase() + element.heading.slice(1)} key={index} className="site-collapse-custom-panel">
-                                        <div>
-                                            <ol>
-                                                {element.content.map((item,index)=>{
-                                                    return <li style={{margin:"3px 0px",fontWeight:"500"}}>{item}</li>
-                                                })}
-                                            </ol>
-                                        </div>
-                                    </Panel>
-                                   )
+                                arr.map((element, index) => {
+                                    return (
+                                        <Panel style={{ color: "#505763", fontWeight: "700" }} header={element.heading.charAt(0).toUpperCase() + element.heading.slice(1)} key={index} className="site-collapse-custom-panel">
+                                            <div>
+                                                <ol>
+                                                    {element.content.map((item, index) => {
+                                                        return <li style={{ margin: "3px 0px", fontWeight: "500" }}>{item}</li>
+                                                    })}
+                                                </ol>
+                                            </div>
+                                        </Panel>
+                                    )
                                 })
                             }
 
-                            
+
 
                         </Collapse>
                     </div>
@@ -187,11 +187,64 @@ const CourseModule = props => {
                 <HomePageContentContainer title="Course Packages">
                     <div className="coursePackage">
                         <div className="packlist">
-                            package 1
-</div>
+                            <div className="heading">
+                                <h2>
+                                    Basic
+                                </h2>
+                            </div>
+                            <div className="price-box">
+                                <h1>&#8377; 2999</h1>
+                                <h4><span>&#8377; 5000</span> <span>40% off</span></h4>
+                            </div>
+                            <div className="description">
+                                <h4>
+                                    <b>2</b> Projects
+                                </h4>
+                                <h4>
+                                    <b>Duration :</b> 40 days
+                                </h4>
+                                <h4>
+                                    Python Basic Concepts
+                                </h4>
+                            </div>
+                            <div className="btn-container">
+                                <a href="https://forms.gle/R7bBRiWD9fjuepwx5" target="_blank">
+                                    <Button type="primary" shape="round">
+                                        Register Now
+                                </Button>
+                                </a>
+                            </div>
+                        </div>
+
                         <div className="packlist">
-                            package 2
-</div>
+                            <div className="heading" style={{ background: "#c300ee" }}>
+                                <h2>
+                                    Advanced
+                                </h2>
+                            </div>
+                            <div className="price-box">
+                                <h1>&#8377; 4999</h1>
+                                <h4><span>&#8377; 8000</span> <span>38% off</span></h4>
+                            </div>
+                            <div className="description">
+                                <h4>
+                                    <b>4</b> Projects
+                                </h4>
+                                <h4>
+                                    <b>Duration :</b> 65 days
+                                </h4>
+                                <h4>
+                                    Python Advanced Concepts
+                                </h4>
+                            </div>
+                            <div className="btn-container">
+                                <a href="https://forms.gle/R7bBRiWD9fjuepwx5" target="_blank">
+                                    <Button type="primary" shape="round">
+                                        Register Now
+                                </Button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </HomePageContentContainer>
 
