@@ -50,6 +50,12 @@
                 color: #000;
                 .upper-section {
                     height: 150px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        max-height: 80%;
+                    }
                 }
                 .btnSection {
                     color: #fff;
