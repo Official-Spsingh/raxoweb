@@ -161,11 +161,11 @@ const CourseModule = props => {
 
                 <HomePageContentContainer title="Course content">
                     <div className="courseContent">
-                    <Collapse accordion>
+                    <Collapse accordion defaultActiveKey={['0']}>
                             {
                                 arr.map((element,index)=>{
                                     return(
-                                        <Panel style={{color:"#505763",fontWeight:"700"}} header={element.heading.charAt(0).toUpperCase() + element.heading.slice(1)} key={index+1} className="site-collapse-custom-panel">
+                                        <Panel style={{color:"#505763",fontWeight:"700"}}  header={element.heading.charAt(0).toUpperCase() + element.heading.slice(1)} key={index} className="site-collapse-custom-panel">
                                         <div>
                                             <ol>
                                                 {element.content.map((item,index)=>{
