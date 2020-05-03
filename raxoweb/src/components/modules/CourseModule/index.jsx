@@ -9,28 +9,28 @@ import BenifitComponent from "@modules/BenifitComponent";
 const { Panel } = Collapse;
 const arr = [{
     heading: "Python setup",
-    content: [" windows", "linux", "Ananconda"]
+    content: [" Windows", "Linux", "Ananconda"]
 },
 {
-    heading: "python object and data structure basics",
-    content: [" Introduction to python Data Types ", " Variable assignment ", " introduction to string ", " Indexing and slicing with strings ", " string properties and methods ", " print formatting with string ", " print formatting ", " list data structure ", " Dictionary data structure ", " Tuple data structure ", " set data structure ", " boolean"]
+    heading: "Python Object and Data structure basics",
+    content: [" Introduction to Python data types ", " Variable assignment ", " Introduction to String ", "Indexing and Slicing with Strings ", "String properties and methods ", " Print formatting with String ", " Print formatting ", " List data structure ", " Dictionary data structure ", " Tuple data structure ", " Set data structure ", " Boolean"]
 },
 {
-    heading: "python comparison operators",
-    content: [" comparison operators ", " logical operators"]
+    heading: "Python comparison operators",
+    content: [" Comparison operators ", " Logical operators"]
 },
 {
-    heading: "python statements",
-    content: [" if elif and else statement ", " for loop ", " while loop ", " useful operators ", " list comprehension"]
+    heading: "Python statements",
+    content: [" If elif and else statement ", " For loop ", " While loop ", " Useful operators ", " List comprehension"]
 }
     ,
 {
-    heading: "methods and functon",
-    content: [" function overview ", " function return boolean ", " function args ", " function kwargs ", " Lambda expression , Map and Filter ", " Nested statements and scope"]
+    heading: "Methods and Function",
+    content: [" Function Overview ", " Function return boolean ", " Function args ", " Function kwargs ", " Lambda expression , Map and Filter ", " Nested statements and scope"]
 }
     ,
 {
-    heading: "Milestone project - 1",
+    heading: "Milestone Project - 1",
     content: [" project overview ", " solution overview ", " Advance solution"]
 },
 {
@@ -43,14 +43,14 @@ const arr = [{
 },
 {
     heading: "Errors and Exceptions Handling",
-    content: [" try,catch and finally ", " exception logging"]
+    content: [" Try, catch and finally ", " Exception logging"]
 },
 {
     heading: "Running tests with the Unittest Library",
-    content: [" testing programs"]
+    content: [" Testing programs"]
 },
 {
-    heading: "Project - 2",
+    heading: "Milestone Project - 2",
     content: [" Card and Deck classes ", " Hand and Chip Classes ", " Functions for Game Play ", " Final Gameplay Script"]
 },
 {
@@ -67,11 +67,11 @@ const arr = [{
 },
 {
     heading: "Advanced Python Modules",
-    content: [" Collections Module ", " counter ", " Collections Module ", " defaultdict ", " Collections Module ", " OrderedDict ", " Collections Module ", " namedtuple Datetime"]
+    content: [" Collections Module ", " Counter ", " Collections Module ", " Defaultdict ", " Collections Module ", " OrderedDict ", " Collections Module ", " Namedtuple Datetime"]
 },
 {
     heading: "Datetime",
-    content: [" date ", " time"]
+    content: [" Date ", " Time"]
 },
 {
     heading: "Python Debugger",
@@ -83,11 +83,11 @@ const arr = [{
 },
 {
     heading: "Regular Expressions",
-    content: ["re"]
+    content: ["Understanding Regular Expressions", "Explanation on Regular Expressions"]
 },
 {
     heading: "StringIO",
-    content: ["file handling"]
+    content: ["File handling"]
 },
 {
     heading: "Advanced Python Objects and Data Structures",
@@ -95,18 +95,10 @@ const arr = [{
 },
 {
     heading: "Advance Final project complete Backend APi:",
-    content: [" Login ", " Logout ", " database operation ", " Request and response ", " Jwt token concept ", " sql alchemy"]
+    content: [" Login ", " Logout ", " database operation ", " Request and response ", " Jwt token concept ", " Sql alchemy"]
 }]
 
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
 const CourseModule = props => {
-    const gotoPage = link => {
-        props.history.push(link);
-    };
     return (
         <div className="course-module">
 
@@ -161,17 +153,21 @@ const CourseModule = props => {
 
                 <HomePageContentContainer title="Course content">
                     <div className="courseContent">
-                        <Collapse accordion defaultActiveKey={['0']}>
+                        <Collapse accordion defaultActiveKey={['0']} expandIconPosition="right">
                             {
                                 arr.map((element, index) => {
                                     return (
                                         <Panel style={{ color: "#505763", fontWeight: "700" }} header={element.heading.charAt(0).toUpperCase() + element.heading.slice(1)} key={index} className="site-collapse-custom-panel">
                                             <div>
-                                                <ol>
+                                                <ul>
                                                     {element.content.map((item, index) => {
-                                                        return <li style={{ margin: "3px 0px", fontWeight: "500" }}>{item}</li>
+                                                        return <li style={{
+                                                            margin: "3px 0px", 
+                                                            fontWeight: "500",
+                                                            padding: "6px",
+                                                        }}>{item}</li>
                                                     })}
-                                                </ol>
+                                                </ul>
                                             </div>
                                         </Panel>
                                     )
@@ -231,7 +227,7 @@ const CourseModule = props => {
                                     <b>4</b> Projects
                                 </h4>
                                 <h4>
-                                    <b>Duration :</b> 65 days
+                                    <b>Duration :</b> 60 days
                                 </h4>
                                 <h4>
                                     Python Advanced Concepts

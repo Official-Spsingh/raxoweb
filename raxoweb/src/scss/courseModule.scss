@@ -103,10 +103,13 @@
                 overflow: hidden;
             }
             .ant-collapse-header {
-                background: #f9f9f9;
+                background: #fff;
             }
             .ant-collapse-content-box {
                 padding: 16px 0px;
+            }
+            .ant-collapse-content {
+                border-top: 0;
             }
         }
         .coursePackage {
@@ -191,13 +194,16 @@
                     min-width: 270px;
                 }
             }
-            
         }
-        .ant-collapse-item {
-            text-align: left;
-            margin-bottom: 0 !important;
-            p {
-                padding: 0;
+        .ant-collapse {
+            border: 0;
+            .ant-collapse-item {
+                text-align: left;
+                margin-bottom: 0 !important;
+                border-bottom: 1px solid #f1f1f1;
+                p {
+                    padding: 0;
+                }
             }
         }
     }

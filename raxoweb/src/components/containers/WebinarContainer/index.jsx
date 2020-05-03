@@ -13,7 +13,7 @@ const WebinarContainer = () => {
         <p>
           As we all are at our home during this lock down period, Raxoweb is going to organize a webinar for those who want to learn new technologies and enhance their skills. We want that you all utilize your time during this lock down and be a professional developer.
        </p>
-        <a href="https://forms.gle/3hCyC8FBRX4nvpNJ8" target="_blank" ><Button type="primary">Register now !</Button></a>
+        <a href="https://forms.gle/b98Ntg9kCdEuFDS36" target="_blank" ><Button type="primary">Register now !</Button></a>
       </HomePageContentContainer>
       <HomePageContentContainer
         title="Benefits from this Webinar"
