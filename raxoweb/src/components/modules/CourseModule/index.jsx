@@ -94,8 +94,8 @@ const arr = [{
     content: [" Advanced Numbers ", " Advanced Strings ", " Advanced Sets ", " Advanced Dictionaries ", " Advanced Lists"]
 },
 {
-    heading: "Advance Final project complete Backend APi:",
-    content: [" Login ", " Logout ", " database operation ", " Request and response ", " Jwt token concept ", " Sql alchemy"]
+    heading: "Advance Final project complete Backend API",
+    content: [" Login ", " Logout ", " Database operation ", " Request and response ", " Jwt token concept ", " Sql alchemy"]
 }]
 
 const CourseModule = props => {
