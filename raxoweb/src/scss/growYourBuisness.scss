@@ -27,7 +27,7 @@
           height: 100%;
           img {
             width: 100%;
-            min-height: 500px;
+            min-height: 435px;
             @media (max-width:768px)
             {
               height: 370px;
@@ -45,7 +45,7 @@
       width: 100%;
     }
     .right-section-container {
-      margin: 115px 2%;
+      margin: 70px 2%;
       width: 90%;
       @media (max-width:768px)
       {
@@ -68,13 +68,18 @@
             font-weight: 500;
             margin: 8px;
             font-size: 26px;
+            @media (max-width:767px){
+              text-align: center;
+            }
           }
         }
         .content-section {
           font-weight: 500;
-          text-align: left;
           padding: 0px 8px;
           font-size: 17px;
+          @media (max-width:767px){
+            text-align: center;
+          }
         }
       }
     }
@@ -88,7 +93,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    @media(max-width:800px){
+    @media(max-width:767px){
       height: 20%;
     }
 

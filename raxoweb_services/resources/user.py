@@ -1,37 +1,21 @@
 from flask_restful import Resource, reqparse
 from models.user import UserModel
 from models.validate import ValidateUser
-import datetime
 from library.gmail.mail import mail_otp
 from library.otp.otpgenerator import OtpGenerate
 import uuid
 from werkzeug.security import generate_password_hash, check_password_hash
-import jwt
-# from functools import wraps
+from blacklist import BLACKLIST
+from flask_jwt_extended import (
+    create_access_token,
+    create_refresh_token,
+    jwt_refresh_token_required,
+    get_jwt_identity,
+    jwt_required,
+    get_raw_jwt,
+)
 
 generat_otp = OtpGenerate()
-
-
-# def token_required(f):
-#     @wraps(f)
-#     def decorated(*args, **kwargs):
-#         token = None
-#
-#         if 'x-access-token' in request.headers:
-#             token = request.headers['x-access-token']
-#
-#         if not token:
-#             return {'message': 'Token is missing!'}
-#
-#         try:
-#             data = jwt.decode(token, )
-#             current_user = User.query.filter_by(public_id=data['public_id']).first()
-#         except:
-#             return {'message': 'Token is invalid!'}
-#
-#         return f(current_user, *args, **kwargs)
-#
-#     return decorated
 
 
 # username, userpic, title , photo, content , category , time , hona chahiye
@@ -58,9 +42,8 @@ class UserRegister(Resource):
     def post():
         data = UserRegister.parser.parse_args()
         past_user = UserModel.find_by_email(data['email'])
-        if past_user is not None:
-            # user_code = ValidateUser.find_by_email(data['email'])
-            if past_user.isactive == 'True':
+        if past_user:
+            if past_user.isactive:
                 return {
                     "status": {
                         "code": 409,
@@ -70,16 +53,6 @@ class UserRegister(Resource):
                         "message": "A user with this email already exists"
                     }
                 }
-            # elif user_code.expiretime > current_time:
-            #     return {
-            #         "status": {
-            #             "code": 202,
-            #             "value": "202 accepted"
-            #         },
-            #         "data": {
-            #             "message": "A user with this email already registered but not validated."
-            #         }
-            #     }
             else:
                 past_user.email = data['email']
                 past_user.username = data['username']
@@ -129,8 +102,6 @@ class UserRegister(Resource):
 
 
 class UserLogin(Resource):
-    def __init__(self, secret):
-        self.key = secret
 
     parser = reqparse.RequestParser()
     parser.add_argument('email',
@@ -160,10 +131,14 @@ class UserLogin(Resource):
                    }, 200
         if valid_user.isactive:
             if check_password_hash(valid_user.password, password):
-                token = jwt.encode({'id': valid_user.id,
-                                    'email': valid_user.email,
-                                    'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=30)},
-                                   self.key)
+                # token = jwt.encode({'id': valid_user.id,
+                #                     'email': valid_user.email,
+                #                     'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=30)},
+                #                    self.key)
+                # identity= is what the identity() function did in security.py—now stored in the JWT
+                access_token = create_access_token(identity=valid_user.id, fresh=True)
+                refresh_token = create_refresh_token(valid_user.id)
+                # return {"access_token": access_token, "refresh_token": refresh_token}, 200
                 return {
                            "data": {
                                "username": valid_user.username
@@ -171,7 +146,8 @@ class UserLogin(Resource):
                            "status": {
                                "code": 200,
                                "value": "login successfully",
-                               "token": token.decode('UTF-8')
+                               "access_token": access_token,
+                               "refresh_token": refresh_token
                            }
                        }, 200
             else:
@@ -194,3 +170,20 @@ class UserLogin(Resource):
                            "value": "user registered but validation not completed yet."
                        }
                    }, 200
+
+
+class UserLogout(Resource):
+    @jwt_required
+    def post(self):
+        jti = get_raw_jwt()["jti"]  # jti is "JWT ID", a unique identifier for a JWT.
+        user_id = get_jwt_identity()
+        BLACKLIST.add(jti)
+        return {"message": "User <id={}> successfully logged out.".format(user_id)}, 200
+
+
+class TokenRefresh(Resource):
+    @jwt_refresh_token_required
+    def post(self):
+        current_user = get_jwt_identity()
+        new_token = create_access_token(identity=current_user, fresh=False)
+        return {"access_token": new_token}, 200

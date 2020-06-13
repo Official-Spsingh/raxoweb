@@ -8,10 +8,9 @@ const BlogsComponent = props => {
   return (
     <div className="blogs-component">
       <p>
-        Blog component Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Fuga minus corporis expedita et ratione eligendi animi architecto fugiat
-        laudantium enim, aspernatur quis itaque consequatur assumenda deserunt
-        culpa corrupti soluta molestias.
+      A blog is an online journal and a platform where a 
+      writer or even a group of writers share their views on an individual subject.
+      So now you can also become a blogger by reading and writing technical blogs at our platform.
       </p>
       <div className="btn-container">
         <Button type="primary" shape="round" onClick={() => gotoPage("blogs")} style={{background:"#0a3d62" ,color:"#fafafa",border:"0px"}}>

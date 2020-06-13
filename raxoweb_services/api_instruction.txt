@@ -1,0 +1,10 @@
+
+# get database info run on terminal-- > heroku config --app raxowebapi
+
+# Below command is used to create all tables defined in models modules(Run this
+# first time only)
+# heroku run pyhton ( to start python on heroku)
+# db.create_all()
+# login into database usin command
+# heroku pg:psql --app raxowebapie
+

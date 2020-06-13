@@ -19,7 +19,7 @@ const Items =
         },
         {
             image: implementation,
-            title: "Learn By Implenting",
+            title: "Learn By Implementing",
             subtitle: "Learn by working on amazing projects using the tools and workflows you'll encounter in a real work environment."
         },
         {

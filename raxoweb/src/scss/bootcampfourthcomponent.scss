@@ -36,14 +36,16 @@
           margin-bottom: 25px;
         }
         .section {
-          height: 140px;
+          height: 165px;
+          @media(max-width:990px){
+            height: 125px;
+          }
           .sec-row {
             height: 100%;
             .sec-col {
               height: 100%;
               display: flex;
               flex-direction: column;
-              justify-content: center;
               
               .image-container {
                 height: 100%;
@@ -51,20 +53,21 @@
                 img {
                   height: 100%;
                   padding: 25px;
+                  max-height: 140px;
                 }
               }
               .title {
                 font-weight: 500;
                 margin-bottom: 8px;
                 font-size: 26px;
-                @media(max-width:700px){
+                @media(max-width:990px){
                     text-align: center;
                   }
               }
               .subtitle {
                 font-weight: 500;
                 font-size: 17px;
-                @media(max-width:600px){
+                @media(max-width:990px){
                     text-align: center;
                   }
     

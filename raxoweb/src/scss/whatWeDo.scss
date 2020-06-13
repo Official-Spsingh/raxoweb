@@ -1,9 +1,11 @@
 .what-we-do {
   margin: 42px 0px;
-   .ant-row {
+  .ant-row {
     .ant-col {
       .card-container {
-        width: 86%;
+        @media (min-width: 1040px) {
+          width: 86%;
+        }
         margin: auto;
         height: 320px;
         box-shadow: 4px 4px 10px 2px #e4e4e4;
@@ -13,7 +15,7 @@
           width: 92%;
           margin: 10px 4%;
         }
-        @media(max-width:575px){
+        @media (max-width: 575px) {
           width: 90%;
           margin: 18px 5%;
         }
@@ -21,16 +23,15 @@
         .top-section {
           height: 70%;
           //  background: url("../media/images/whatwedo1.jpg");
-          img{
+          img {
             height: 100%;
             width: 100%;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
           }
-
         }
         .buttom-section {
-          height: 30%;
+          height: 33%;
           background: #fff;
           background-size: cover;
           background-repeat: no-repeat;
@@ -42,30 +43,28 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-              .title{
-                font-size: 18px;
-                color: rgba(0, 0, 0, 0.85);
-                font-weight: 600;
-                padding: 0;
-                margin: 0;
-                margin-bottom: 6px;
-              }
-              .sub-title{
-                padding: 0;
-                margin: 0;
-
-              }
+            .title {
+              font-size: 18px;
+              color: rgba(0, 0, 0, 0.85);
+              font-weight: 600;
+              padding: 0;
+              margin: 0;
+              margin-bottom: 6px;
+            }
+            .sub-title {
+              padding: 0 13px;
+              margin: 0;
+              margin: 0;
+            }
           }
         }
         transition: 0.3s;
         &:hover {
-          box-shadow: 0 16px 32px rgba(32,32,49,.4), 0 4px 8px rgba(32,32,49,.2);
+          box-shadow: 0 16px 32px rgba(32, 32, 49, 0.4), 0 4px 8px rgba(32, 32, 49, 0.2);
           transform: translateY(-15px);
-         
-          transform: scale(1.02);        
+
+          transform: scale(1.02);
         }
-
-
       }
       .container1 {
         // background: url("../media/images/whatwedo1.jpg");

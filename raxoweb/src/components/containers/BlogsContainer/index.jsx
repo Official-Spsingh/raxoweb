@@ -1,16 +1,17 @@
 import React from "react";
-import { Icon } from 'antd';
+import { Icon,message } from 'antd';
 import { isUserAuthenticated } from '@utils/auth'
 import { withRouter } from 'react-router-dom'
 const BlogsContainer = props => {
 
   const writeBlogClicked = () => {
-    if (isUserAuthenticated()) {
-      props.history.push('writeBlog')
-    }
-    else {
-      setActiveModal('login')
-    }
+    message.warning('Feature in development mode');
+    // if (isUserAuthenticated()) {
+    //   props.history.push('writeBlog')
+    // }
+    // else {
+    //   setActiveModal('login')
+    // }
   }
   const setActiveModal = (type) => {
     props.setModalVisible(true)
