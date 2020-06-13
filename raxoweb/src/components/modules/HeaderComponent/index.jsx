@@ -21,20 +21,29 @@ const HeaderComponent = (props) => {
 
                     </div>
                     <div className="menu-content">
-                        <div className="header-content" onClick={() => gotoPage('bootcamp')}>
-                            <span>Bootcamp</span>
+                        <div className="header-content" onClick={() => gotoPage('home')}>
+                            <span>Home</span>
                         </div>
-                        {/* <div className="header-content" onClick={() => gotoPage('blogs')}>
-                            <span>Blogs</span>
-                        </div> */}
+                        <div className="header-content" onClick={() => gotoPage('blogs')}>
+                            <span>Who we are</span>
+                        </div>
                         <div className="header-content" onClick={() => gotoPage('webinar')}>
-                            <span>Webinar</span>
+                            <span>What we do</span>
+                        </div>
+                        <div className="header-content" onClick={() => gotoPage('webinar')}>
+                            <span>Blogs</span>
+                        </div>
+                        <div className="header-content" onClick={() => gotoPage('webinar')}>
+                            <span>Learning</span>
+                        </div>
+                        <div className="header-content" onClick={() => gotoPage('webinar')}>
+                            <span>Contact</span>
                         </div>
                     </div>
 
                 </div>
 
-                <div className="header-content-right">
+                {/* <div className="header-content-right">
                     {
                         !isUserAuthenticated() ?
                             <>
@@ -50,7 +59,7 @@ const HeaderComponent = (props) => {
                                 <span style={{ textTransform: 'capitalize', letterSpacing: '0.75px' }}>Logout</span>
                             </div>
                     }
-                </div>
+                </div> */}
             </div>
         </div>
     )

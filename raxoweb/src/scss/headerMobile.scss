@@ -1,6 +1,6 @@
 .header-mobile {
     box-shadow: 1px 1px 7px 3px #e4e4e4;
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
         display: flex;
     }
     display: none;
@@ -99,7 +99,7 @@
             }
         }
     }
-    @media (min-width: 768px) {
+    @media (min-width: 1000px) {
         display: none;
     }
 }

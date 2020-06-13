@@ -18,7 +18,10 @@
         }
     }
     .title-box-right-content-container {
-        flex: 1;
+        background: url(https://img.freepik.com/free-vector/white-technology-background-with-arrows_23-2148399722.jpg?size=626&ext=jpg);
+        background-position: center;
+        background-size: cover;
+        flex: 1 1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -28,20 +31,26 @@
             .main-heading {
                 margin-bottom: 5px;
                 color: #000a49;
+                font-size: 35px;
             }
             .sub-sub-heading {
                 margin-bottom: 5px;
                 color: #000a49;
             }
             .sub-heading {
-                color: #000a49;
+                color: #1f2732;
             }
             .learn-more-button {
-                padding: 15px 5px;
+                padding: 15px 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 h2 {
                     cursor: pointer;
                     margin: 0 auto;
-                    padding: 0px 15px 4px;
+                    padding: 4px 10px;
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
                     width: fit-content;
                     border: 2px solid;
                     border-radius: 20px;

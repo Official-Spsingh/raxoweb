@@ -1,10 +1,10 @@
 .header-main-container {
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
         display: none;
     }
     z-index: 100;
     box-shadow: 1px 1px 7px 3px #e4e4e4;
-    padding: 0px 14px;
+    padding: 0 14px;
     position: absolute;
     top: 0;
     left: 0;
@@ -19,6 +19,7 @@
         color: #000a49;
         .header-content-left {
             display: flex;
+            margin: auto 0;
             .menu-content {
                 display: flex;
                 margin: 0px 35px;
@@ -56,11 +57,11 @@
             }
             .login {
                 background: #0a3d62;
-                color: #FAFAFA;
+                color: #fafafa;
                 border-radius: 5px;
             }
             .cancel {
-                color: #0A3D62;
+                color: #0a3d62;
             }
         }
     }

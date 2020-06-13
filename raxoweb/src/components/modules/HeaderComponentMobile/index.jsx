@@ -36,20 +36,35 @@ class HeaderComponentMobile extends Component {
                 route: ''
             },
             {
-                name: 'Bootcamp',
+                name: 'Who We Are',
                 icon: 'schedule',
                 route: 'bootcamp'
             },
-            // {
-            //     name: 'Blogs',
-            //     icon: 'block',
-            //     route: 'blogs'
-            // },
             {
-                name: 'Webinar',
-                icon: 'play-circle',
-                route: 'webinar'
-            }
+                name: 'What We Do',
+                icon: 'block',
+                route: 'blogs'
+            },
+            {
+                name: 'Blogs',
+                icon: 'block',
+                route: 'blogs'
+            },
+            {
+                name: 'Learning',
+                icon: 'block',
+                route: 'blogs'
+            },
+            {
+                name: 'Contact',
+                icon: 'block',
+                route: 'blogs'
+            },
+            // {
+            //     name: 'Webinar',
+            //     icon: 'play-circle',
+            //     route: 'webinar'
+            // }
         ]
         // if (isUserAuthenticated()) {
         //     links = [...links, { name: 'Write Blog', icon: 'edit', route: 'writeBlog' }]
@@ -63,13 +78,13 @@ class HeaderComponentMobile extends Component {
                         </div>
                     </div>
                     <div className="right-section">
-                        {
+                        {/* {
                             !isUserAuthenticated() ?
                                 <div className="login-btn">
                                     <Button onClick={() => this.gotoPage('login/signUp')}>Login</Button>
                                 </div>
                                 : null
-                        }
+                        } */}
                         <div className="icon-container" onClick={this.showDrawer}>
                             <Icon type="menu" />
 
@@ -98,7 +113,7 @@ class HeaderComponentMobile extends Component {
                                             </div>
                                         )
                                     }
-                                    {
+                                    {/* {
                                         isUserAuthenticated()
                                             ?
                                             <div key="logout" className="link-item" onClick={() => logoutUser()}>
@@ -106,7 +121,7 @@ class HeaderComponentMobile extends Component {
                                                 <h3>{'Logout'}</h3>
                                             </div>
                                             : null
-                                    }
+                                    } */}
                                 </div>
                             </div>
                         </Drawer>
