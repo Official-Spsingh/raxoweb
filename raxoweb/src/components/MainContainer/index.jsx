@@ -5,11 +5,13 @@ import { Route, Switch, withRouter } from "react-router";
 import BlogsContainer from '@containers/BlogsContainer';
 import HeaderComponentMobile from '@modules/HeaderComponentMobile';
 import LoginSignupContainer from '@containers/LoginSignUpContainer';
+import WebinarContainer from '@containers/WebinarContainer';
 import BootCampContainer from '@containers/BootCampContainer';
 import FooterComponent from '@modules/FooterComponent';
 import { useEffect } from 'react';
 import { PrivateRoute } from '@utils/privateRoute';
 import WriteBlogComponent from '@modules/WriteBlogComponent';
+import CourseModule from '@modules/CourseModule';
 
 const MainContainer = (props) => {
     const [visible, setModalVisible] = useState(false)
@@ -35,8 +37,8 @@ const MainContainer = (props) => {
             </div>
             <div className="page-container">
                 <Switch>
-                    <Route exact path="/">
-                        <LandingPageContainer />
+                    <Route exact path="/webinar">
+                        <WebinarContainer />
                     </Route>
                     <Route exact path="/blogs">
                         <BlogsContainer setModalVisible={setModalVisible} setActiveTab={setActiveTab} />
@@ -44,9 +46,15 @@ const MainContainer = (props) => {
                     <Route exact path="/bootcamp">
                         <BootCampContainer />
                     </Route>
+                    <Route exact path="/python-course">
+                        <CourseModule/>
+                    </Route>
                     <PrivateRoute exact path="/writeBlog">
-                        <WriteBlogComponent/>
+                        <WriteBlogComponent />
                     </PrivateRoute>
+                    <Route exact path="/">
+                        <LandingPageContainer />
+                    </Route>
                     <Route path="*">
                         <LandingPageContainer />
                     </Route>

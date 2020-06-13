@@ -1,9 +1,9 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 const growBuisness = require('@media/images/growBuisness.jpg')
-const growthicon = require('@media/images/growthicon1.png')
-const manageicon = require('@media/images/managementicon1.png')
-const experience = require('@media/images/experience.png')
+const growthicon = require('@media/svg/b2.svg')
+const manageicon = require('@media/svg/b3.svg')
+const experience = require('@media/svg/b1.svg')
 const GrowYourBuisness = (props) => {
     return (
         <div className="grow-your-buisness">

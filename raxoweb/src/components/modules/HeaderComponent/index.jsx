@@ -24,8 +24,11 @@ const HeaderComponent = (props) => {
                         <div className="header-content" onClick={() => gotoPage('bootcamp')}>
                             <span>Bootcamp</span>
                         </div>
-                        <div className="header-content" onClick={() => gotoPage('blogs')}>
+                        {/* <div className="header-content" onClick={() => gotoPage('blogs')}>
                             <span>Blogs</span>
+                        </div> */}
+                        <div className="header-content" onClick={() => gotoPage('webinar')}>
+                            <span>Webinar</span>
                         </div>
                     </div>
 

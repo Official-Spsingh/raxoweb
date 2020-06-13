@@ -1,0 +1,79 @@
+.webinar-first-page-container {
+    padding: 40px;
+    .webinar-first-page-content-box {
+        background: white;
+        padding: 50px 30px;
+        box-shadow: 0 2px 4px rgba(32,32,49,.2), 0 1px 2px rgba(32,32,49,.1);
+        .webinar-content-container {
+            display: flex;
+            .content-left-container {
+                width: 55%;
+                text-align: center;
+                padding: 0 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .left-content {
+                    h3 {
+                        color: #575757;
+                        margin: 0;
+                        font-size: 24px;
+                        font-family: "Lobster", cursive;
+                    }
+                    h1 {
+                        font-family: "Roboto", sans-serif;
+                        font-size: 45px;
+                        margin: 0;
+                        @media(max-width: 414px){
+                            font-size: 34px;
+                        }
+                    }
+                    p {
+                        font-size: 18px;
+                        padding: 10px;
+                    }
+                }
+            }
+            .content-right-container {
+                width: 45%;
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            @media (max-width: 980px) {
+                flex-direction: column-reverse;
+                .content-left-container {
+                    width: 100%;
+                    padding: 35px 25px;
+                }
+                .content-right-container {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media (max-width: 414px) {
+        padding: 20px;
+        .webinar-first-page-content-box {
+            padding: 30px 20px;
+        }
+    }
+}
+a{
+    text-decoration: none;
+    .ant-btn{
+        margin: 20px;
+        background: #0a3d62;
+        border: none;
+        outline: none;
+        border-radius: 14px;
+        &:hover{
+            margin: 20px;
+        background: #0a3d62;
+        border: none;
+        outline: none;
+        border-radius: 14px; 
+        }
+    }
+}

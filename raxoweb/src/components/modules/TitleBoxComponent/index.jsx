@@ -1,5 +1,5 @@
 import React from 'react';
-const image = require('@media/pawan.svg')
+const image = require('@media/svg/frontpage.svg')
 const TitleBoxComponent = (props) => {
     return (
         <div className="title-box-component-main-container">
